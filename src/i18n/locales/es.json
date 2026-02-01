@@ -1,0 +1,88 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "destinations": "Destinos",
+    "services": "Servicios",
+    "about": "Nosotros",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "title": "Descubrí la Magia de Argentina",
+    "subtitle": "Viajes exclusivos para grupos de 15-20 personas. Experiencias personalizadas desde Israel hasta el corazón de Sudamérica.",
+    "cta": "Planificá tu Viaje"
+  },
+  "destinations": {
+    "title": "Nuestros Destinos",
+    "subtitle": "Tres regiones únicas, experiencias inolvidables",
+    "noa": {
+      "title": "Noroeste Argentino",
+      "description": "Salta, Jujuy, Tucumán - Paisajes de colores y cultura ancestral"
+    },
+    "buenosaires": {
+      "title": "Ciudad de Buenos Aires",
+      "description": "La París de Sudamérica - Tango, gastronomía y arquitectura"
+    },
+    "patagonia": {
+      "title": "Sur Argentino",
+      "description": "Calafate, Ushuaia, Bariloche - Naturaleza en su máxima expresión"
+    },
+    "cta": "Ver más"
+  },
+  "services": {
+    "title": "Servicios Premium",
+    "subtitle": "Todo incluido para tu tranquilidad",
+    "transfers": "Traslados",
+    "transfersDesc": "Desde y hacia el aeropuerto en todos los destinos",
+    "accommodation": "Hospedaje 4★",
+    "accommodationDesc": "Hoteles cuidadosamente seleccionados",
+    "guides": "Guías Expertos",
+    "guidesDesc": "Guías locales bilingües especializados",
+    "gastronomy": "Gastronomía",
+    "gastronomyDesc": "Experiencias culinarias auténticas",
+    "support": "Asistencia 24/7",
+    "supportDesc": "Soporte constante durante todo el viaje",
+    "insurance": "Seguro de Viaje",
+    "insuranceDesc": "Cobertura completa incluida"
+  },
+  "about": {
+    "title": "Conectando Culturas",
+    "description": "Con sede central en Israel y oficinas en Tucumán, Argentina y Nueva York, llevamos más de 15 años creando puentes entre continentes. Nuestros programas personalizados para grupos de 15-20 personas ofrecen la perfecta combinación de aventura, cultura y confort.",
+    "years": "Años de experiencia",
+    "groups": "Grupos atendidos",
+    "offices": "Sedes internacionales"
+  },
+  "testimonials": {
+    "title": "Lo que dicen nuestros viajeros",
+    "testimonial1": "Una experiencia inolvidable. Desde Israel hasta el fin del mundo, todo perfectamente organizado.",
+    "author1": "Familia Cohen, Tel Aviv",
+    "testimonial2": "El mejor viaje de nuestras vidas. Patagonia es mágica y el equipo hizo todo impecable.",
+    "author2": "Grupo Jerusalem, Haifa",
+    "testimonial3": "Excelente atención en hebreo, nos sentimos como en casa en Argentina.",
+    "author3": "Familia Levy, Beer Sheva"
+  },
+  "contact": {
+    "title": "Empezá tu Aventura",
+    "subtitle": "Contactanos y diseñamos juntos tu viaje soñado",
+    "name": "Nombre completo",
+    "email": "Email",
+    "phone": "Teléfono",
+    "people": "Cantidad de personas",
+    "destination": "Destino de interés",
+    "message": "Mensaje",
+    "send": "Enviar Consulta",
+    "success": "¡Gracias! Te contactaremos pronto.",
+    "offices": {
+      "title": "Nuestras Sedes",
+      "israel": "Israel (Central)",
+      "argentina": "Argentina",
+      "usa": "EE.UU."
+    }
+  },
+  "footer": {
+    "description": "Conectando Israel con Argentina a través de experiencias de viaje inolvidables.",
+    "quickLinks": "Links Rápidos",
+    "destinations": "Destinos",
+    "contact": "Contacto",
+    "rights": "Todos los derechos reservados."
+  }
+}

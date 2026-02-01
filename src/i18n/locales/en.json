@@ -1,0 +1,88 @@
+{
+  "nav": {
+    "home": "Home",
+    "destinations": "Destinations",
+    "services": "Services",
+    "about": "About Us",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Discover the Magic of Argentina",
+    "subtitle": "Exclusive trips for groups of 15-20 people. Personalized experiences from Israel to the heart of South America.",
+    "cta": "Plan Your Trip"
+  },
+  "destinations": {
+    "title": "Our Destinations",
+    "subtitle": "Three unique regions, unforgettable experiences",
+    "noa": {
+      "title": "Northwest Argentina",
+      "description": "Salta, Jujuy, Tucumán - Colorful landscapes and ancestral culture"
+    },
+    "buenosaires": {
+      "title": "Buenos Aires City",
+      "description": "The Paris of South America - Tango, gastronomy and architecture"
+    },
+    "patagonia": {
+      "title": "Argentine Patagonia",
+      "description": "Calafate, Ushuaia, Bariloche - Nature at its finest"
+    },
+    "cta": "Learn More"
+  },
+  "services": {
+    "title": "Premium Services",
+    "subtitle": "All inclusive for your peace of mind",
+    "transfers": "Transfers",
+    "transfersDesc": "To and from the airport at all destinations",
+    "accommodation": "4★ Accommodation",
+    "accommodationDesc": "Carefully selected hotels",
+    "guides": "Expert Guides",
+    "guidesDesc": "Specialized bilingual local guides",
+    "gastronomy": "Gastronomy",
+    "gastronomyDesc": "Authentic culinary experiences",
+    "support": "24/7 Support",
+    "supportDesc": "Constant support throughout your trip",
+    "insurance": "Travel Insurance",
+    "insuranceDesc": "Full coverage included"
+  },
+  "about": {
+    "title": "Connecting Cultures",
+    "description": "With headquarters in Israel and offices in Tucumán, Argentina and New York, we have been building bridges between continents for over 15 years. Our customized programs for groups of 15-20 people offer the perfect combination of adventure, culture and comfort.",
+    "years": "Years of experience",
+    "groups": "Groups served",
+    "offices": "International offices"
+  },
+  "testimonials": {
+    "title": "What our travelers say",
+    "testimonial1": "An unforgettable experience. From Israel to the end of the world, everything perfectly organized.",
+    "author1": "Cohen Family, Tel Aviv",
+    "testimonial2": "The best trip of our lives. Patagonia is magical and the team made everything impeccable.",
+    "author2": "Jerusalem Group, Haifa",
+    "testimonial3": "Excellent service in Hebrew, we felt at home in Argentina.",
+    "author3": "Levy Family, Beer Sheva"
+  },
+  "contact": {
+    "title": "Start Your Adventure",
+    "subtitle": "Contact us and let's design your dream trip together",
+    "name": "Full name",
+    "email": "Email",
+    "phone": "Phone",
+    "people": "Number of people",
+    "destination": "Destination of interest",
+    "message": "Message",
+    "send": "Send Inquiry",
+    "success": "Thank you! We will contact you soon.",
+    "offices": {
+      "title": "Our Offices",
+      "israel": "Israel (Headquarters)",
+      "argentina": "Argentina",
+      "usa": "USA"
+    }
+  },
+  "footer": {
+    "description": "Connecting Israel with Argentina through unforgettable travel experiences.",
+    "quickLinks": "Quick Links",
+    "destinations": "Destinations",
+    "contact": "Contact",
+    "rights": "All rights reserved."
+  }
+}
