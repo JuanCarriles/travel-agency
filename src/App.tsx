@@ -9,6 +9,8 @@ import About from './sections/About';
 import Testimonials from './sections/Testimonials';
 import Contact from './sections/Contact';
 import Footer from './sections/Footer';
+import WhatsAppButton from './components/WhatsAppButton';
+import GroupMeButton from './components/GroupMeButton';
 import './App.css';
 
 function App() {
@@ -31,6 +33,16 @@ function App() {
         <Contact />
       </main>
       <Footer />
+
+
+      {/* Floating Social Buttons */}
+      <GroupMeButton
+        groupUrl="https://groupme.com/join_group/YOUR_GROUP_ID/YOUR_TOKEN"
+      />
+      <WhatsAppButton
+        phoneNumber="5493815326666"
+        message=""
+      />
     </div>
   );
 }

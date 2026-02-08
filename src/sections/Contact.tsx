@@ -40,7 +40,6 @@ export default function Contact() {
     name: '',
     email: '',
     phone: '',
-    people: '',
     destination: '',
     message: '',
   });
@@ -55,7 +54,6 @@ export default function Contact() {
         name: '',
         email: '',
         phone: '',
-        people: '',
         destination: '',
         message: '',
       });
@@ -79,22 +77,21 @@ export default function Contact() {
         className="absolute inset-0 bg-cover bg-center bg-fixed"
         style={{ backgroundImage: 'url(/images/contact-bg.jpg)' }}
       >
-        <div className="absolute inset-0 bg-[#1A3A52]/85" />
+        <div className="absolute inset-0 bg-[#848484]/85" />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div
-          className={`text-center mb-16 transition-all duration-700 ${
-            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-          }`}
+          className={`text-center mb-16 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+            }`}
         >
           <div className="flex items-center justify-center gap-4 mb-4">
-            <div className="w-12 h-[2px] bg-[#C9A962]" />
-            <span className="text-[#C9A962] text-sm font-semibold uppercase tracking-wider">
+            <div className="w-12 h-[2px] bg-[#EFB4A7]" />
+            <span className="text-[#EFB4A7] text-sm font-semibold uppercase tracking-wider">
               Contacto
             </span>
-            <div className="w-12 h-[2px] bg-[#C9A962]" />
+            <div className="w-12 h-[2px] bg-[#EFB4A7]" />
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
             {t('contact.title')}
@@ -107,11 +104,10 @@ export default function Contact() {
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">
           {/* Contact Form */}
           <div
-            className={`lg:col-span-3 transition-all duration-700 delay-200 ${
-              isVisible
-                ? 'opacity-100 translate-x-0'
-                : 'opacity-0 -translate-x-10'
-            }`}
+            className={`lg:col-span-3 transition-all duration-700 delay-200 ${isVisible
+              ? 'opacity-100 translate-x-0'
+              : 'opacity-0 -translate-x-10'
+              }`}
           >
             <div className="bg-white rounded-2xl p-8 shadow-xl">
               {isSubmitted ? (
@@ -136,7 +132,7 @@ export default function Contact() {
                         value={formData.name}
                         onChange={handleChange}
                         required
-                        className="border-[#2D2D2D]/20 focus:border-[#C9A962] focus:ring-[#C9A962]"
+                        className="border-[#2D2D2D]/20 focus:border-[#EFB4A7] focus:ring-[#EFB4A7]"
                         placeholder="John Doe"
                       />
                     </div>
@@ -151,7 +147,7 @@ export default function Contact() {
                         value={formData.email}
                         onChange={handleChange}
                         required
-                        className="border-[#2D2D2D]/20 focus:border-[#C9A962] focus:ring-[#C9A962]"
+                        className="border-[#2D2D2D]/20 focus:border-[#EFB4A7] focus:ring-[#EFB4A7]"
                         placeholder="john@example.com"
                       />
                     </div>
@@ -168,57 +164,41 @@ export default function Contact() {
                         type="tel"
                         value={formData.phone}
                         onChange={handleChange}
-                        className="border-[#2D2D2D]/20 focus:border-[#C9A962] focus:ring-[#C9A962]"
+                        className="border-[#2D2D2D]/20 focus:border-[#EFB4A7] focus:ring-[#EFB4A7]"
                         placeholder="+1 234 567 890"
                       />
                     </div>
                     <div className="space-y-2">
-                      <Label htmlFor="people" className="text-[#2D2D2D]">
-                        {t('contact.people')}
+                      <Label htmlFor="destination" className="text-[#2D2D2D]">
+                        {t('contact.destination')}
                       </Label>
-                      <Input
-                        id="people"
-                        name="people"
-                        type="number"
-                        min="15"
-                        max="20"
-                        value={formData.people}
-                        onChange={handleChange}
-                        className="border-[#2D2D2D]/20 focus:border-[#C9A962] focus:ring-[#C9A962]"
-                        placeholder="15-20"
-                      />
+                      <Select
+                        value={formData.destination}
+                        onValueChange={(value) =>
+                          setFormData({ ...formData, destination: value })
+                        }
+                      >
+                        <SelectTrigger className="border-[#2D2D2D]/20 focus:border-[#EFB4A7] focus:ring-[#EFB4A7]">
+                          <SelectValue placeholder={t('contact.destination')} />
+                        </SelectTrigger>
+                        <SelectContent>
+                          <SelectItem value="noa">
+                            {t('destinations.noa.title')}
+                          </SelectItem>
+                          <SelectItem value="buenosaires">
+                            {t('destinations.buenosaires.title')}
+                          </SelectItem>
+                          <SelectItem value="patagonia">
+                            {t('destinations.patagonia.title')}
+                          </SelectItem>
+                          <SelectItem value="combined">
+                            Combined Tour
+                          </SelectItem>
+                        </SelectContent>
+                      </Select>
                     </div>
                   </div>
 
-                  <div className="space-y-2">
-                    <Label htmlFor="destination" className="text-[#2D2D2D]">
-                      {t('contact.destination')}
-                    </Label>
-                    <Select
-                      value={formData.destination}
-                      onValueChange={(value) =>
-                        setFormData({ ...formData, destination: value })
-                      }
-                    >
-                      <SelectTrigger className="border-[#2D2D2D]/20 focus:border-[#C9A962] focus:ring-[#C9A962]">
-                        <SelectValue placeholder={t('contact.destination')} />
-                      </SelectTrigger>
-                      <SelectContent>
-                        <SelectItem value="noa">
-                          {t('destinations.noa.title')}
-                        </SelectItem>
-                        <SelectItem value="buenosaires">
-                          {t('destinations.buenosaires.title')}
-                        </SelectItem>
-                        <SelectItem value="patagonia">
-                          {t('destinations.patagonia.title')}
-                        </SelectItem>
-                        <SelectItem value="combined">
-                          Combined Tour
-                        </SelectItem>
-                      </SelectContent>
-                    </Select>
-                  </div>
 
                   <div className="space-y-2">
                     <Label htmlFor="message" className="text-[#2D2D2D]">
@@ -230,14 +210,14 @@ export default function Contact() {
                       value={formData.message}
                       onChange={handleChange}
                       rows={4}
-                      className="border-[#2D2D2D]/20 focus:border-[#C9A962] focus:ring-[#C9A962] resize-none"
+                      className="border-[#2D2D2D]/20 focus:border-[#EFB4A7] focus:ring-[#EFB4A7] resize-none"
                       placeholder="Tell us about your dream trip..."
                     />
                   </div>
 
                   <Button
                     type="submit"
-                    className="w-full bg-[#C9A962] hover:bg-[#B8964F] text-white py-6 rounded-xl text-lg font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-[#C9A962]/30"
+                    className="w-full bg-[#EFB4A7] hover:bg-[#EFB9B0] text-white py-6 rounded-xl text-lg font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-[#EFB4A7]/30"
                   >
                     <Send className="w-5 h-5 mr-2" />
                     {t('contact.send')}
@@ -249,11 +229,10 @@ export default function Contact() {
 
           {/* Offices Info */}
           <div
-            className={`lg:col-span-2 transition-all duration-700 delay-400 ${
-              isVisible
-                ? 'opacity-100 translate-x-0'
-                : 'opacity-0 translate-x-10'
-            }`}
+            className={`lg:col-span-2 transition-all duration-700 delay-400 ${isVisible
+              ? 'opacity-100 translate-x-0'
+              : 'opacity-0 translate-x-10'
+              }`}
           >
             <div className="space-y-6">
               <h3 className="text-xl font-bold text-white mb-6">
@@ -266,7 +245,7 @@ export default function Contact() {
                   className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 hover:bg-white/15 transition-colors duration-300"
                 >
                   <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 bg-[#C9A962] rounded-lg flex items-center justify-center flex-shrink-0">
+                    <div className="w-10 h-10 bg-[#EFB4A7] rounded-lg flex items-center justify-center flex-shrink-0">
                       <MapPin className="w-5 h-5 text-white" />
                     </div>
                     <div>
@@ -286,16 +265,16 @@ export default function Contact() {
               ))}
 
               {/* Email */}
-              <div className="bg-[#C9A962]/20 backdrop-blur-sm border border-[#C9A962]/30 rounded-xl p-6">
+              <div className="bg-[#EFB4A7]/20 backdrop-blur-sm border border-[#EFB4A7]/30 rounded-xl p-6">
                 <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 bg-[#C9A962] rounded-lg flex items-center justify-center">
+                  <div className="w-10 h-10 bg-[#EFB4A7] rounded-lg flex items-center justify-center">
                     <Mail className="w-5 h-5 text-white" />
                   </div>
                   <div>
                     <h4 className="text-white font-semibold mb-1">Email</h4>
                     <a
                       href="mailto:info@andesjourney.com"
-                      className="text-[#C9A962] hover:text-white transition-colors duration-300"
+                      className="text-[#EFB4A7] hover:text-white transition-colors duration-300"
                     >
                       info@andesjourney.com
                     </a>
