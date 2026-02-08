@@ -41,21 +41,22 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? 'bg-[#1A3A52]/95 backdrop-blur-md shadow-lg'
-          : 'bg-transparent'
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
+        ? 'bg-[#848484]/95 backdrop-blur-md shadow-lg'
+        : 'bg-transparent'
+        }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <a href="#home" className="flex items-center gap-2">
-            <div className="w-10 h-10 rounded-full bg-[#C9A962] flex items-center justify-center">
-              <span className="text-white font-bold text-lg">AJ</span>
-            </div>
+          <a href="#home" className="flex items-center gap-3">
+            <img
+              src="/images/gates-to-arg-LOGO-SIMPLIFICADO.png"
+              alt="Andes Journey Logo"
+              className="h-12 w-auto object-contain"
+            />
             <span className="text-white font-semibold text-xl hidden sm:block">
-              Andes Journey
+              Gates To Argentina
             </span>
           </a>
 
@@ -65,7 +66,7 @@ export default function Header() {
               <a
                 key={item.key}
                 href={item.href}
-                className="text-white/90 hover:text-[#C9A962] transition-colors duration-300 text-sm font-medium"
+                className="text-white/90 hover:text-[#EFB4A7] transition-colors duration-300 text-sm font-medium"
               >
                 {t(`nav.${item.key}`)}
               </a>
@@ -78,7 +79,7 @@ export default function Header() {
               <DropdownMenuTrigger asChild>
                 <Button
                   variant="ghost"
-                  className="text-white hover:text-[#C9A962] hover:bg-white/10 flex items-center gap-2"
+                  className="text-white hover:text-[#EFB4A7] hover:bg-white/10 flex items-center gap-2"
                 >
                   <Globe className="w-4 h-4" />
                   <span className="hidden sm:inline">{currentLanguage.flag}</span>
@@ -101,7 +102,7 @@ export default function Header() {
 
             <a
               href="#contact"
-              className="hidden md:inline-flex bg-[#C9A962] hover:bg-[#B8964F] text-white px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 hover:shadow-lg hover:shadow-[#C9A962]/30"
+              className="hidden md:inline-flex bg-[#EFB4A7] hover:bg-[#EFB9B0] text-white px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 hover:shadow-lg hover:shadow-[#EFB4A7]/30"
             >
               {t('hero.cta')}
             </a>
@@ -122,14 +123,14 @@ export default function Header() {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden bg-[#1A3A52]/98 backdrop-blur-md rounded-b-2xl pb-6">
+          <div className="lg:hidden bg-[#848484]/98 backdrop-blur-md rounded-b-2xl pb-6">
             <nav className="flex flex-col gap-2 px-4">
               {navItems.map((item) => (
                 <a
                   key={item.key}
                   href={item.href}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="text-white/90 hover:text-[#C9A962] hover:bg-white/5 transition-all duration-300 py-3 px-4 rounded-lg text-base font-medium"
+                  className="text-white/90 hover:text-[#EFB4A7] hover:bg-white/5 transition-all duration-300 py-3 px-4 rounded-lg text-base font-medium"
                 >
                   {t(`nav.${item.key}`)}
                 </a>
@@ -137,7 +138,7 @@ export default function Header() {
               <a
                 href="#contact"
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="bg-[#C9A962] hover:bg-[#B8964F] text-white text-center py-3 px-4 rounded-lg text-base font-medium mt-2 transition-all duration-300"
+                className="bg-[#EFB4A7] hover:bg-[#EFB9B0] text-white text-center py-3 px-4 rounded-lg text-base font-medium mt-2 transition-all duration-300"
               >
                 {t('hero.cta')}
               </a>

@@ -29,7 +29,7 @@ function StatCounter({
 
   return (
     <div className="text-center">
-      <div className="text-4xl sm:text-5xl font-bold text-[#C9A962] mb-2">
+      <div className="text-4xl sm:text-5xl font-bold text-[#EFB4A7] mb-2">
         {count}
         {suffix}
       </div>
@@ -48,11 +48,10 @@ export default function About() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Image */}
           <div
-            className={`relative transition-all duration-700 ${
-              isVisible
+            className={`relative transition-all duration-700 ${isVisible
                 ? 'opacity-100 translate-x-0'
                 : 'opacity-0 -translate-x-10'
-            }`}
+              }`}
           >
             <div className="relative">
               {/* Main Image */}
@@ -63,17 +62,17 @@ export default function About() {
                   className="w-full h-[400px] sm:h-[500px] object-cover"
                 />
                 {/* Gold Frame */}
-                <div className="absolute inset-0 border-4 border-[#C9A962] rounded-2xl pointer-events-none" />
+                <div className="absolute inset-0 border-4 border-[#EFB4A7] rounded-2xl pointer-events-none" />
               </div>
 
               {/* Decorative Elements */}
-              <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-[#C9A962]/10 rounded-2xl -z-10" />
-              <div className="absolute -top-6 -left-6 w-24 h-24 border-2 border-[#C9A962]/30 rounded-2xl -z-10" />
+              <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-[#EFB4A7]/10 rounded-2xl -z-10" />
+              <div className="absolute -top-6 -left-6 w-24 h-24 border-2 border-[#EFB4A7]/30 rounded-2xl -z-10" />
             </div>
 
             {/* Floating Badge */}
             <div className="absolute -bottom-4 left-8 bg-white shadow-xl rounded-xl p-4 flex items-center gap-3">
-              <div className="w-12 h-12 bg-[#C9A962] rounded-full flex items-center justify-center">
+              <div className="w-12 h-12 bg-[#EFB4A7] rounded-full flex items-center justify-center">
                 <span className="text-white text-xl">✈️</span>
               </div>
               <div>
@@ -87,16 +86,15 @@ export default function About() {
 
           {/* Content */}
           <div
-            className={`transition-all duration-700 delay-200 ${
-              isVisible
+            className={`transition-all duration-700 delay-200 ${isVisible
                 ? 'opacity-100 translate-x-0'
                 : 'opacity-0 translate-x-10'
-            }`}
+              }`}
           >
             {/* Section Header */}
             <div className="flex items-center gap-4 mb-4">
-              <div className="w-12 h-[2px] bg-[#C9A962]" />
-              <span className="text-[#C9A962] text-sm font-semibold uppercase tracking-wider">
+              <div className="w-12 h-[2px] bg-[#EFB4A7]" />
+              <span className="text-[#EFB4A7] text-sm font-semibold uppercase tracking-wider">
                 {t('nav.about')}
               </span>
             </div>
@@ -118,7 +116,7 @@ export default function About() {
                 'Soporte 24/7 durante todo el viaje',
               ].map((feature, index) => (
                 <div key={index} className="flex items-center gap-3">
-                  <div className="w-5 h-5 rounded-full bg-[#C9A962] flex items-center justify-center flex-shrink-0">
+                  <div className="w-5 h-5 rounded-full bg-[#EFB4A7] flex items-center justify-center flex-shrink-0">
                     <svg
                       className="w-3 h-3 text-white"
                       fill="none"

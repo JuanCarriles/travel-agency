@@ -32,18 +32,20 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-[#1A3A52] text-white">
+    <footer className="bg-[#848484] text-white">
       {/* Main Footer */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
           <div className="lg:col-span-1">
             <a href="#home" className="flex items-center gap-2 mb-6">
-              <div className="w-12 h-12 rounded-full bg-[#C9A962] flex items-center justify-center">
-                <span className="text-white font-bold text-xl">AJ</span>
-              </div>
+              <img
+                src="/images/gates-to-arg-LOGO-SIMPLIFICADO.png"
+                alt="Gates to argentina logo"
+                className="h-12 w-auto object-contain"
+              />
               <span className="text-white font-semibold text-xl">
-                Andes Journey
+                Gates to argentina
               </span>
             </a>
             <p className="text-white/70 leading-relaxed mb-6">
@@ -57,7 +59,7 @@ export default function Footer() {
                   <a
                     key={social.label}
                     href={social.href}
-                    className="w-10 h-10 rounded-full bg-white/10 hover:bg-[#C9A962] flex items-center justify-center transition-all duration-300 hover:scale-110"
+                    className="w-10 h-10 rounded-full bg-white/10 hover:bg-[#EFB4A7] flex items-center justify-center transition-all duration-300 hover:scale-110"
                     aria-label={social.label}
                   >
                     <Icon className="w-5 h-5" />
@@ -69,7 +71,7 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-lg font-semibold mb-6 text-[#C9A962]">
+            <h4 className="text-lg font-semibold mb-6 text-[#EFB4A7]">
               {t('footer.quickLinks')}
             </h4>
             <ul className="space-y-3">
@@ -77,7 +79,7 @@ export default function Footer() {
                 <li key={link.key}>
                   <a
                     href={link.href}
-                    className="text-white/70 hover:text-[#C9A962] transition-colors duration-300"
+                    className="text-white/70 hover:text-[#EFB4A7] transition-colors duration-300"
                   >
                     {t(`nav.${link.key}`)}
                   </a>
@@ -88,7 +90,7 @@ export default function Footer() {
 
           {/* Destinations */}
           <div>
-            <h4 className="text-lg font-semibold mb-6 text-[#C9A962]">
+            <h4 className="text-lg font-semibold mb-6 text-[#EFB4A7]">
               {t('footer.destinations')}
             </h4>
             <ul className="space-y-3">
@@ -96,7 +98,7 @@ export default function Footer() {
                 <li key={dest.key}>
                   <a
                     href={dest.href}
-                    className="text-white/70 hover:text-[#C9A962] transition-colors duration-300"
+                    className="text-white/70 hover:text-[#EFB4A7] transition-colors duration-300"
                   >
                     {t(`destinations.${dest.key}.title`)}
                   </a>
@@ -107,45 +109,45 @@ export default function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h4 className="text-lg font-semibold mb-6 text-[#C9A962]">
+            <h4 className="text-lg font-semibold mb-6 text-[#EFB4A7]">
               {t('footer.contact')}
             </h4>
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
-                <MapPin className="w-5 h-5 text-[#C9A962] flex-shrink-0 mt-0.5" />
+                <MapPin className="w-5 h-5 text-[#EFB4A7] flex-shrink-0 mt-0.5" />
                 <div className="text-white/70 text-sm">
                   <p className="font-medium text-white">Israel (HQ)</p>
                   <p>Tel Aviv, Israel</p>
                 </div>
               </li>
               <li className="flex items-start gap-3">
-                <MapPin className="w-5 h-5 text-[#C9A962] flex-shrink-0 mt-0.5" />
+                <MapPin className="w-5 h-5 text-[#EFB4A7] flex-shrink-0 mt-0.5" />
                 <div className="text-white/70 text-sm">
                   <p className="font-medium text-white">Argentina</p>
                   <p>Tucumán, Argentina</p>
                 </div>
               </li>
               <li className="flex items-start gap-3">
-                <MapPin className="w-5 h-5 text-[#C9A962] flex-shrink-0 mt-0.5" />
+                <MapPin className="w-5 h-5 text-[#EFB4A7] flex-shrink-0 mt-0.5" />
                 <div className="text-white/70 text-sm">
                   <p className="font-medium text-white">USA</p>
                   <p>New York, NY</p>
                 </div>
               </li>
               <li className="flex items-center gap-3">
-                <Mail className="w-5 h-5 text-[#C9A962] flex-shrink-0" />
+                <Mail className="w-5 h-5 text-[#EFB4A7] flex-shrink-0" />
                 <a
                   href="mailto:info@andesjourney.com"
-                  className="text-white/70 hover:text-[#C9A962] transition-colors duration-300 text-sm"
+                  className="text-white/70 hover:text-[#EFB4A7] transition-colors duration-300 text-sm"
                 >
                   info@andesjourney.com
                 </a>
               </li>
               <li className="flex items-center gap-3">
-                <Phone className="w-5 h-5 text-[#C9A962] flex-shrink-0" />
+                <Phone className="w-5 h-5 text-[#EFB4A7] flex-shrink-0" />
                 <a
                   href="tel:+97231234567"
-                  className="text-white/70 hover:text-[#C9A962] transition-colors duration-300 text-sm"
+                  className="text-white/70 hover:text-[#EFB4A7] transition-colors duration-300 text-sm"
                 >
                   +972-3-123-4567
                 </a>
@@ -165,13 +167,13 @@ export default function Footer() {
             <div className="flex items-center gap-6">
               <a
                 href="#"
-                className="text-white/50 hover:text-[#C9A962] text-sm transition-colors duration-300"
+                className="text-white/50 hover:text-[#EFB4A7] text-sm transition-colors duration-300"
               >
                 Privacy Policy
               </a>
               <a
                 href="#"
-                className="text-white/50 hover:text-[#C9A962] text-sm transition-colors duration-300"
+                className="text-white/50 hover:text-[#EFB4A7] text-sm transition-colors duration-300"
               >
                 Terms of Service
               </a>

@@ -17,7 +17,7 @@ i18n
   .use(initReactI18next)
   .init({
     resources,
-    fallbackLng: 'es',
+    fallbackLng: 'en',
     interpolation: {
       escapeValue: false,
     },
@@ -30,7 +30,7 @@ i18n
 export default i18n;
 
 export const languages = [
-  { code: 'es', name: 'Español', flag: '🇦🇷' },
   { code: 'en', name: 'English', flag: '🇺🇸' },
+  { code: 'es', name: 'Español', flag: '🇦🇷' },
   { code: 'he', name: 'עברית', flag: '🇮🇱' },
 ];
