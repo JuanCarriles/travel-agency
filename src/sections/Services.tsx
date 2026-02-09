@@ -44,7 +44,7 @@ export default function Services() {
     <section
       id="services"
       ref={ref}
-      className="py-20 md:py-32 bg-[#848484] relative overflow-hidden"
+      className="py-20 md:py-32 bg-[#232121fa] relative overflow-hidden"
     >
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
@@ -64,16 +64,15 @@ export default function Services() {
         >
           <div className="flex items-center justify-center gap-4 mb-4">
             <div className="w-12 h-[2px] bg-[#EFB4A7]" />
-            <span className="text-[#EFB4A7] text-sm font-semibold uppercase tracking-wider">
-              Servicios
+            <span className="text-[#EFB4A7] text-sm font-semibold uppercase tracking-wider services-text-shadow">
+              {t('services.title-section')}
             </span>
             <div className="w-12 h-[2px] bg-[#EFB4A7]" />
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 services-text-shadow">
             {t('services.title')}
           </h2>
-          <p className="text-lg text-white/70 max-w-2xl mx-auto">
-            {t('services.subtitle')}
+          <p className="text-2xl text-white/70 max-w-2xl mx-auto services-text-shadow">            {t('services.subtitle')}
           </p>
         </div>
 
@@ -102,10 +101,10 @@ export default function Services() {
                 </div>
 
                 {/* Content */}
-                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-[#EFB4A] transition-colors duration-300">
+                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-[#EFB4A] transition-colors duration-300 services-text-shadow">
                   {t(`services.${service.key}`)}
                 </h3>
-                <p className="text-white/70 leading-relaxed">
+                <p className="text-white/70 leading-relaxed services-text-shadow">
                   {t(`services.${service.key}Desc`)}
                 </p>
 

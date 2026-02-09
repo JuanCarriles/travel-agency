@@ -42,7 +42,7 @@ export default function Header() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
-        ? 'bg-[#848484]/95 backdrop-blur-md shadow-lg'
+        ? 'bg-[#858585ea]/95 backdrop-blur-md shadow-lg'
         : 'bg-transparent'
         }`}
     >
@@ -52,7 +52,7 @@ export default function Header() {
           <a href="#home" className="flex items-center gap-3">
             <img
               src="/images/gates-to-arg-LOGO-SIMPLIFICADO.png"
-              alt="Andes Journey Logo"
+              alt="Gates to argentina logo"
               className="h-12 w-auto object-contain"
             />
             <span className="text-white font-semibold text-xl hidden sm:block">
@@ -102,7 +102,7 @@ export default function Header() {
 
             <a
               href="#contact"
-              className="hidden md:inline-flex bg-[#EFB4A7] hover:bg-[#EFB9B0] text-white px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 hover:shadow-lg hover:shadow-[#EFB4A7]/30"
+              className="hidden md:inline-flex bg-[#EFB4A7] hover:bg-[#EFB9B0] text-white px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 hover:shadow-lg hover:shadow-[#EFB4A7]/30 drop-shadow-lg"
             >
               {t('hero.cta')}
             </a>
@@ -123,7 +123,7 @@ export default function Header() {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden bg-[#848484]/98 backdrop-blur-md rounded-b-2xl pb-6">
+          <div className="lg:hidden bg-[#858585ea]/98 backdrop-blur-md rounded-b-2xl pb-6">
             <nav className="flex flex-col gap-2 px-4">
               {navItems.map((item) => (
                 <a
@@ -138,7 +138,7 @@ export default function Header() {
               <a
                 href="#contact"
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="bg-[#EFB4A7] hover:bg-[#EFB9B0] text-white text-center py-3 px-4 rounded-lg text-base font-medium mt-2 transition-all duration-300"
+                className="bg-[#EFB4A7] hover:bg-[#EFB9B0] text-white text-center py-3 px-4 rounded-lg text-base font-medium mt-2 transition-all duration-300 drop-shadow-lg"
               >
                 {t('hero.cta')}
               </a>

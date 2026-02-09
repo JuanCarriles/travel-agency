@@ -54,8 +54,8 @@ export default function Destinations() {
             <div
               key={dest.key}
               className={`group relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 ${isVisible
-                  ? 'opacity-100 translate-y-0'
-                  : 'opacity-0 translate-y-10'
+                ? 'opacity-100 translate-y-0'
+                : 'opacity-0 translate-y-10'
                 }`}
               style={{
                 transitionDelay: `${index * 150}ms`,

@@ -77,7 +77,7 @@ export default function Contact() {
         className="absolute inset-0 bg-cover bg-center bg-fixed"
         style={{ backgroundImage: 'url(/images/contact-bg.jpg)' }}
       >
-        <div className="absolute inset-0 bg-[#848484]/85" />
+        <div className="absolute inset-0 bg-[#858585ea]/85" />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
