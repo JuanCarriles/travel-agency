@@ -13,6 +13,10 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select';
+import modulesData from '@/data/modules.json';
+import type { ModulesData } from '@/types/modules';
+
+const modules = (modulesData as ModulesData).modules;
 
 const offices = [
   {
@@ -77,7 +81,7 @@ export default function Contact() {
         className="absolute inset-0 bg-cover bg-center bg-fixed"
         style={{ backgroundImage: 'url(/images/contact-bg.jpg)' }}
       >
-        <div className="absolute inset-0 bg-[#858585ea]/85" />
+        <div className="absolute inset-0 bg-[#494242ea]/85" />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -182,18 +186,11 @@ export default function Contact() {
                           <SelectValue placeholder={t('contact.destination')} />
                         </SelectTrigger>
                         <SelectContent>
-                          <SelectItem value="noa">
-                            {t('destinations.noa.title')}
-                          </SelectItem>
-                          <SelectItem value="buenosaires">
-                            {t('destinations.buenosaires.title')}
-                          </SelectItem>
-                          <SelectItem value="patagonia">
-                            {t('destinations.patagonia.title')}
-                          </SelectItem>
-                          <SelectItem value="combined">
-                            Combined Tour
-                          </SelectItem>
+                          {modules.map((module) => (
+                            <SelectItem key={module.id} value={module.id}>
+                              {t(module.name)}
+                            </SelectItem>
+                          ))}
                         </SelectContent>
                       </Select>
                     </div>

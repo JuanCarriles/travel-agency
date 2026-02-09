@@ -1,0 +1,380 @@
+{
+    "modules": [
+        {
+            "id": "noa",
+            "name": "Norte Argentino: Tucumán, Salta y Jujuy",
+            "summary": "Un recorrido completo por el noroeste argentino que combina historia, paisajes únicos y cultura. Incluye la Casa Histórica de Tucumán, los Valles Calchaquíes, la Quebrada de Humahuaca y las Salinas Grandes.",
+            "numberOfDays": 8,
+            "numberOfPeople": 20,
+            "coverImage": "/images/destino-noa.jpg",
+            "locations": [
+                {
+                    "name": "Tucumán",
+                    "type": "city",
+                    "image": "/images/tucuman.jpg"
+                },
+                {
+                    "name": "Salta",
+                    "type": "natural",
+                    "image": "/images/Salta.jpg"
+                },
+                {
+                    "name": "Jujuy",
+                    "type": "natural",
+                    "image": "/images/Jujuy.jpg"
+                }
+            ],
+            "mainAttractions": [
+                {
+                    "id": "casaHistorica",
+                    "name": "Casa Histórica de Tucumán",
+                    "type": "cultural",
+                    "description": "El lugar histórico donde se firmó la Declaración de la Independencia Argentina en 1816",
+                    "image": "/images/casa-historica.jpg"
+                },
+                {
+                    "id": "ruinasQuilmes",
+                    "name": "Ruinas de Quilmes",
+                    "type": "cultural",
+                    "description": "Uno de los asentamientos precolombinos más importantes y extensos de Argentina",
+                    "image": "/images/quilmes.jpg"
+                },
+                {
+                    "id": "wineries",
+                    "name": "Bodegas de Cafayate",
+                    "type": "cultural",
+                    "description": "Visita a viñedos famosos por sus vinos Torrontés y paisajes únicos de altura",
+                    "image": "/images/bodegas.jpg"
+                },
+                {
+                    "id": "quebradaConchas",
+                    "name": "Quebrada de las Conchas",
+                    "type": "natural",
+                    "description": "Espectacular ruta escénica con cañones de roca roja y formaciones geológicas únicas",
+                    "image": "/images/conchas.jpg"
+                },
+                {
+                    "id": "humahuaca",
+                    "name": "Quebrada de Humahuaca",
+                    "type": "cultural",
+                    "description": "Patrimonio de la Humanidad con pueblos históricos, calles empedradas y cultura viva6].",
+                    "image": "/images/humahuaca-center.jpg"
+                },
+                {
+                    "id": "colorMountain",
+                    "name": "Serranía del Hornocal (14 Colores)",
+                    "type": "natural",
+                    "description": "Impresionante cadena montañosa de 14 colores ubicada a más de 4.300 metros de altura",
+                    "image": "/images/hornocal.jpg"
+                },
+                {
+                    "id": "salinas",
+                    "name": "Salinas Grandes",
+                    "type": "natural",
+                    "description": "Uno de los salares más grandes del mundo que ofrece un paisaje blanco deslumbrante",
+                    "image": "/images/salinas.jpg"
+                }
+            ],
+            "whatsIncluded": [
+                {
+                    "name": "Traslados privados y logística",
+                    "icon": "Car"
+                },
+                {
+                    "name": "Alojamiento en hoteles seleccionados",
+                    "icon": "Hotel"
+                },
+                {
+                    "name": "Guías profesionales y acompañamiento",
+                    "icon": "User"
+                },
+                {
+                    "name": "Cena de bienvenida y comidas seleccionadas",
+                    "icon": "UtensilsCrossed"
+                },
+                {
+                    "name": "Excursiones y visitas guiadas",
+                    "icon": "Camera"
+                },
+                {
+                    "name": "Entradas a parques y museos",
+                    "icon": "Ticket"
+                }
+            ],
+            "itinerary": {
+                "pdfUrl": "/pdfs/itinerary-noa.pdf",
+                "days": [
+                    {
+                        "day": 1,
+                        "title": "Llegada a Tucumán y Bienvenida",
+                        "description": "Recepción en el aeropuerto, traslado al hotel y cena de bienvenida para presentar el programa."
+                    },
+                    {
+                        "day": 2,
+                        "title": "City Tour Histórico y San Javier",
+                        "description": "Visita a la Casa Histórica y Plaza Independencia, seguido de un recorrido por el Cerro San Javier."
+                    },
+                    {
+                        "day": 3,
+                        "title": "Valles Calchaquíes: Tafí y Amaicha",
+                        "description": "Viaje a través de los valles con paradas en Tafí del Valle y el Museo de la Pachamama en Amaicha."
+                    },
+                    {
+                        "day": 4,
+                        "title": "Ruinas de Quilmes y Vinos en Cafayate",
+                        "description": "Exploración de las Ruinas de Quilmes y visita a una bodega en Cafayate con almuerzo incluido."
+                    },
+                    {
+                        "day": 5,
+                        "title": "Quebrada de las Conchas y Salta",
+                        "description": "Recorrido por las formaciones rocosas de la Quebrada de las Conchas y llegada a la ciudad de Salta."
+                    },
+                    {
+                        "day": 6,
+                        "title": "Hacia Jujuy: Purmamarca y Tilcara",
+                        "description": "Visita al Cerro de los 7 Colores en Purmamarca y el Pucará de Tilcara rumbo al norte."
+                    },
+                    {
+                        "day": 7,
+                        "title": "Serranía del Hornocal y Humahuaca",
+                        "description": "Excursión al mirador del Hornocal (14 colores) y recorrido por el pueblo histórico de Humahuaca."
+                    },
+                    {
+                        "day": 8,
+                        "title": "Salinas Grandes y Regreso",
+                        "description": "Ascenso por la Cuesta de Lipán hasta las Salinas Grandes antes del regreso a Salta."
+                    }
+                ]
+            }
+        },
+        {
+            "id": "buenosaires",
+            "name": "modules.buenosaires.name",
+            "summary": "modules.buenosaires.summary",
+            "numberOfDays": 5,
+            "numberOfPeople": 20,
+            "coverImage": "/images/destino-buenosaires.jpg",
+            "locations": [
+                {
+                    "name": "Buenos Aires",
+                    "type": "city",
+                    "image": "/images/destino-buenosaires.jpg"
+                },
+                {
+                    "name": "San Telmo",
+                    "type": "cultural",
+                    "image": "/images/destino-buenosaires.jpg"
+                },
+                {
+                    "name": "La Boca",
+                    "type": "cultural",
+                    "image": "/images/destino-buenosaires.jpg"
+                },
+                {
+                    "name": "Palermo",
+                    "type": "city",
+                    "image": "/images/destino-buenosaires.jpg"
+                }
+            ],
+            "mainAttractions": [
+                {
+                    "id": "obelisco",
+                    "type": "cultural",
+                    "image": "/images/destino-buenosaires.jpg"
+                },
+                {
+                    "id": "tango",
+                    "type": "cultural",
+                    "image": "/images/destino-buenosaires.jpg"
+                },
+                {
+                    "id": "caminito",
+                    "type": "cultural",
+                    "image": "/images/destino-buenosaires.jpg"
+                },
+                {
+                    "id": "recoleta",
+                    "type": "cultural",
+                    "image": "/images/destino-buenosaires.jpg"
+                },
+                {
+                    "id": "palermo",
+                    "type": "cultural",
+                    "image": "/images/destino-buenosaires.jpg"
+                }
+            ],
+            "whatsIncluded": [
+                {
+                    "name": "transfers",
+                    "icon": "Car"
+                },
+                {
+                    "name": "accommodation",
+                    "icon": "Hotel"
+                },
+                {
+                    "name": "guides",
+                    "icon": "User"
+                },
+                {
+                    "name": "gastronomy",
+                    "icon": "UtensilsCrossed"
+                },
+                {
+                    "name": "support",
+                    "icon": "Phone"
+                },
+                {
+                    "name": "insurance",
+                    "icon": "Shield"
+                }
+            ]
+        },
+        {
+            "id": "patagonia",
+            "name": "modules.patagonia.name",
+            "summary": "modules.patagonia.summary",
+            "numberOfDays": 10,
+            "numberOfPeople": 20,
+            "coverImage": "/images/destino-patagonia.jpg",
+            "locations": [
+                {
+                    "name": "El Calafate",
+                    "type": "city",
+                    "image": "/images/destino-patagonia.jpg"
+                },
+                {
+                    "name": "El Chaltén",
+                    "type": "natural",
+                    "image": "/images/destino-patagonia.jpg"
+                },
+                {
+                    "name": "Ushuaia",
+                    "type": "city",
+                    "image": "/images/destino-patagonia.jpg"
+                },
+                {
+                    "name": "Bariloche",
+                    "type": "city",
+                    "image": "/images/destino-patagonia.jpg"
+                }
+            ],
+            "mainAttractions": [
+                {
+                    "id": "perito",
+                    "type": "natural",
+                    "image": "/images/destino-patagonia.jpg"
+                },
+                {
+                    "id": "fitz",
+                    "type": "adventure",
+                    "image": "/images/destino-patagonia.jpg"
+                },
+                {
+                    "id": "beagle",
+                    "type": "natural",
+                    "image": "/images/destino-patagonia.jpg"
+                },
+                {
+                    "id": "tierra",
+                    "type": "natural",
+                    "image": "/images/destino-patagonia.jpg"
+                },
+                {
+                    "id": "nahuel",
+                    "type": "natural",
+                    "image": "/images/destino-patagonia.jpg"
+                }
+            ],
+            "whatsIncluded": [
+                {
+                    "name": "transfers",
+                    "icon": "Car"
+                },
+                {
+                    "name": "accommodation",
+                    "icon": "Hotel"
+                },
+                {
+                    "name": "guides",
+                    "icon": "User"
+                },
+                {
+                    "name": "gastronomy",
+                    "icon": "UtensilsCrossed"
+                },
+                {
+                    "name": "support",
+                    "icon": "Phone"
+                },
+                {
+                    "name": "insurance",
+                    "icon": "Shield"
+                },
+                {
+                    "name": "excursions",
+                    "icon": "Camera"
+                },
+                {
+                    "name": "nationalParks",
+                    "icon": "Mountain"
+                }
+            ],
+            "itinerary": {
+                "pdfUrl": "/pdfs/itinerary-patagonia.pdf",
+                "days": [
+                    {
+                        "day": 1,
+                        "title": "itinerary.patagonia.day1.title",
+                        "description": "itinerary.patagonia.day1.description"
+                    },
+                    {
+                        "day": 2,
+                        "title": "itinerary.patagonia.day2.title",
+                        "description": "itinerary.patagonia.day2.description"
+                    },
+                    {
+                        "day": 3,
+                        "title": "itinerary.patagonia.day3.title",
+                        "description": "itinerary.patagonia.day3.description"
+                    },
+                    {
+                        "day": 4,
+                        "title": "itinerary.patagonia.day4.title",
+                        "description": "itinerary.patagonia.day4.description"
+                    },
+                    {
+                        "day": 5,
+                        "title": "itinerary.patagonia.day5.title",
+                        "description": "itinerary.patagonia.day5.description"
+                    },
+                    {
+                        "day": 6,
+                        "title": "itinerary.patagonia.day6.title",
+                        "description": "itinerary.patagonia.day6.description"
+                    },
+                    {
+                        "day": 7,
+                        "title": "itinerary.patagonia.day7.title",
+                        "description": "itinerary.patagonia.day7.description"
+                    },
+                    {
+                        "day": 8,
+                        "title": "itinerary.patagonia.day8.title",
+                        "description": "itinerary.patagonia.day8.description"
+                    },
+                    {
+                        "day": 9,
+                        "title": "itinerary.patagonia.day9.title",
+                        "description": "itinerary.patagonia.day9.description"
+                    },
+                    {
+                        "day": 10,
+                        "title": "itinerary.patagonia.day10.title",
+                        "description": "itinerary.patagonia.day10.description"
+                    }
+                ]
+            }
+        }
+    ]
+}

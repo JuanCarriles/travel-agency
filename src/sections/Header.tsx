@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Menu, X, ChevronDown, Globe } from 'lucide-react';
 import { languages } from '@/i18n';
@@ -30,11 +31,11 @@ export default function Header() {
   };
 
   const navItems = [
-    { key: 'home', href: '#home' },
-    { key: 'destinations', href: '#destinations' },
-    { key: 'services', href: '#services' },
-    { key: 'about', href: '#about' },
-    { key: 'contact', href: '#contact' },
+    { key: 'home', href: '/#home' },
+    { key: 'destinations', href: '/#modules' },
+    { key: 'services', href: '/#services' },
+    { key: 'about', href: '/#about' },
+    { key: 'contact', href: '/#contact' },
   ];
 
   const currentLanguage = languages.find((l) => l.code === i18n.language) || languages[0];
@@ -49,7 +50,7 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <a href="#home" className="flex items-center gap-3">
+          <Link to="/#home" className="flex items-center gap-3">
             <img
               src="/images/gates-to-arg-LOGO-SIMPLIFICADO.png"
               alt="Gates to argentina logo"
@@ -58,18 +59,18 @@ export default function Header() {
             <span className="text-white font-semibold text-xl hidden sm:block">
               Gates To Argentina
             </span>
-          </a>
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-8">
             {navItems.map((item) => (
-              <a
+              <Link
                 key={item.key}
-                href={item.href}
+                to={item.href}
                 className="text-white/90 hover:text-[#EFB4A7] transition-colors duration-300 text-sm font-medium"
               >
                 {t(`nav.${item.key}`)}
-              </a>
+              </Link>
             ))}
           </nav>
 
@@ -100,12 +101,12 @@ export default function Header() {
               </DropdownMenuContent>
             </DropdownMenu>
 
-            <a
-              href="#contact"
+            <Link
+              to="/#contact"
               className="hidden md:inline-flex bg-[#EFB4A7] hover:bg-[#EFB9B0] text-white px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 hover:shadow-lg hover:shadow-[#EFB4A7]/30 drop-shadow-lg"
             >
               {t('hero.cta')}
-            </a>
+            </Link>
 
             {/* Mobile Menu Button */}
             <button
@@ -126,22 +127,22 @@ export default function Header() {
           <div className="lg:hidden bg-[#858585ea]/98 backdrop-blur-md rounded-b-2xl pb-6">
             <nav className="flex flex-col gap-2 px-4">
               {navItems.map((item) => (
-                <a
+                <Link
                   key={item.key}
-                  href={item.href}
+                  to={item.href}
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="text-white/90 hover:text-[#EFB4A7] hover:bg-white/5 transition-all duration-300 py-3 px-4 rounded-lg text-base font-medium"
                 >
                   {t(`nav.${item.key}`)}
-                </a>
+                </Link>
               ))}
-              <a
-                href="#contact"
+              <Link
+                to="/#contact"
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="bg-[#EFB4A7] hover:bg-[#EFB9B0] text-white text-center py-3 px-4 rounded-lg text-base font-medium mt-2 transition-all duration-300 drop-shadow-lg"
               >
                 {t('hero.cta')}
-              </a>
+              </Link>
             </nav>
           </div>
         )}

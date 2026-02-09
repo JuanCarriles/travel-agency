@@ -7,28 +7,33 @@ import {
   Phone,
   MapPin,
 } from 'lucide-react';
+import modulesData from '@/data/modules.json';
+import type { ModulesData } from '@/types/modules';
+
+const modules = (modulesData as ModulesData).modules;
 
 export default function Footer() {
   const { t } = useTranslation();
 
   const quickLinks = [
-    { key: 'home', href: '#home' },
-    { key: 'destinations', href: '#destinations' },
-    { key: 'services', href: '#services' },
-    { key: 'about', href: '#about' },
-    { key: 'contact', href: '#contact' },
+    { key: 'home', href: '/#home' },
+    { key: 'destinations', href: '/#destinations' },
+    { key: 'services', href: '/#services' },
+    { key: 'about', href: '/#about' },
+    { key: 'contact', href: '/#contact' },
   ];
 
-  const destinations = [
-    { key: 'noa', href: '#destinations' },
-    { key: 'buenosaires', href: '#destinations' },
-    { key: 'patagonia', href: '#destinations' },
-  ];
+  const destinations = modules.map(module => ({
+    id: module.id,
+    href: `/modules/${module.id}`,
+    name: module.name
+  }));
 
   const socialLinks = [
-    { icon: Facebook, href: '#', label: 'Facebook' },
-    { icon: Instagram, href: '#', label: 'Instagram' },
-    { icon: MessageCircle, href: '#', label: 'WhatsApp' },
+    { icon: Instagram, href: 'https://www.instagram.com/gatestoargentina/', label: 'Instagram' },
+    { icon: Facebook, href: 'https://www.facebook.com/gatestoargentina/', label: 'Facebook' },
+    { icon: MessageCircle, href: 'https://wa.me/5493815326666', label: 'WhatsApp' },
+    { icon: null, href: 'https://groupme.com/contact/101879750/UfDn3LFL', label: 'GroupMe', isGroupMe: true },
   ];
 
   return (
@@ -44,25 +49,30 @@ export default function Footer() {
                 alt="Gates to argentina logo"
                 className="h-12 w-auto object-contain"
               />
-              <span className="text-white font-semibold text-xl">
+              <span className="text-white font-semibold text-xl" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}>
                 Gates to argentina
               </span>
             </a>
-            <p className="text-white/70 leading-relaxed mb-6">
+            <p className="text-white/70 leading-relaxed mb-6" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}>
               {t('footer.description')}
             </p>
             {/* Social Links */}
             <div className="flex gap-3">
               {socialLinks.map((social) => {
-                const Icon = social.icon;
                 return (
                   <a
                     key={social.label}
                     href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="w-10 h-10 rounded-full bg-white/10 hover:bg-[#EFB4A7] flex items-center justify-center transition-all duration-300 hover:scale-110"
                     aria-label={social.label}
                   >
-                    <Icon className="w-5 h-5" />
+                    {social.isGroupMe ? (
+                      <img src="/images/groupme-icon.png" alt="GroupMe" className="w-5 h-5" />
+                    ) : (
+                      social.icon && <social.icon className="w-5 h-5" />
+                    )}
                   </a>
                 );
               })}
@@ -71,7 +81,7 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-lg font-semibold mb-6 text-[#EFB4A7]">
+            <h4 className="text-lg font-semibold mb-6 text-[#EFB4A7]" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}>
               {t('footer.quickLinks')}
             </h4>
             <ul className="space-y-3">
@@ -80,6 +90,7 @@ export default function Footer() {
                   <a
                     href={link.href}
                     className="text-white/70 hover:text-[#EFB4A7] transition-colors duration-300"
+                    style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}
                   >
                     {t(`nav.${link.key}`)}
                   </a>
@@ -90,17 +101,18 @@ export default function Footer() {
 
           {/* Destinations */}
           <div>
-            <h4 className="text-lg font-semibold mb-6 text-[#EFB4A7]">
+            <h4 className="text-lg font-semibold mb-6 text-[#EFB4A7]" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}>
               {t('footer.destinations')}
             </h4>
             <ul className="space-y-3">
               {destinations.map((dest) => (
-                <li key={dest.key}>
+                <li key={dest.id}>
                   <a
                     href={dest.href}
                     className="text-white/70 hover:text-[#EFB4A7] transition-colors duration-300"
+                    style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}
                   >
-                    {t(`destinations.${dest.key}.title`)}
+                    {t(dest.name)}
                   </a>
                 </li>
               ))}
@@ -109,27 +121,27 @@ export default function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h4 className="text-lg font-semibold mb-6 text-[#EFB4A7]">
+            <h4 className="text-lg font-semibold mb-6 text-[#EFB4A7]" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}>
               {t('footer.contact')}
             </h4>
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-[#EFB4A7] flex-shrink-0 mt-0.5" />
-                <div className="text-white/70 text-sm">
+                <div className="text-white/70 text-sm" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}>
                   <p className="font-medium text-white">Israel (HQ)</p>
                   <p>Tel Aviv, Israel</p>
                 </div>
               </li>
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-[#EFB4A7] flex-shrink-0 mt-0.5" />
-                <div className="text-white/70 text-sm">
+                <div className="text-white/70 text-sm" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}>
                   <p className="font-medium text-white">Argentina</p>
                   <p>Tucumán, Argentina</p>
                 </div>
               </li>
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-[#EFB4A7] flex-shrink-0 mt-0.5" />
-                <div className="text-white/70 text-sm">
+                <div className="text-white/70 text-sm" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}>
                   <p className="font-medium text-white">USA</p>
                   <p>New York, NY</p>
                 </div>
@@ -139,6 +151,7 @@ export default function Footer() {
                 <a
                   href="mailto:info@andesjourney.com"
                   className="text-white/70 hover:text-[#EFB4A7] transition-colors duration-300 text-sm"
+                  style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}
                 >
                   info@andesjourney.com
                 </a>
@@ -148,6 +161,7 @@ export default function Footer() {
                 <a
                   href="tel:+97231234567"
                   className="text-white/70 hover:text-[#EFB4A7] transition-colors duration-300 text-sm"
+                  style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}
                 >
                   +972-3-123-4567
                 </a>
@@ -161,19 +175,21 @@ export default function Footer() {
       <div className="border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-white/50 text-sm">
+            <p className="text-white/50 text-sm" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}>
               © 2024 Andes Journey. {t('footer.rights')}
             </p>
             <div className="flex items-center gap-6">
               <a
                 href="#"
                 className="text-white/50 hover:text-[#EFB4A7] text-sm transition-colors duration-300"
+                style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}
               >
                 Privacy Policy
               </a>
               <a
                 href="#"
                 className="text-white/50 hover:text-[#EFB4A7] text-sm transition-colors duration-300"
+                style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}
               >
                 Terms of Service
               </a>
