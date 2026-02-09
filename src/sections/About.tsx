@@ -49,8 +49,8 @@ export default function About() {
           {/* Image */}
           <div
             className={`relative transition-all duration-700 ${isVisible
-                ? 'opacity-100 translate-x-0'
-                : 'opacity-0 -translate-x-10'
+              ? 'opacity-100 translate-x-0'
+              : 'opacity-0 -translate-x-10'
               }`}
           >
             <div className="relative">
@@ -73,13 +73,11 @@ export default function About() {
             {/* Floating Badge */}
             <div className="absolute -bottom-4 left-8 bg-white shadow-xl rounded-xl p-4 flex items-center gap-3">
               <div className="w-12 h-12 bg-[#EFB4A7] rounded-full flex items-center justify-center">
-                <span className="text-white text-xl">✈️</span>
+                <span className="text-white text-xl">🔥</span>
               </div>
               <div>
-                <div className="font-bold text-[#2D2D2D]">15+ Años</div>
-                <div className="text-sm text-[#2D2D2D]/60">
-                  de experiencia
-                </div>
+                <div className="font-bold text-[#2D2D2D]">Gloria Pais</div>
+
               </div>
             </div>
           </div>
@@ -87,8 +85,8 @@ export default function About() {
           {/* Content */}
           <div
             className={`transition-all duration-700 delay-200 ${isVisible
-                ? 'opacity-100 translate-x-0'
-                : 'opacity-0 translate-x-10'
+              ? 'opacity-100 translate-x-0'
+              : 'opacity-0 translate-x-10'
               }`}
           >
             {/* Section Header */}
@@ -109,12 +107,7 @@ export default function About() {
 
             {/* Features List */}
             <div className="space-y-4 mb-10">
-              {[
-                'Programas personalizados para grupos',
-                'Guías bilingües especializados',
-                'Atención en hebreo, español e inglés',
-                'Soporte 24/7 durante todo el viaje',
-              ].map((feature, index) => (
+              {['list1', 'list2', 'list3'].map((key, index) => (
                 <div key={index} className="flex items-center gap-3">
                   <div className="w-5 h-5 rounded-full bg-[#EFB4A7] flex items-center justify-center flex-shrink-0">
                     <svg
@@ -131,7 +124,7 @@ export default function About() {
                       />
                     </svg>
                   </div>
-                  <span className="text-[#2D2D2D]/80">{feature}</span>
+                  <span className="text-[#2D2D2D]/80">{t(`about.${key}`)}</span>
                 </div>
               ))}
             </div>

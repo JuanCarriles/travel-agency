@@ -120,7 +120,7 @@ export default function Testimonials() {
 
                   {/* Author */}
                   <div className="text-center">
-                    <div className="w-12 h-12 bg-[#848484] rounded-full mx-auto mb-3 flex items-center justify-center">
+                    <div className="w-12 h-12 bg-[#858585ea] rounded-full mx-auto mb-3 flex items-center justify-center">
                       <span className="text-white font-semibold">
                         {t(`testimonials.${testimonial.author}`).charAt(0)}
                       </span>

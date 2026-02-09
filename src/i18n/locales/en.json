@@ -7,8 +7,9 @@
     "contact": "Contact"
   },
   "hero": {
-    "title": "Discover the Magic of Argentina",
-    "subtitle": "Exclusive trips for groups of 15-20 people. Personalized experiences from Israel to the heart of South America.",
+    "title": "Gates to Argentina",
+    "subtitle": "Personalized Tourism Services",
+    "text": "Custom designed experiences. We create exclusive and group trips so you can discover the authentic essence of Argentina.",
     "cta": "Plan Your Trip"
   },
   "destinations": {
@@ -29,8 +30,9 @@
     "cta": "Learn More"
   },
   "services": {
+    "title-section": "Services",
     "title": "Premium Services",
-    "subtitle": "All inclusive for your peace of mind",
+    "subtitle": "Personalized services crafted to match your unique travel style",
     "transfers": "Transfers",
     "transfersDesc": "To and from the airport at all destinations",
     "accommodation": "4★ Accommodation",
@@ -45,8 +47,11 @@
     "insuranceDesc": "Full coverage included"
   },
   "about": {
-    "title": "Connecting Cultures",
-    "description": "With headquarters in Israel and offices in Tucumán, Argentina and New York, we have been building bridges between continents for over 15 years. Our customized programs for groups of 15-20 people offer the perfect combination of adventure, culture and comfort.",
+    "title": "Born and raised in Argentina",
+    "description": "I am the founder of Gates to Argentina, a boutique agency born from a solid international background. For over 15 years, I led tour operations in the Middle East through Gates to Israel, managing more than 500 groups and perfecting the art of travel logistics. Our firm is distinguished by offering trilingual service (Spanish, English, and Hebrew) and 24/7 support, ensuring that every detail of your trip is covered. Although our original headquarters were in Israel, today we operate with offices in Tucumán, New York, and Israel, building bridges between continents. My role has always been one of 'courage and logistics.' After returning to Argentina in 2023, I apply that same rigor and passion to designing personalized programs that combine adventure, culture, and comfort in one of South America's most fascinating countries.",
+    "list1": "Languages: Spanish, English, Hebrew",
+    "list2": "Experience: +15 Years in the tourism industry",
+    "list3": "Offices: Tucumán, New York, Israel",
     "years": "Years of experience",
     "groups": "Groups served",
     "offices": "International offices"
