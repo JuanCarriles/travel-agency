@@ -1,13 +1,10 @@
 import { useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import './i18n';
 import Header from './sections/Header';
-import Hero from './sections/Hero';
-import Destinations from './sections/Destinations';
-import Services from './sections/Services';
-import About from './sections/About';
-import Testimonials from './sections/Testimonials';
-import Contact from './sections/Contact';
+import Home from './pages/Home';
+import ModuleDetail from './pages/ModuleDetail';
 import Footer from './sections/Footer';
 import WhatsAppButton from './components/WhatsAppButton';
 import GroupMeButton from './components/GroupMeButton';
@@ -22,28 +19,27 @@ function App() {
   }, [i18n.language]);
 
   return (
-    <div className="min-h-screen bg-[#F5F3EE]">
-      <Header />
-      <main>
-        <Hero />
-        <Destinations />
-        <Services />
-        <About />
-        <Testimonials />
-        <Contact />
-      </main>
-      <Footer />
+    <Router>
+      <div className="min-h-screen bg-[#F5F3EE]">
+        <Header />
+        <main>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/modules/:moduleId" element={<ModuleDetail />} />
+          </Routes>
+        </main>
+        <Footer />
 
-
-      {/* Floating Social Buttons */}
-      <GroupMeButton
-        groupUrl="https://groupme.com/join_group/YOUR_GROUP_ID/YOUR_TOKEN"
-      />
-      <WhatsAppButton
-        phoneNumber="5493815326666"
-        message=""
-      />
-    </div>
+        {/* Floating Social Buttons */}
+        <GroupMeButton
+          groupUrl="https://groupme.com/join_group/YOUR_GROUP_ID/YOUR_TOKEN"
+        />
+        <WhatsAppButton
+          phoneNumber="5493815326666"
+          message=""
+        />
+      </div>
+    </Router>
   );
 }
 

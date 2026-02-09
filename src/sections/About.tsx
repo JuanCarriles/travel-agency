@@ -57,9 +57,9 @@ export default function About() {
               {/* Main Image */}
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 <img
-                  src="/images/nosotros.jpg"
+                  src="/images/GloriaPais.JPEG"
                   alt="About Us"
-                  className="w-full h-[400px] sm:h-[500px] object-cover"
+                  className="w-full h-[400px] sm:h-[900px] object-cover"
                 />
                 {/* Gold Frame */}
                 <div className="absolute inset-0 border-4 border-[#EFB4A7] rounded-2xl pointer-events-none" />
@@ -72,9 +72,7 @@ export default function About() {
 
             {/* Floating Badge */}
             <div className="absolute -bottom-4 left-8 bg-white shadow-xl rounded-xl p-4 flex items-center gap-3">
-              <div className="w-12 h-12 bg-[#EFB4A7] rounded-full flex items-center justify-center">
-                <span className="text-white text-xl">🔥</span>
-              </div>
+
               <div>
                 <div className="font-bold text-[#2D2D2D]">Gloria Pais</div>
 

@@ -101,7 +101,7 @@ export default function Hero() {
               <div className="hero-text-shadow absolute inset-0 bg-white/20 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-500" />
             </a>
             <a
-              href="#destinations"
+              href="#modules"
               className="hero-text-shadow text-white border-2 border-white/30 hover:border-[#EFB4A7] hover:text-[#EFB4A7] px-8 py-4 rounded-full text-lg font-medium transition-all duration-300 hero-text-shadow"
             >
               {t('nav.destinations')}

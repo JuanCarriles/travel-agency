@@ -7,26 +7,221 @@
     "contact": "Contacto"
   },
   "hero": {
-    "title": "Descubrí la Magia de Argentina",
-    "subtitle": "Viajes exclusivos para grupos de 15-20 personas. Experiencias personalizadas desde Israel hasta el corazón de Sudamérica.",
+    "title": "Gates to Argentina",
+    "subtitle": "Servicios Turísticos Personalizados",
+    "text": "Experiencias diseñadas a medida. Creamos viajes exclusivos y grupales para que descubras la auténtica esencia de Argentina.",
     "cta": "Planificá tu Viaje"
   },
-  "destinations": {
-    "title": "Nuestros Destinos",
-    "subtitle": "Tres regiones únicas, experiencias inolvidables",
+  "modules": {
+    "title": "Nuestros Módulos de Viaje",
+    "subtitle": "Experiencias cuidadosamente diseñadas para grupos de 15-20 viajeros",
+    "cta": "Ver Detalles",
+    "days": "Días",
+    "people": "Viajeros",
+    "inquireNow": "Consultar por este Módulo",
+    "downloadItinerary": "Descargar Itinerario Completo",
+    "mainAttractions": "Principales Atracciones",
+    "dailyItinerary": "Itinerario Día a Día",
+    "travelLocations": "Destinos Incluidos",
+    "tripOverview": "Resumen del Viaje",
+    "whatsIncluded": "Qué Incluye",
+    "readyToExperience": "¿Listo para vivir esta experiencia?",
+    "customizeTrip": "Contáctanos y personalizaremos tu viaje grupal",
+    "backToHome": "Inicio",
+    "notFound": "Módulo no encontrado",
+    "noItineraryMessage": "El itinerario detallado para este módulo está siendo preparado. Por favor, contáctanos para obtener más información sobre este viaje.",
+    "customizableTitle": "Experiencia Totalmente Personalizable",
+    "customizableMessage": "Este itinerario es una experiencia sugerida. Podemos coordinar contigo para modificar el viaje según tus necesidades y deseos. Podemos ofrecer servicios adicionales, cambios de duración o diferentes categorías de hoteles.",
+    "contactViaGmail": "Email",
+    "contactViaWhatsApp": "WhatsApp",
+    "contactViaGroupMe": "GroupMe",
     "noa": {
-      "title": "Noroeste Argentino",
-      "description": "Salta, Jujuy, Tucumán - Paisajes de colores y cultura ancestral"
+      "name": "Experiencia Noroeste Argentino",
+      "summary": "Explorá las montañas de colores y la rica herencia cultural de Salta y Jujuy",
+      "description": "Sumergite en los paisajes impresionantes del noroeste argentino. Desde las montañas multicolores de Purmamarca hasta las extensas salinas blancas de Salinas Grandes, este viaje de 8 días te lleva a través de culturas indígenas ancestrales, ciudades coloniales y algunas de las maravillas naturales más impactantes de Sudamérica. Experimentá vinos de altura de clase mundial en Cafayate y caminá por sitios declarados Patrimonio de la Humanidad por UNESCO.",
+      "inquiryText": "¡Hola! Me interesa conocer más sobre el módulo Experiencia Noroeste Argentino. ¿Podrían proporcionarme detalles adicionales sobre disponibilidad y precios?"
     },
     "buenosaires": {
-      "title": "Ciudad de Buenos Aires",
-      "description": "La París de Sudamérica - Tango, gastronomía y arquitectura"
+      "name": "Inmersión Cultural Buenos Aires",
+      "summary": "Descubrí la París de Sudamérica - tango, arquitectura y gastronomía",
+      "description": "Experimentá la energía vibrante de Buenos Aires, una ciudad donde la elegancia europea se encuentra con la pasión latinoamericana. Esta inmersión cultural de 5 días te llevará por barrios históricos como San Telmo y La Boca, donde nació el tango. Disfrutá de carnes y vino Malbec de clase mundial, explorá la impresionante arquitectura de inspiración francesa en Recoleta, y viví la vida nocturna en el trendy Palermo. Este es el corazón cosmopolita de Argentina.",
+      "inquiryText": "¡Hola! Me gustaría saber más sobre el módulo Inmersión Cultural Buenos Aires. ¿Qué fechas están disponibles y qué incluye el paquete?"
     },
     "patagonia": {
-      "title": "Sur Argentino",
-      "description": "Calafate, Ushuaia, Bariloche - Naturaleza en su máxima expresión"
+      "name": "Aventura Patagónica",
+      "summary": "Viaje al fin del mundo - glaciares, montañas y naturaleza salvaje",
+      "description": "Aventurate en una de las últimas áreas verdaderamente salvajes del planeta. Esta aventura patagónica de 10 días te lleva desde el imponente Glaciar Perito Moreno hasta los picos escarpados de El Chaltén, hacia el sur a la ciudad más austral del mundo, Ushuaia, y al norte hacia los lagos prístinos y bosques de Bariloche. Experimentá la naturaleza en su forma más dramática, con oportunidades para senderismo, observación de vida silvestre y paisajes inolvidables que permanecerán contigo para siempre.",
+      "inquiryText": "¡Hola! Estoy muy interesado en el módulo Aventura Patagónica. ¿Pueden compartir más información sobre el itinerario, nivel de dificultad y qué está incluido?"
+    }
+  },
+  "attractionTypes": {
+    "natural": "Natural",
+    "cultural": "Cultural",
+    "adventure": "Aventura"
+  },
+  "attractions": {
+    "noa": {
+      "humahuaca": {
+        "name": "Quebrada de Humahuaca",
+        "description": "Valle Patrimonio de la Humanidad con formaciones montañosas impresionantes"
+      },
+      "colorMountain": {
+        "name": "Cerro de los Siete Colores",
+        "description": "Montaña icónica multicolor en Purmamarca"
+      },
+      "salinas": {
+        "name": "Salinas Grandes",
+        "description": "Extensas salinas blancas a 3.600 metros de altura"
+      },
+      "wineries": {
+        "name": "Región Vitivinícola de Cafayate",
+        "description": "Viñedos de altura produciendo Torrontés de clase mundial"
+      }
     },
-    "cta": "Ver más"
+    "buenosaires": {
+      "obelisco": {
+        "name": "Obelisco y Av. 9 de Julio",
+        "description": "Monumento icónico en la avenida más ancha del mundo"
+      },
+      "tango": {
+        "name": "Experiencia de Show de Tango",
+        "description": "Presentaciones auténticas de tango en lugares históricos"
+      },
+      "caminito": {
+        "name": "Calle Caminito",
+        "description": "Museo de calle colorido en el barrio de La Boca"
+      },
+      "recoleta": {
+        "name": "Cementerio de la Recoleta",
+        "description": "Cementerio histórico con arquitectura impresionante y la tumba de Eva Perón"
+      },
+      "palermo": {
+        "name": "Parques y Gastronomía de Palermo",
+        "description": "Barrio trendy con parques, boutiques y restaurantes"
+      }
+    },
+    "patagonia": {
+      "perito": {
+        "name": "Glaciar Perito Moreno",
+        "description": "Glaciar masivo en avance en el Parque Nacional Los Glaciares"
+      },
+      "fitz": {
+        "name": "Monte Fitz Roy",
+        "description": "Pico icónico escarpado y paraíso del trekking en El Chaltén"
+      },
+      "beagle": {
+        "name": "Canal Beagle",
+        "description": "Estrecho histórico con colonias de lobos marinos e islas de pingüinos"
+      },
+      "tierra": {
+        "name": "Parque Nacional Tierra del Fuego",
+        "description": "Bosques prístinos en el fin del mundo"
+      },
+      "nahuel": {
+        "name": "Lago Nahuel Huapi",
+        "description": "Lago alpino cristalino rodeado de picos nevados"
+      }
+    }
+  },
+  "itinerary": {
+    "noa": {
+      "day1": {
+        "title": "Llegada a Salta",
+        "description": "Llegada a Salta, traslado al hotel. Orientación vespertina y cena de bienvenida con gastronomía regional."
+      },
+      "day2": {
+        "title": "Tour Ciudad de Salta",
+        "description": "Explorá arquitectura colonial, plazas históricas y mercados locales. Visitá la Iglesia San Francisco y museo MAAM."
+      },
+      "day3": {
+        "title": "Cafayate y Ruta del Vino",
+        "description": "Viaje por la Quebrada de las Conchas. Degustación de vinos en viñedos de altura en Cafayate."
+      },
+      "day4": {
+        "title": "Cachi y Los Cardones",
+        "description": "Recorrido por la Cuesta del Obispo y Parque Nacional Los Cardones. Visita al encantador pueblo de Cachi."
+      },
+      "day5": {
+        "title": "Purmamarca y Cerro de los Siete Colores",
+        "description": "Viaje a Jujuy. Visitá el icónico Cerro de los Siete Colores y explorá el mercado artesanal de Purmamarca."
+      },
+      "day6": {
+        "title": "Quebrada de Humahuaca",
+        "description": "Día completo explorando el valle Patrimonio de la Humanidad. Visitá Tilcara, Humahuaca y comunidades indígenas."
+      },
+      "day7": {
+        "title": "Salinas Grandes",
+        "description": "Viaje a las extensas salinas blancas. Oportunidades fotográficas y aprendé sobre extracción de sal."
+      },
+      "day8": {
+        "title": "Partida",
+        "description": "Traslado al aeropuerto. Partida con recuerdos inolvidables del noroeste argentino."
+      }
+    },
+    "buenosaires": {
+      "day1": {
+        "title": "Llegada e Introducción a la Ciudad",
+        "description": "Llegada a Buenos Aires, traslado al hotel en Recoleta. Caminata de orientación vespertina y cena."
+      },
+      "day2": {
+        "title": "Buenos Aires Histórico",
+        "description": "Tour guiado por Plaza de Mayo, Casa Rosada, Catedral Metropolitana. Tarde en los mercados de antigüedades de San Telmo."
+      },
+      "day3": {
+        "title": "La Boca y Tango",
+        "description": "Visita matutina al colorido Caminito. Clase de tango por la tarde. Show profesional de tango con cena por la noche."
+      },
+      "day4": {
+        "title": "Recoleta y Palermo",
+        "description": "Visitá el Cementerio de la Recoleta y centro cultural. Explorá parques, boutiques y restaurantes trendy de Palermo."
+      },
+      "day5": {
+        "title": "Partida",
+        "description": "Mañana libre para compras o exploraciones finales. Traslado al aeropuerto."
+      }
+    },
+    "patagonia": {
+      "day1": {
+        "title": "Llegada a El Calafate",
+        "description": "Llegada a El Calafate, puerta de entrada a los glaciares. Check-in en hotel y orientación."
+      },
+      "day2": {
+        "title": "Glaciar Perito Moreno",
+        "description": "Día completo en el Glaciar Perito Moreno. Caminata por pasarelas y trekking sobre hielo opcional."
+      },
+      "day3": {
+        "title": "Traslado a El Chaltén",
+        "description": "Recorrido escénico a El Chaltén. Caminata corta por la tarde con vistas del Fitz Roy."
+      },
+      "day4": {
+        "title": "Trekking Fitz Roy",
+        "description": "Día completo de trekking a Laguna de los Tres con vistas impresionantes del Monte Fitz Roy."
+      },
+      "day5": {
+        "title": "Vuelo a Ushuaia",
+        "description": "Vuelo matutino a Ushuaia. Tour por la tarde de la ciudad más austral del mundo."
+      },
+      "day6": {
+        "title": "Parque Nacional Tierra del Fuego",
+        "description": "Explorá el Parque Nacional Tierra del Fuego por tierra y mar. Paseo en el tren del fin del mundo."
+      },
+      "day7": {
+        "title": "Crucero Canal Beagle",
+        "description": "Tour en barco por el Canal Beagle. Visitá colonias de lobos marinos e islas de pingüinos."
+      },
+      "day8": {
+        "title": "Vuelo a Bariloche",
+        "description": "Vuelo a Bariloche. Check-in en hotel en esta ciudad de estilo suizo."
+      },
+      "day9": {
+        "title": "Circuito Chico",
+        "description": "Explorá el circuito pequeño alrededor del Lago Nahuel Huapi. Visitá miradores, playas y chocolaterías."
+      },
+      "day10": {
+        "title": "Partida",
+        "description": "Mañana libre. Traslado al aeropuerto para la partida."
+      }
+    }
   },
   "services": {
     "title": "Servicios Premium",
@@ -67,14 +262,14 @@
     "title": "Empezá tu Aventura",
     "subtitle": "Contactanos y diseñamos juntos tu viaje soñado",
     "name": "Nombre completo",
-    "email": "Email",
+    "email": "Correo electrónico",
     "phone": "Teléfono (Opcional)",
-    "destination": "Destino de interés (Opcional)",
+    "destination": "Módulo de interés (Opcional)",
     "message": "Mensaje",
     "send": "Enviar Consulta",
     "success": "¡Gracias! Te contactaremos pronto.",
     "offices": {
-      "title": "Nuestras Sedes",
+      "title": "Nuestros contactos",
       "israel": "Israel (Central)",
       "argentina": "Argentina",
       "usa": "EE.UU."
