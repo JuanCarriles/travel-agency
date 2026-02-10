@@ -15,6 +15,7 @@ import {
 } from '@/components/ui/select';
 import modulesData from '@/data/modules.json';
 import type { ModulesData } from '@/types/modules';
+import i18n from '@/i18n';
 
 const modules = (modulesData as ModulesData).modules;
 
@@ -188,7 +189,7 @@ export default function Contact() {
                         <SelectContent>
                           {modules.map((module) => (
                             <SelectItem key={module.id} value={module.id}>
-                              {t(module.name)}
+                              {module.name[i18n.language as keyof typeof module.name] || module.name.en}
                             </SelectItem>
                           ))}
                         </SelectContent>

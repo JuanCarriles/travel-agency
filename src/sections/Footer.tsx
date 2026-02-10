@@ -9,6 +9,7 @@ import {
 } from 'lucide-react';
 import modulesData from '@/data/modules.json';
 import type { ModulesData } from '@/types/modules';
+import i18n from '@/i18n';
 
 const modules = (modulesData as ModulesData).modules;
 
@@ -112,7 +113,7 @@ export default function Footer() {
                     className="text-white/70 hover:text-[#EFB4A7] transition-colors duration-300"
                     style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}
                   >
-                    {t(dest.name)}
+                    {dest.name[i18n.language as keyof typeof dest.name] || dest.name.en}
                   </a>
                 </li>
               ))}
