@@ -34,7 +34,7 @@ export default function Modules() {
                         <div className="w-12 h-[2px] bg-[#EFB4A7]" />
                     </div>
                     <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#2D2D2D] mb-4">
-                        {t('modules.title')}
+                        " {t('modules.title')}"
                     </h2>
                     <p className="text-lg text-[#2D2D2D]/70 max-w-2xl mx-auto">
                         {t('modules.subtitle')}
@@ -64,10 +64,10 @@ export default function Modules() {
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
 
-                                {/* Location Badge - Dynamic */}
-                                {module.locations.length > 0 && (
+                                {/* Tag Badge - Dynamic */}
+                                {module.tag && (
                                     <div className="absolute top-4 left-4 bg-[#EFB4A7] text-white text-xs font-semibold px-3 py-1.5 rounded-full">
-                                        {module.locations[0].name[currentLang]}
+                                        {module.tag[currentLang]}
                                     </div>
                                 )}
 
