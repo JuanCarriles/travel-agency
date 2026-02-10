@@ -34,25 +34,7 @@
     "customizableMessage": "Este itinerario es una experiencia sugerida. Podemos coordinar contigo para modificar el viaje según tus necesidades y deseos. Podemos ofrecer servicios adicionales, cambios de duración o diferentes categorías de hoteles.",
     "contactViaGmail": "Email",
     "contactViaWhatsApp": "WhatsApp",
-    "contactViaGroupMe": "GroupMe",
-    "noa": {
-      "name": "Experiencia Noroeste Argentino",
-      "summary": "Explorá las montañas de colores y la rica herencia cultural de Salta y Jujuy",
-      "description": "Sumergite en los paisajes impresionantes del noroeste argentino. Desde las montañas multicolores de Purmamarca hasta las extensas salinas blancas de Salinas Grandes, este viaje de 8 días te lleva a través de culturas indígenas ancestrales, ciudades coloniales y algunas de las maravillas naturales más impactantes de Sudamérica. Experimentá vinos de altura de clase mundial en Cafayate y caminá por sitios declarados Patrimonio de la Humanidad por UNESCO.",
-      "inquiryText": "¡Hola! Me interesa conocer más sobre el módulo Experiencia Noroeste Argentino. ¿Podrían proporcionarme detalles adicionales sobre disponibilidad y precios?"
-    },
-    "buenosaires": {
-      "name": "Inmersión Cultural Buenos Aires",
-      "summary": "Descubrí la París de Sudamérica - tango, arquitectura y gastronomía",
-      "description": "Experimentá la energía vibrante de Buenos Aires, una ciudad donde la elegancia europea se encuentra con la pasión latinoamericana. Esta inmersión cultural de 5 días te llevará por barrios históricos como San Telmo y La Boca, donde nació el tango. Disfrutá de carnes y vino Malbec de clase mundial, explorá la impresionante arquitectura de inspiración francesa en Recoleta, y viví la vida nocturna en el trendy Palermo. Este es el corazón cosmopolita de Argentina.",
-      "inquiryText": "¡Hola! Me gustaría saber más sobre el módulo Inmersión Cultural Buenos Aires. ¿Qué fechas están disponibles y qué incluye el paquete?"
-    },
-    "patagonia": {
-      "name": "Aventura Patagónica",
-      "summary": "Viaje al fin del mundo - glaciares, montañas y naturaleza salvaje",
-      "description": "Aventurate en una de las últimas áreas verdaderamente salvajes del planeta. Esta aventura patagónica de 10 días te lleva desde el imponente Glaciar Perito Moreno hasta los picos escarpados de El Chaltén, hacia el sur a la ciudad más austral del mundo, Ushuaia, y al norte hacia los lagos prístinos y bosques de Bariloche. Experimentá la naturaleza en su forma más dramática, con oportunidades para senderismo, observación de vida silvestre y paisajes inolvidables que permanecerán contigo para siempre.",
-      "inquiryText": "¡Hola! Estoy muy interesado en el módulo Aventura Patagónica. ¿Pueden compartir más información sobre el itinerario, nivel de dificultad y qué está incluido?"
-    }
+    "contactViaGroupMe": "GroupMe"
   },
   "attractionTypes": {
     "natural": "Natural",
@@ -78,7 +60,7 @@
         "description": "Viñedos de altura produciendo Torrontés de clase mundial"
       }
     },
-    "buenosaires": {
+    "ba": {
       "obelisco": {
         "name": "Obelisco y Av. 9 de Julio",
         "description": "Monumento icónico en la avenida más ancha del mundo"
@@ -158,7 +140,7 @@
         "description": "Traslado al aeropuerto. Partida con recuerdos inolvidables del noroeste argentino."
       }
     },
-    "buenosaires": {
+    "ba": {
       "day1": {
         "title": "Llegada e Introducción a la Ciudad",
         "description": "Llegada a Buenos Aires, traslado al hotel en Recoleta. Caminata de orientación vespertina y cena."

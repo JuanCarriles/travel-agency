@@ -1,25 +1,17 @@
 import { useTranslation } from 'react-i18next';
 import { ArrowRight } from 'lucide-react';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+import modulesData from '@/data/modules.json';
+import type { ModulesData } from '@/types/modules';
 
-const destinations = [
-  {
-    key: 'noa',
-    image: '/images/destino-noa.jpg',
-  },
-  {
-    key: 'buenosaires',
-    image: '/images/destino-buenosaires.jpg',
-  },
-  {
-    key: 'patagonia',
-    image: '/images/destino-patagonia.jpg',
-  },
-];
+const modules = (modulesData as ModulesData).modules;
 
 export default function Destinations() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const { ref, isVisible } = useScrollAnimation<HTMLElement>();
+
+  // Get current language, fallback to 'es' if not available
+  const currentLang = (i18n.language as 'es' | 'en' | 'he') || 'es';
 
   return (
     <section
@@ -50,9 +42,9 @@ export default function Destinations() {
 
         {/* Destinations Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {destinations.map((dest, index) => (
+          {modules.map((module, index) => (
             <div
-              key={dest.key}
+              key={module.id}
               className={`group relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 ${isVisible
                 ? 'opacity-100 translate-y-0'
                 : 'opacity-0 translate-y-10'
@@ -64,27 +56,27 @@ export default function Destinations() {
               {/* Image */}
               <div className="relative h-80 overflow-hidden">
                 <img
-                  src={dest.image}
-                  alt={t(`destinations.${dest.key}.title`)}
+                  src={module.coverImage}
+                  alt={module.name[currentLang]}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
 
-                {/* Location Badge */}
-                <div className="absolute top-4 left-4 bg-[#EFB4A7] text-white text-xs font-semibold px-3 py-1.5 rounded-full">
-                  {dest.key === 'noa' && 'NOA'}
-                  {dest.key === 'buenosaires' && 'CABA'}
-                  {dest.key === 'patagonia' && 'Patagonia'}
-                </div>
+                {/* Location Badge - Dynamic */}
+                {module.locations.length > 0 && (
+                  <div className="absolute top-4 left-4 bg-[#EFB4A7] text-white text-xs font-semibold px-3 py-1.5 rounded-full">
+                    {module.locations[0].name[currentLang]}
+                  </div>
+                )}
               </div>
 
               {/* Content */}
               <div className="p-6">
                 <h3 className="text-xl font-bold text-[#2D2D2D] mb-2 group-hover:text-[#EFB4A7] transition-colors duration-300">
-                  {t(`destinations.${dest.key}.title`)}
+                  {module.name[currentLang]}
                 </h3>
                 <p className="text-[#2D2D2D]/70 mb-4 line-clamp-2">
-                  {t(`destinations.${dest.key}.description`)}
+                  {module.description[currentLang]}
                 </p>
                 <a
                   href="#contact"

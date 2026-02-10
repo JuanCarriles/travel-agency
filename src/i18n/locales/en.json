@@ -34,25 +34,7 @@
     "customizableMessage": "This itinerary is a suggested experience. We can coordinate with you to modify the trip according to your needs and desires. We can offer additional services, duration adjustments, or different hotel categories.",
     "contactViaGmail": "Email",
     "contactViaWhatsApp": "WhatsApp",
-    "contactViaGroupMe": "GroupMe",
-    "noa": {
-      "name": "Northwest Argentina Experience",
-      "summary": "Explore the colorful mountains and rich cultural heritage of Salta and Jujuy",
-      "description": "Immerse yourself in the breathtaking landscapes of Argentina's northwest region. From the multicolored mountains of Purmamarca to the sprawling white salt flats of Salinas Grandes, this 8-day journey takes you through ancient indigenous cultures, colonial cities, and some of South America's most stunning natural wonders. Experience world-class high-altitude wines in Cafayate and walk through UNESCO World Heritage sites.",
-      "inquiryText": "Hello! I'm interested in learning more about the Northwest Argentina Experience module. Could you provide additional details about availability and pricing?"
-    },
-    "buenosaires": {
-      "name": "Buenos Aires Cultural Immersion",
-      "summary": "Discover the Paris of South America - tango, architecture, and gastronomy",
-      "description": "Experience the vibrant energy of Buenos Aires, a city where European elegance meets Latin American passion. This 5-day cultural immersion will take you through historic neighborhoods like San Telmo and La Boca, where tango was born. Enjoy world-class steaks and Malbec wine, explore stunning French-inspired architecture in Recoleta, and experience the nightlife in trendy Palermo. This is Argentina's cosmopolitan heart.",
-      "inquiryText": "Hello! I'd like to know more about the Buenos Aires Cultural Immersion module. What dates are available and what's included in the package?"
-    },
-    "patagonia": {
-      "name": "Patagonia Adventure",
-      "summary": "Journey to the end of the world - glaciers, mountains, and untamed nature",
-      "description": "Venture into one of the planet's last true wilderness areas. This 10-day Patagonia adventure takes you from the awe-inspiring Perito Moreno Glacier to the rugged peaks of El Chaltén, south to the world's southernmost city of Ushuaia, and north to the pristine lakes and forests of Bariloche. Experience nature at its most dramatic, with opportunities for hiking, wildlife viewing, and unforgettable landscapes that will stay with you forever.",
-      "inquiryText": "Hello! I'm very interested in the Patagonia Adventure module. Can you share more information about the itinerary, difficulty level, and what's included?"
-    }
+    "contactViaGroupMe": "GroupMe"
   },
   "attractionTypes": {
     "natural": "Natural",
@@ -78,7 +60,7 @@
         "description": "High-altitude vineyards producing world-class Torrontés"
       }
     },
-    "buenosaires": {
+    "ba": {
       "obelisco": {
         "name": "Obelisco & 9 de Julio Avenue",
         "description": "Iconic monument on the world's widest avenue"
@@ -158,7 +140,7 @@
         "description": "Transfer to airport. Departure with unforgettable memories of Argentina's northwest."
       }
     },
-    "buenosaires": {
+    "ba": {
       "day1": {
         "title": "Arrival & City Introduction",
         "description": "Arrive in Buenos Aires, transfer to hotel in Recoleta. Evening orientation walk and dinner."

@@ -1,6 +1,6 @@
 // Location information for the module
 export interface TravelLocation {
-    name: string;
+    name: Translation;
     type: 'city' | 'natural' | 'cultural';
     image: string;
 }
@@ -8,17 +8,17 @@ export interface TravelLocation {
 // Attraction with visual assets
 export interface Attraction {
     id: string;
-    name?: string; // Optional: some attractions include name directly (though i18n is preferred)
+    name: Translation;
     image: string;
     type: 'natural' | 'cultural' | 'adventure';
-    description: string;
+    description: Translation;
 }
 
 // Single day in the itinerary
 export interface ItineraryDay {
     day: number;
-    title: string;
-    description: string;
+    title: Translation;
+    description: Translation;
 }
 
 // Complete itinerary information
@@ -28,15 +28,24 @@ export interface Itinerary {
 }
 
 export interface WhatsIncludedItem {
-    name: string;
+    name: Translation;
     icon: string;
+}
+
+// Translation object for multi-language support
+export interface Translation {
+    es: string;
+    en: string;
+    he: string;
 }
 
 // Main Module structure
 export interface Module {
     id: string;
-    name: string;
-    summary: string;
+    name: Translation;
+    summary: Translation;
+    description: Translation;
+    inquiryText: Translation;
     coverImage: string;
     numberOfDays: number;
     numberOfPeople: number;
