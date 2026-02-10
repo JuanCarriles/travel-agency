@@ -49,6 +49,7 @@ export interface Module {
     coverImage: string;
     numberOfDays: number;
     numberOfPeople: number;
+    tag?: Translation; // Optional badge/tag for the module card
     locations: TravelLocation[];
     mainAttractions: Attraction[];
     itinerary?: Itinerary;

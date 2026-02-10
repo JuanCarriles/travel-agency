@@ -24,6 +24,11 @@
             },
             "numberOfDays": 8,
             "numberOfPeople": 20,
+            "tag": {
+                "es": "Noroeste Argentino",
+                "en": "Northwest Argentina",
+                "he": "צפון מערב ארגנטינה"
+            },
             "coverImage": "/images/destino-noa2.jpg",
             "locations": [
                 {
@@ -375,6 +380,11 @@
             },
             "numberOfDays": 4,
             "numberOfPeople": 20,
+            "tag": {
+                "es": "Buenos Aires",
+                "en": "Buenos Aires",
+                "he": "בואנוס איירס"
+            },
             "coverImage": "/images/BA/buenos-aires-cover.jpg",
             "locations": [
                 {
@@ -625,6 +635,11 @@
             },
             "numberOfDays": 9,
             "numberOfPeople": 20,
+            "tag": {
+                "es": "Patagonia Austral",
+                "en": "Southern Patagonia",
+                "he": "פטגוניה דרומית"
+            },
             "coverImage": "/images/Module-CyU/patagonia-cover.jpg",
             "locations": [
                 {
