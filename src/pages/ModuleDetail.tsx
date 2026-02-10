@@ -24,7 +24,10 @@ const modules = (modulesData as ModulesData).modules;
 
 export default function ModuleDetail() {
     const { moduleId } = useParams<{ moduleId: string }>();
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
+
+    // Get current language, fallback to 'es' if not available
+    const currentLang = (i18n.language as 'es' | 'en' | 'he') || 'es';
     const { ref: overviewRef, isVisible: overviewVisible } = useScrollAnimation<HTMLDivElement>();
     const { ref: attractionsRef, isVisible: attractionsVisible } = useScrollAnimation<HTMLDivElement>();
     const { ref: itineraryRef, isVisible: itineraryVisible } = useScrollAnimation<HTMLDivElement>();
@@ -63,10 +66,10 @@ export default function ModuleDetail() {
 
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white z-10">
                     <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-3 sm:mb-4 px-2">
-                        {t(`modules.${module.id}.name`)}
+                        {module.name[currentLang]}
                     </h1>
                     <p className="text-base sm:text-lg md:text-xl lg:text-2xl mb-6 sm:mb-8 max-w-3xl mx-auto px-2">
-                        {t(`modules.${module.id}.summary`)}
+                        {module.summary[currentLang]}
                     </p>
 
                     <div className="flex items-center justify-center gap-3 sm:gap-4 md:gap-6 lg:gap-8 flex-wrap px-2">
@@ -81,7 +84,7 @@ export default function ModuleDetail() {
                         <div className="flex items-center gap-1.5 sm:gap-2 bg-black/20 backdrop-blur-sm px-2 sm:px-3 py-1.5 sm:py-2 rounded-full">
                             <MapPin className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0" />
                             <span className="text-sm sm:text-base md:text-lg line-clamp-1">
-                                {module.locations.map((loc) => loc.name).join(', ')}
+                                {module.locations.map((loc) => loc.name[currentLang]).join(', ')}
                             </span>
                         </div>
                     </div>
@@ -98,7 +101,7 @@ export default function ModuleDetail() {
                     {t('modules.tripOverview') || 'Trip Overview'}
                 </h2>
                 <p className="text-base sm:text-lg md:text-xl text-[#2D2D2D]/80 leading-relaxed">
-                    {t(`modules.${module.id}.description`)}
+                    {module.description[currentLang]}
                 </p>
             </div>
 
@@ -124,7 +127,7 @@ export default function ModuleDetail() {
                                 <div className="relative h-56 sm:h-64">
                                     <img
                                         src={attraction.image}
-                                        alt={t(`attractions.${module.id}.${attraction.id}.name`)}
+                                        alt={attraction.name[currentLang]}
                                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
@@ -134,10 +137,10 @@ export default function ModuleDetail() {
                                             {t(`attractionTypes.${attraction.type}`)}
                                         </div>
                                         <h3 className="text-base sm:text-lg md:text-xl font-bold text-white mb-1 sm:mb-2" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.8)' }}>
-                                            {t(`${attraction.name}`)}
+                                            {attraction.name[currentLang]}
                                         </h3>
                                         <p className="text-sm sm:text-base text-white" style={{ textShadow: '1px 1px 3px rgba(0,0,0,0.8)' }}>
-                                            {t(`${attraction.description}`)}
+                                            {attraction.description[currentLang]}
                                         </p>
                                     </div>
                                 </div>
@@ -178,10 +181,10 @@ export default function ModuleDetail() {
                                         </div>
                                         <div className="flex-1 min-w-0">
                                             <h3 className="text-base sm:text-lg md:text-xl font-bold text-[#2D2D2D] mb-1 sm:mb-2">
-                                                {t(day.title)}
+                                                {day.title[currentLang]}
                                             </h3>
                                             <p className="text-sm sm:text-base text-[#2D2D2D]/70 leading-relaxed">
-                                                {t(day.description)}
+                                                {day.description[currentLang]}
                                             </p>
                                         </div>
                                     </div>
@@ -245,7 +248,7 @@ export default function ModuleDetail() {
                             const Icon = iconMap[item.icon];
                             return (
                                 <div
-                                    key={item.name}
+                                    key={item.name[currentLang]}
                                     className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-[#EFB4A7]/50 transition-all duration-500"
                                     style={{
                                         transitionDelay: `${index * 100}ms`,
@@ -262,7 +265,7 @@ export default function ModuleDetail() {
 
                                     {/* Content */}
                                     <h3 className="text-lg font-bold text-white mb-2 group-hover:text-[#EFB4A7] transition-colors duration-300 services-text-shadow">
-                                        {t(`${item.name}`) || item.name}
+                                        {item.name[currentLang]}
                                     </h3>
 
                                     {/* Decorative Corner */}
@@ -315,7 +318,7 @@ export default function ModuleDetail() {
                 <div className="flex flex-col sm:flex-row gap-4 justify-center items-stretch max-w-3xl mx-auto">
                     {/* Email Button */}
                     <a
-                        href={`https://mail.google.com/mail/?view=cm&fs=1&to=info@gatesto.com&su=${encodeURIComponent(t(`modules.${module.id}.name`))}&body=${encodeURIComponent(t(`modules.${module.id}.inquiryText`))}`}
+                        href={`https://mail.google.com/mail/?view=cm&fs=1&to=info@gatesto.com&su=${encodeURIComponent(module.name[currentLang])}&body=${encodeURIComponent(module.inquiryText[currentLang])}`}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="group flex items-center justify-center gap-3 bg-[#EA4335] hover:bg-[#D33426] text-white px-8 py-4 rounded-xl text-base font-bold transition-all duration-300 hover:shadow-xl hover:shadow-[#EA4335]/40 hover:scale-105 flex-1"
@@ -326,7 +329,7 @@ export default function ModuleDetail() {
 
                     {/* WhatsApp Button */}
                     <a
-                        href={`https://wa.me/5493815326666?text=${encodeURIComponent(t(`modules.${module.id}.inquiryText`))}`}
+                        href={`https://wa.me/5493815326666?text=${encodeURIComponent(module.inquiryText[currentLang])}`}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="group flex items-center justify-center gap-3 bg-[#25D366] hover:bg-[#1EBE57] text-white px-8 py-4 rounded-xl text-base font-bold transition-all duration-300 hover:shadow-xl hover:shadow-[#25D366]/40 hover:scale-105 flex-1"

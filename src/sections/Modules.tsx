@@ -8,8 +8,11 @@ import type { ModulesData } from '@/types/modules';
 const modules = (modulesData as ModulesData).modules;
 
 export default function Modules() {
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
     const { ref, isVisible } = useScrollAnimation<HTMLElement>();
+
+    // Get current language, fallback to 'es' if not available
+    const currentLang = (i18n.language as 'es' | 'en' | 'he') || 'es';
 
     return (
         <section
@@ -56,17 +59,17 @@ export default function Modules() {
                             <div className="relative h-80 overflow-hidden">
                                 <img
                                     src={module.coverImage}
-                                    alt={t(`modules.${module.id}.name`)}
+                                    alt={module.name[currentLang]}
                                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
 
-                                {/* Location Badge */}
-                                <div className="absolute top-4 left-4 bg-[#EFB4A7] text-white text-xs font-semibold px-3 py-1.5 rounded-full">
-                                    {module.id === 'noa' && 'NOA'}
-                                    {module.id === 'buenosaires' && 'CABA'}
-                                    {module.id === 'patagonia' && 'Patagonia'}
-                                </div>
+                                {/* Location Badge - Dynamic */}
+                                {module.locations.length > 0 && (
+                                    <div className="absolute top-4 left-4 bg-[#EFB4A7] text-white text-xs font-semibold px-3 py-1.5 rounded-full">
+                                        {module.locations[0].name[currentLang]}
+                                    </div>
+                                )}
 
                                 {/* Module Details Overlay */}
                                 <div className="absolute bottom-4 left-4 right-4 text-white">
@@ -90,10 +93,10 @@ export default function Modules() {
                             {/* Content */}
                             <div className="p-6">
                                 <h3 className="text-xl font-bold text-[#2D2D2D] mb-2 group-hover:text-[#EFB4A7] transition-colors duration-300">
-                                    {t(`modules.${module.id}.name`)}
+                                    {module.name[currentLang]}
                                 </h3>
                                 <p className="text-[#2D2D2D]/70 mb-4 line-clamp-2">
-                                    {t(`modules.${module.id}.summary`)}
+                                    {module.summary[currentLang]}
                                 </p>
                                 <span className="inline-flex items-center gap-2 text-[#EFB4A7] font-semibold group-hover:gap-3 transition-all duration-300">
                                     {t('modules.cta')}
@@ -105,13 +108,6 @@ export default function Modules() {
                             <div className="absolute inset-0 border-2 border-[#EFB4A7] rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
                         </Link>
                     ))}
-                </div>
-
-                {/* Main Attractions Preview */}
-                <div className="mt-16 text-center">
-                    <p className="text-[#2D2D2D]/60 text-sm">
-                        {t('modules.mainAttractions')}: {t('attractions.noa.humahuaca.name')}, {t('attractions.buenosaires.tango.name')}, {t('attractions.patagonia.perito.name')}
-                    </p>
                 </div>
             </div>
         </section>
