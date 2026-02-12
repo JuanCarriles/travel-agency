@@ -59,7 +59,7 @@ export default function About() {
                 <img
                   src="/images/GloriaPais.JPEG"
                   alt="About Us"
-                  className="w-full h-[400px] sm:h-[900px] object-cover"
+                  className="w-full h-[400px] sm:h-[900px] object-cover object-top"
                 />
                 {/* Gold Frame */}
                 <div className="absolute inset-0 border-4 border-[#EFB4A7] rounded-2xl pointer-events-none" />

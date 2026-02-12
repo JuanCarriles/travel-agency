@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { MapPin, Phone, Mail, Send, CheckCircle } from 'lucide-react';
+import { MapPin, Phone, Mail, Send, CheckCircle, Loader2, AlertCircle } from 'lucide-react';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -16,6 +16,8 @@ import {
 import modulesData from '@/data/modules.json';
 import type { ModulesData } from '@/types/modules';
 import i18n from '@/i18n';
+import { smtpexpressClient, SENDER_EMAIL } from '@/lib/smtp';
+import { toast } from 'sonner';
 
 const modules = (modulesData as ModulesData).modules;
 
@@ -23,24 +25,23 @@ const offices = [
   {
     key: 'israel',
     location: 'Tel Aviv',
-    phone: '+972-3-123-4567',
+    phone: '+972546787997',
+    email: 'glo.israel@gmail.com',
   },
   {
     key: 'argentina',
     location: 'Tucumán',
-    phone: '+54-381-123-4567',
-  },
-  {
-    key: 'usa',
-    location: 'New York',
-    phone: '+1-212-123-4567',
-  },
+    phone: '0381 3598639',
+    email: 'gloria.gta.office@gmail.com ',
+  }
 ];
 
 export default function Contact() {
   const { t } = useTranslation();
   const { ref, isVisible } = useScrollAnimation<HTMLElement>();
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [hasError, setHasError] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -49,20 +50,59 @@ export default function Contact() {
     message: '',
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Simulate form submission
-    setIsSubmitted(true);
-    setTimeout(() => {
-      setIsSubmitted(false);
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        destination: '',
-        message: '',
+    setIsLoading(true);
+    setHasError(false);
+
+    try {
+      const destinationName = formData.destination
+        ? modules.find((m) => m.id === formData.destination)?.name[
+        i18n.language as keyof (typeof modules)[0]['name']
+        ] || formData.destination
+        : t('contact.noDestination');
+
+      const result = await smtpexpressClient.sendApi.sendMail({
+        subject: `Nuevo contacto: ${formData.name} — ${destinationName}`,
+        message: `
+          <h2>Nuevo mensaje de contacto</h2>
+          <table style="border-collapse: collapse; width: 100%;">
+            <tr><td style="padding: 8px; font-weight: bold;">Nombre:</td><td style="padding: 8px;">${formData.name}</td></tr>
+            <tr><td style="padding: 8px; font-weight: bold;">Email:</td><td style="padding: 8px;">${formData.email}</td></tr>
+            <tr><td style="padding: 8px; font-weight: bold;">Teléfono:</td><td style="padding: 8px;">${formData.phone || 'No proporcionado'}</td></tr>
+            <tr><td style="padding: 8px; font-weight: bold;">Destino:</td><td style="padding: 8px;">${destinationName}</td></tr>
+          </table>
+          <h3>Mensaje:</h3>
+          <p>${formData.message || 'Sin mensaje'}</p>
+        `,
+        sender: {
+          name: 'Andes Journey Contact Form',
+          email: SENDER_EMAIL,
+        },
+        recipients: {
+          email: 'luffyesmejor@gmail.com',
+        },
       });
-    }, 3000);
+      console.log('SMTP Express response:', result);
+
+      setIsSubmitted(true);
+      setTimeout(() => {
+        setIsSubmitted(false);
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          destination: '',
+          message: '',
+        });
+      }, 3000);
+    } catch (error) {
+      console.error('Email send error:', error);
+      setHasError(true);
+      toast.error(t('contact.error'));
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const handleChange = (
@@ -123,6 +163,21 @@ export default function Contact() {
                   <h3 className="text-2xl font-bold text-[#2D2D2D] mb-2">
                     {t('contact.success')}
                   </h3>
+                </div>
+              ) : hasError ? (
+                <div className="text-center py-12">
+                  <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <AlertCircle className="w-8 h-8 text-red-600" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-[#2D2D2D] mb-2">
+                    {t('contact.error')}
+                  </h3>
+                  <Button
+                    onClick={() => setHasError(false)}
+                    className="mt-4 bg-[#EFB4A7] hover:bg-[#EFB9B0] text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300"
+                  >
+                    {t('contact.retry')}
+                  </Button>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
@@ -207,6 +262,7 @@ export default function Contact() {
                       name="message"
                       value={formData.message}
                       onChange={handleChange}
+                      required
                       rows={4}
                       className="border-[#2D2D2D]/20 focus:border-[#EFB4A7] focus:ring-[#EFB4A7] resize-none"
                       placeholder="Tell us about your dream trip..."
@@ -215,10 +271,15 @@ export default function Contact() {
 
                   <Button
                     type="submit"
-                    className="w-full bg-[#EFB4A7] hover:bg-[#EFB9B0] text-white py-6 rounded-xl text-lg font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-[#EFB4A7]/30"
+                    disabled={isLoading}
+                    className="w-full bg-[#EFB4A7] hover:bg-[#EFB9B0] text-white py-6 rounded-xl text-lg font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-[#EFB4A7]/30 disabled:opacity-60"
                   >
-                    <Send className="w-5 h-5 mr-2" />
-                    {t('contact.send')}
+                    {isLoading ? (
+                      <Loader2 className="w-5 h-5 mr-2 animate-spin" />
+                    ) : (
+                      <Send className="w-5 h-5 mr-2" />
+                    )}
+                    {isLoading ? t('contact.sending') : t('contact.send')}
                   </Button>
                 </form>
               )}
@@ -256,6 +317,12 @@ export default function Contact() {
                       <div className="flex items-center gap-2 text-white/60 text-sm">
                         <Phone className="w-4 h-4" />
                         {office.phone}
+                      </div>
+                      <div className="flex items-center gap-2 text-white/60 text-sm mt-1">
+                        <Mail className="w-4 h-4" />
+                        <a href={`mailto:${office.email}`} className="hover:text-[#EFB4A7] transition-colors duration-300">
+                          {office.email}
+                        </a>
                       </div>
                     </div>
                   </div>

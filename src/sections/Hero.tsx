@@ -4,8 +4,8 @@ import { ChevronDown } from 'lucide-react';
 
 // Array of background images - Add or remove images here
 const backgroundImages = [
-  '/images/RecorriendoJujuy.png',
-  '/images/desert-arg.webp',
+  '/images/RecorriendoJujuy.jpg',
+  '/images/desert-arg.jpg',
   '/images/hero-patagonia.jpg',
   // Add more images here as needed
 ];
@@ -65,8 +65,7 @@ export default function Hero() {
           <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 mb-8">
             <span className="w-2 h-2 bg-[#EFB4A7] rounded-full animate-pulse" />
             <span className="text-white/90 text-sm font-medium hero-text-shadow">
-              Israel - Argentina - USA
-            </span>
+              Israel - Argentina             </span>
           </div>
 
           {/* Main Title */}
@@ -104,7 +103,7 @@ export default function Hero() {
               href="#modules"
               className="hero-text-shadow text-white border-2 border-white/30 hover:border-[#EFB4A7] hover:text-[#EFB4A7] px-8 py-4 rounded-full text-lg font-medium transition-all duration-300 hero-text-shadow"
             >
-              {t('nav.destinations')}
+              {t('Destinations')}
             </a>
           </div>
         </div>
@@ -113,10 +112,10 @@ export default function Hero() {
       {/* Scroll Indicator */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
         <a
-          href="#destinations"
+          href="#modules"
           className="flex flex-col items-center text-white/60 hover:text-[#EFB4A7] transition-colors duration-300"
         >
-          <span className="text-sm mb-2 hero-text-shadow">{t('nav.destinations')}</span>
+          <span className="text-sm mb-2 hero-text-shadow">{t('Destinations')}</span>
           <ChevronDown className="w-6 h-6 hero-text-shadow" />
         </a>
       </div>

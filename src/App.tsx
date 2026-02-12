@@ -35,7 +35,7 @@ function App() {
           groupUrl="https://groupme.com/join_group/YOUR_GROUP_ID/YOUR_TOKEN"
         />
         <WhatsAppButton
-          phoneNumber="5493815326666"
+          phoneNumber="543813598639"
           message=""
         />
       </div>

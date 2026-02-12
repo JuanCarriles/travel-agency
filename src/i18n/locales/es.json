@@ -29,7 +29,7 @@
     "customizeTrip": "Contáctanos y personalizaremos tu viaje grupal",
     "backToHome": "Inicio",
     "notFound": "Módulo no encontrado",
-    "noItineraryMessage": "El itinerario detallado para este módulo está siendo preparado. Por favor, contáctanos para obtener más información sobre este viaje.",
+    "noItineraryMessage": "Si deseas el itinerario completo, ponte en contacto con nuestro equipo y te enviaremos uno personalizado para ti.",
     "customizableTitle": "Experiencia Totalmente Personalizable",
     "customizableMessage": "Este itinerario es una experiencia sugerida. Podemos coordinar contigo para modificar el viaje según tus necesidades y deseos. Podemos ofrecer servicios adicionales, cambios de duración o diferentes categorías de hoteles.",
     "contactViaGmail": "Email",
@@ -222,11 +222,11 @@
     "insuranceDesc": "Cobertura completa incluida"
   },
   "about": {
-    "title": "Conectando Culturas",
-    "description": "Con sede central en Israel y oficinas en Tucumán, Argentina y Nueva York, llevamos más de 15 años creando puentes entre continentes. Nuestros programas personalizados para grupos de 15-20 personas ofrecen la perfecta combinación de aventura, cultura y confort.",
+    "title": "Nacida y criada en Argentina",
+    "description": "Soy la fundadora de Gates to Argentina, una agencia boutique nacida con una sólida trayectoria internacional. Durante más de 15 años, dirigí operaciones turísticas en Medio Oriente a través de Gates to Israel, gestionando más de 500 grupos y perfeccionando el arte de la logística de viajes. Nuestra firma se distingue por ofrecer servicio trilingüe (español, inglés y hebreo) y soporte 24 horas al día, 7 días a la semana, asegurando que cada detalle de su viaje esté cubierto. Aunque nuestra sede original estaba en Israel, hoy operamos con oficinas en Tucumán e Israel, tendiendo puentes entre continentes. Mi papel siempre ha sido el de 'valentía y logística'. Luego de regresar a Argentina en 2023, aplico ese mismo rigor y pasión para diseñar programas personalizados que combinan aventura, cultura y comodidad en uno de los países más fascinantes de Sudamérica.",
     "list1": "Idiomas: Español, Inglés, Hebreo",
     "list2": "Experiencia: +15 Años en la industria turística",
-    "list3": "Oficinas: Tucumán, New York, Israel",
+    "list3": "Sedes : Argentina, Israel",
     "years": "Años de experiencia",
     "groups": "Grupos atendidos",
     "offices": "Sedes internacionales"
@@ -249,16 +249,19 @@
     "destination": "Módulo de interés (Opcional)",
     "message": "Mensaje",
     "send": "Enviar Consulta",
+    "sending": "Enviando...",
     "success": "¡Gracias! Te contactaremos pronto.",
+    "error": "¡Ups! Algo salió mal. Por favor, intentá de nuevo más tarde.",
+    "retry": "Intentar de Nuevo",
+    "noDestination": "Sin destino seleccionado",
     "offices": {
       "title": "Nuestros contactos",
       "israel": "Israel (Central)",
-      "argentina": "Argentina",
-      "usa": "EE.UU."
+      "argentina": "Argentina"
     }
   },
   "footer": {
-    "description": "Conectando Israel con Argentina a través de experiencias de viaje inolvidables.",
+    "description": "Especializados en programas grupales personalizados con soporte bilingüe 24/7. Llevamos la calidez de Argentina a los viajeros.",
     "quickLinks": "Links Rápidos",
     "destinations": "Destinos",
     "contact": "Contacto",

@@ -247,6 +247,7 @@
                 }
             ],
             "itinerary": {
+                "pdfUrl": "/pdfs/Itinerary - North of Argentina.pdf",
                 "days": [
                     {
                         "day": 1,
@@ -551,7 +552,64 @@
                     },
                     "icon": "UtensilsCrossed"
                 }
-            ]
+            ],
+            "itinerary": {
+                "pdfUrl": "/pdfs/Itinerary - Outline 4 days tour in Buenos Aires.pdf",
+                "days": [
+                    {
+                        "day": 1,
+                        "title": {
+                            "es": "El Corazón Histórico de Argentina",
+                            "en": "The Historical Heart of Argentina",
+                            "he": "הלב ההיסטורי של ארגנטינה"
+                        },
+                        "description": {
+                            "es": "Walking tour por Plaza de Mayo, visita a la Casa Rosada y Catedral. Paseo por Av. de Mayo, visita al Teatro Colón y café en el histórico Café Tortoni",
+                            "en": "Walking tour of Plaza de Mayo, visit to Casa Rosada and Cathedral. Walk along Av. de Mayo, visit to Teatro Colón and coffee at the historic Café Tortoni",
+                            "he": "סיור רגלי בפלאזה דה מאיו, ביקור בבית הוורוד ובקתדרלה. טיול בשדרת דה מאיו, ביקור בתיאטרון קולון וקפה בקפה טורטוני ההיסטורי"
+                        }
+                    },
+                    {
+                        "day": 2,
+                        "title": {
+                            "es": "Arquitectura y Monumentos Nacionales",
+                            "en": "Architecture and National Monuments",
+                            "he": "ארכיטקטורה ואנדרטאות לאומיות"
+                        },
+                        "description": {
+                            "es": "Visita guiada al Palacio Barolo (inspirado en la Divina Comedia), Congreso de la Nación y el Museo Histórico Nacional en Parque Lezama. Noche en San Telmo",
+                            "en": "Guided tour of Palacio Barolo (inspired by the Divine Comedy), National Congress and the National Historical Museum in Parque Lezama. Evening in San Telmo",
+                            "he": "סיור מודרך בארמון בארולו (בהשראת הקומדיה האלוהית), הקונגרס הלאומי והמוזיאון ההיסטורי הלאומי בפארק לזמה. ערב בסן טלמו"
+                        }
+                    },
+                    {
+                        "day": 3,
+                        "title": {
+                            "es": "Arte y Cultura: La Boca y Palermo",
+                            "en": "Art and Culture: La Boca and Palermo",
+                            "he": "אמנות ותרבות: לה בוקה ופלרמו"
+                        },
+                        "description": {
+                            "es": "Recorrido por Caminito y el estadio La Bombonera. Traslado a Palermo para visitar el MALBA. Por la noche, cena show de Tango (opcional)",
+                            "en": "Tour of Caminito and La Bombonera stadium. Transfer to Palermo to visit MALBA. In the evening, Tango dinner show (optional)",
+                            "he": "סיור בקמיניטו ובאצטדיון לה בומבונרה. העברה לפלרמו לביקור במאלבה. בערב, מופע ארוחת טנגו (אופציונלי)"
+                        }
+                    },
+                    {
+                        "day": 4,
+                        "title": {
+                            "es": "Recoleta: Historia y Legado",
+                            "en": "Recoleta: History and Legacy",
+                            "he": "רקולטה: היסטוריה ומורשת"
+                        },
+                        "description": {
+                            "es": "Visita guiada al Cementerio de la Recoleta y la Basílica del Pilar. Tiempo libre para compras en la feria artesanal o el Centro Cultural",
+                            "en": "Guided tour of Recoleta Cemetery and Basilica del Pilar. Free time for shopping at the artisan fair or the Cultural Center",
+                            "he": "סיור מודרך בבית הקברות של רקולטה ובבזיליקת דל פילאר. זמן פנוי לקניות ביריד האומנים או במרכז התרבות"
+                        }
+                    }
+                ]
+            }
         },
         {
             "id": "patagonia-sur-explorer",
