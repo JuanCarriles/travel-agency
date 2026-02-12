@@ -34,7 +34,7 @@ export default function Modules() {
                         <div className="w-12 h-[2px] bg-[#EFB4A7]" />
                     </div>
                     <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#2D2D2D] mb-4">
-                        " {t('modules.title')}"
+                        "{t('modules.title')}"
                     </h2>
                     <p className="text-lg text-[#2D2D2D]/70 max-w-2xl mx-auto">
                         {t('modules.subtitle')}

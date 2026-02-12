@@ -192,16 +192,18 @@ export default function ModuleDetail() {
                             ))}
                         </div>
 
-                        <div className="mt-6 sm:mt-8">
-                            <a
-                                href={module.itinerary.pdfUrl}
-                                download
-                                className="flex items-center justify-center gap-2 w-full bg-[#EFB4A7] hover:bg-[#EFB9B0] text-white py-3 px-6 rounded-full font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-[#EFB4A7]/30 min-h-[44px]"
-                            >
-                                <Download className="w-5 h-5" />
-                                {t('modules.downloadItinerary')}
-                            </a>
-                        </div>
+                        {module.itinerary.pdfUrl && (
+                            <div className="mt-6 sm:mt-8">
+                                <a
+                                    href={module.itinerary.pdfUrl}
+                                    download
+                                    className="flex items-center justify-center gap-2 w-full bg-[#EFB4A7] hover:bg-[#EFB9B0] text-white py-3 px-6 rounded-full font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-[#EFB4A7]/30 min-h-[44px]"
+                                >
+                                    <Download className="w-5 h-5" />
+                                    {t('modules.downloadItinerary')}
+                                </a>
+                            </div>
+                        )}
                     </>
                 ) : (
                     <div className={`bg-white rounded-xl sm:rounded-2xl p-6 sm:p-8 md:p-10 text-center shadow-sm transition-all duration-700 ${itineraryVisible
@@ -329,7 +331,7 @@ export default function ModuleDetail() {
 
                     {/* WhatsApp Button */}
                     <a
-                        href={`https://wa.me/5493815326666?text=${encodeURIComponent(module.inquiryText[currentLang])}`}
+                        href={`https://wa.me/543813598639?text=${encodeURIComponent(module.inquiryText[currentLang])}`}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="group flex items-center justify-center gap-3 bg-[#25D366] hover:bg-[#1EBE57] text-white px-8 py-4 rounded-xl text-base font-bold transition-all duration-300 hover:shadow-xl hover:shadow-[#25D366]/40 hover:scale-105 flex-1"

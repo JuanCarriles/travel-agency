@@ -23,7 +23,7 @@ export interface ItineraryDay {
 
 // Complete itinerary information
 export interface Itinerary {
-    pdfUrl: string;
+    pdfUrl?: string;
     days: ItineraryDay[];
 }
 

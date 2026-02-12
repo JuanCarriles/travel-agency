@@ -29,7 +29,7 @@
     "customizeTrip": "Contact us and we'll customize your group trip",
     "backToHome": "Home",
     "notFound": "Module not found",
-    "noItineraryMessage": "The detailed itinerary for this module is being prepared. Please contact us for more information about this trip.",
+    "noItineraryMessage": "If you would like the full itinerary, please contact our team and we will send you a personalized one.",
     "customizableTitle": "Fully Customizable Experience",
     "customizableMessage": "This itinerary is a suggested experience. We can coordinate with you to modify the trip according to your needs and desires. We can offer additional services, duration adjustments, or different hotel categories.",
     "contactViaGmail": "Email",
@@ -224,10 +224,10 @@
   },
   "about": {
     "title": "Born and raised in Argentina",
-    "description": "I am the founder of Gates to Argentina, a boutique agency born from a solid international background. For over 15 years, I led tour operations in the Middle East through Gates to Israel, managing more than 500 groups and perfecting the art of travel logistics. Our firm is distinguished by offering trilingual service (Spanish, English, and Hebrew) and 24/7 support, ensuring that every detail of your trip is covered. Although our original headquarters were in Israel, today we operate with offices in Tucumán, New York, and Israel, building bridges between continents. My role has always been one of 'courage and logistics.' After returning to Argentina in 2023, I apply that same rigor and passion to designing personalized programs that combine adventure, culture, and comfort in one of South America's most fascinating countries.",
+    "description": "I am the founder of Gates to Argentina, a boutique agency born from a solid international background. For over 15 years, I led tour operations in the Middle East through Gates to Israel, managing more than 500 groups and perfecting the art of travel logistics. Our firm is distinguished by offering trilingual service (Spanish, English, and Hebrew) and 24/7 support, ensuring that every detail of your trip is covered. Although our original headquarters were in Israel, today we operate with offices in Tucumán, and Israel, building bridges between continents. My role has always been one of 'courage and logistics.' After returning to Argentina in 2023, I apply that same rigor and passion to designing personalized programs that combine adventure, culture, and comfort in one of South America's most fascinating countries.",
     "list1": "Languages: Spanish, English, Hebrew",
     "list2": "Experience: +15 Years in the tourism industry",
-    "list3": "Offices: Tucumán, New York, Israel",
+    "list3": "Headquarters : Argentina, Israel",
     "years": "Years of experience",
     "groups": "Groups served",
     "offices": "International offices"
@@ -250,16 +250,19 @@
     "destination": "Module of interest (Optional)",
     "message": "Message",
     "send": "Send Inquiry",
+    "sending": "Sending...",
     "success": "Thank you! We will contact you soon.",
+    "error": "Oops! Something went wrong. Please try again later.",
+    "retry": "Try Again",
+    "noDestination": "No destination selected",
     "offices": {
       "title": "Our contacts",
       "israel": "Israel (Headquarters)",
-      "argentina": "Argentina",
-      "usa": "USA"
+      "argentina": "Argentina"
     }
   },
   "footer": {
-    "description": "Connecting Israel with Argentina through unforgettable travel experiences.",
+    "description": "Specializing in customized group programs with 24/7 bilingual support. We bring the warmth of Argentina to travelers.",
     "quickLinks": "Quick Links",
     "destinations": "Destinations",
     "contact": "Contact",

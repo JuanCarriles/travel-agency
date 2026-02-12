@@ -18,7 +18,7 @@ export default function Footer() {
 
   const quickLinks = [
     { key: 'home', href: '/#home' },
-    { key: 'destinations', href: '/#destinations' },
+    { key: 'destinations', href: '/#modules' },
     { key: 'services', href: '/#services' },
     { key: 'about', href: '/#about' },
     { key: 'contact', href: '/#contact' },
@@ -32,8 +32,8 @@ export default function Footer() {
 
   const socialLinks = [
     { icon: Instagram, href: 'https://www.instagram.com/gatestoargentina/', label: 'Instagram' },
-    { icon: Facebook, href: 'https://www.facebook.com/gatestoargentina/', label: 'Facebook' },
-    { icon: MessageCircle, href: 'https://wa.me/5493815326666', label: 'WhatsApp' },
+    { icon: Facebook, href: 'https://www.facebook.com/people/Gates-to-Argentina/61588040902492/', label: 'Facebook' },
+    { icon: MessageCircle, href: 'https://wa.me/543813598639', label: 'WhatsApp' },
     { icon: null, href: 'https://groupme.com/contact/101879750/UfDn3LFL', label: 'GroupMe', isGroupMe: true },
   ];
 
@@ -133,6 +133,16 @@ export default function Footer() {
                   <p>Tel Aviv, Israel</p>
                 </div>
               </li>
+              <li className="flex items-center gap-3">
+                <Phone className="w-5 h-5 text-[#EFB4A7] flex-shrink-0" />
+                <a
+                  href="tel:+0381 3598639"
+                  className="text-white/70 hover:text-[#EFB4A7] transition-colors duration-300 text-sm"
+                  style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}
+                >
+                  +972546787997
+                </a>
+              </li>
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-[#EFB4A7] flex-shrink-0 mt-0.5" />
                 <div className="text-white/70 text-sm" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}>
@@ -140,12 +150,15 @@ export default function Footer() {
                   <p>Tucumán, Argentina</p>
                 </div>
               </li>
-              <li className="flex items-start gap-3">
-                <MapPin className="w-5 h-5 text-[#EFB4A7] flex-shrink-0 mt-0.5" />
-                <div className="text-white/70 text-sm" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}>
-                  <p className="font-medium text-white">USA</p>
-                  <p>New York, NY</p>
-                </div>
+              <li className="flex items-center gap-3">
+                <Phone className="w-5 h-5 text-[#EFB4A7] flex-shrink-0" />
+                <a
+                  href="tel:+0381 3598639"
+                  className="text-white/70 hover:text-[#EFB4A7] transition-colors duration-300 text-sm"
+                  style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}
+                >
+                  +0381 3598639
+                </a>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-[#EFB4A7] flex-shrink-0" />
@@ -157,16 +170,7 @@ export default function Footer() {
                   info@andesjourney.com
                 </a>
               </li>
-              <li className="flex items-center gap-3">
-                <Phone className="w-5 h-5 text-[#EFB4A7] flex-shrink-0" />
-                <a
-                  href="tel:+97231234567"
-                  className="text-white/70 hover:text-[#EFB4A7] transition-colors duration-300 text-sm"
-                  style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}
-                >
-                  +972-3-123-4567
-                </a>
-              </li>
+
             </ul>
           </div>
         </div>
@@ -177,23 +181,10 @@ export default function Footer() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-white/50 text-sm" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}>
-              © 2024 Andes Journey. {t('footer.rights')}
+              © 2026 Gates to Argentina. {t('footer.rights')}
             </p>
             <div className="flex items-center gap-6">
-              <a
-                href="#"
-                className="text-white/50 hover:text-[#EFB4A7] text-sm transition-colors duration-300"
-                style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}
-              >
-                Privacy Policy
-              </a>
-              <a
-                href="#"
-                className="text-white/50 hover:text-[#EFB4A7] text-sm transition-colors duration-300"
-                style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}
-              >
-                Terms of Service
-              </a>
+
             </div>
           </div>
         </div>

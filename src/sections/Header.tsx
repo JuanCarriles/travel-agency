@@ -51,10 +51,17 @@ export default function Header() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/#home" className="flex items-center gap-3">
+            {/* Mobile: full logo */}
+            <img
+              src="/images/gates-to-arg-LOGO-COMPLETO.png"
+              alt="Gates to argentina logo"
+              className="h-12 w-auto object-contain sm:hidden"
+            />
+            {/* Desktop: simplified logo + text */}
             <img
               src="/images/gates-to-arg-LOGO-SIMPLIFICADO.png"
               alt="Gates to argentina logo"
-              className="h-12 w-auto object-contain"
+              className="h-12 w-auto object-contain hidden sm:block"
             />
             <span className="text-white font-semibold text-xl hidden sm:block">
               Gates To Argentina
