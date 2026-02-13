@@ -7,14 +7,12 @@ import {
   Phone,
   MapPin,
 } from 'lucide-react';
-import modulesData from '@/data/modules.json';
-import type { ModulesData } from '@/types/modules';
+import { useModulesData } from '@/hooks/useModulesData';
 import i18n from '@/i18n';
-
-const modules = (modulesData as ModulesData).modules;
 
 export default function Footer() {
   const { t } = useTranslation();
+  const { modules } = useModulesData();
 
   const quickLinks = [
     { key: 'home', href: '/#home' },

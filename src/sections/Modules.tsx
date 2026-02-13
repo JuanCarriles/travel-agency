@@ -1,15 +1,13 @@
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Calendar, Users, MapPin } from 'lucide-react';
+import { ArrowRight, Calendar, Users, MapPin, Loader2 } from 'lucide-react';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
-import modulesData from '@/data/modules.json';
-import type { ModulesData } from '@/types/modules';
-
-const modules = (modulesData as ModulesData).modules;
+import { useModulesData } from '@/hooks/useModulesData';
 
 export default function Modules() {
     const { t, i18n } = useTranslation();
     const { ref, isVisible } = useScrollAnimation<HTMLElement>();
+    const { modules, loading, error } = useModulesData();
 
     // Get current language, fallback to 'es' if not available
     const currentLang = (i18n.language as 'es' | 'en' | 'he') || 'es';
@@ -41,74 +39,92 @@ export default function Modules() {
                     </p>
                 </div>
 
+                {/* Loading State */}
+                {loading && (
+                    <div className="flex justify-center items-center py-20">
+                        <Loader2 className="w-12 h-12 text-[#EFB4A7] animate-spin" />
+                    </div>
+                )}
+
+                {/* Error State */}
+                {error && (
+                    <div className="text-center py-20">
+                        <p className="text-lg text-red-600">
+                            {t('modules.errorLoading') || 'Error loading modules. Please try again later.'}
+                        </p>
+                    </div>
+                )}
+
                 {/* Modules Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {modules.map((module, index) => (
-                        <Link
-                            key={module.id}
-                            to={`/modules/${module.id}`}
-                            className={`group relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 ${isVisible
-                                ? 'opacity-100 translate-y-0'
-                                : 'opacity-0 translate-y-10'
-                                } block`}
-                            style={{
-                                transitionDelay: `${index * 150}ms`,
-                            }}
-                        >
-                            {/* Image */}
-                            <div className="relative h-80 overflow-hidden">
-                                <img
-                                    src={module.coverImage}
-                                    alt={module.name[currentLang]}
-                                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                                />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                {!loading && !error && (
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        {modules.map((module, index) => (
+                            <Link
+                                key={module.id}
+                                to={`/modules/${module.id}`}
+                                className={`group relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 ${isVisible
+                                    ? 'opacity-100 translate-y-0'
+                                    : 'opacity-0 translate-y-10'
+                                    } block`}
+                                style={{
+                                    transitionDelay: `${index * 150}ms`,
+                                }}
+                            >
+                                {/* Image */}
+                                <div className="relative h-80 overflow-hidden">
+                                    <img
+                                        src={module.coverImage}
+                                        alt={module.name[currentLang]}
+                                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
 
-                                {/* Tag Badge - Dynamic */}
-                                {module.tag && (
-                                    <div className="absolute top-4 left-4 bg-[#EFB4A7] text-white text-xs font-semibold px-3 py-1.5 rounded-full">
-                                        {module.tag[currentLang]}
-                                    </div>
-                                )}
+                                    {/* Tag Badge - Dynamic */}
+                                    {module.tag && (
+                                        <div className="absolute top-4 left-4 bg-[#EFB4A7] text-white text-xs font-semibold px-3 py-1.5 rounded-full">
+                                            {module.tag[currentLang]}
+                                        </div>
+                                    )}
 
-                                {/* Module Details Overlay */}
-                                <div className="absolute bottom-4 left-4 right-4 text-white">
-                                    <div className="flex items-center gap-4 text-sm mb-2">
-                                        <div className="flex items-center gap-1">
-                                            <Calendar className="w-4 h-4" />
-                                            <span>{module.numberOfDays} {t('modules.days')}</span>
+                                    {/* Module Details Overlay */}
+                                    <div className="absolute bottom-4 left-4 right-4 text-white">
+                                        <div className="flex items-center gap-4 text-sm mb-2">
+                                            <div className="flex items-center gap-1">
+                                                <Calendar className="w-4 h-4" />
+                                                <span>{module.numberOfDays} {t('modules.days')}</span>
+                                            </div>
+                                            <div className="flex items-center gap-1">
+                                                <Users className="w-4 h-4" />
+                                                <span>{module.numberOfPeople} {t('modules.people')}</span>
+                                            </div>
                                         </div>
-                                        <div className="flex items-center gap-1">
-                                            <Users className="w-4 h-4" />
-                                            <span>{module.numberOfPeople} {t('modules.people')}</span>
+                                        <div className="flex items-center gap-1 text-sm opacity-90">
+                                            <MapPin className="w-4 h-4" />
+                                            <span>{module.locations.length} {t('modules.travelLocations')}</span>
                                         </div>
-                                    </div>
-                                    <div className="flex items-center gap-1 text-sm opacity-90">
-                                        <MapPin className="w-4 h-4" />
-                                        <span>{module.locations.length} {t('modules.travelLocations')}</span>
                                     </div>
                                 </div>
-                            </div>
 
-                            {/* Content */}
-                            <div className="p-6">
-                                <h3 className="text-xl font-bold text-[#2D2D2D] mb-2 group-hover:text-[#EFB4A7] transition-colors duration-300">
-                                    {module.name[currentLang]}
-                                </h3>
-                                <p className="text-[#2D2D2D]/70 mb-4 line-clamp-2">
-                                    {module.summary[currentLang]}
-                                </p>
-                                <span className="inline-flex items-center gap-2 text-[#EFB4A7] font-semibold group-hover:gap-3 transition-all duration-300">
-                                    {t('modules.cta')}
-                                    <ArrowRight className="w-4 h-4" />
-                                </span>
-                            </div>
+                                {/* Content */}
+                                <div className="p-6">
+                                    <h3 className="text-xl font-bold text-[#2D2D2D] mb-2 group-hover:text-[#EFB4A7] transition-colors duration-300">
+                                        {module.name[currentLang]}
+                                    </h3>
+                                    <p className="text-[#2D2D2D]/70 mb-4 line-clamp-2">
+                                        {module.summary[currentLang]}
+                                    </p>
+                                    <span className="inline-flex items-center gap-2 text-[#EFB4A7] font-semibold group-hover:gap-3 transition-all duration-300">
+                                        {t('modules.cta')}
+                                        <ArrowRight className="w-4 h-4" />
+                                    </span>
+                                </div>
 
-                            {/* Hover Border Effect */}
-                            <div className="absolute inset-0 border-2 border-[#EFB4A7] rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
-                        </Link>
-                    ))}
-                </div>
+                                {/* Hover Border Effect */}
+                                <div className="absolute inset-0 border-2 border-[#EFB4A7] rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+                            </Link>
+                        ))}
+                    </div>
+                )}
             </div>
         </section>
     );

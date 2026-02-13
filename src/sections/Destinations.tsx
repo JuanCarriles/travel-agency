@@ -1,14 +1,12 @@
 import { useTranslation } from 'react-i18next';
 import { ArrowRight } from 'lucide-react';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
-import modulesData from '@/data/modules.json';
-import type { ModulesData } from '@/types/modules';
-
-const modules = (modulesData as ModulesData).modules;
+import { useModulesData } from '@/hooks/useModulesData';
 
 export default function Destinations() {
   const { t, i18n } = useTranslation();
   const { ref, isVisible } = useScrollAnimation<HTMLElement>();
+  const { modules } = useModulesData();
 
   // Get current language, fallback to 'es' if not available
   const currentLang = (i18n.language as 'es' | 'en' | 'he') || 'es';
