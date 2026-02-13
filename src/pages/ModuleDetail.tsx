@@ -24,8 +24,10 @@ export default function ModuleDetail() {
     const { t, i18n } = useTranslation();
     const { modules, loading, error } = useModulesData();
 
-    // Get current language, fallback to 'es' if not available
-    const currentLang = (i18n.language as 'es' | 'en' | 'he') || 'es';
+    // Get current language with proper fallback
+    const validLanguages = ['es', 'en', 'he'] as const;
+    const detectedLang = i18n.language?.split('-')[0]; // Handle 'en-US' -> 'en'
+    const currentLang = (validLanguages.includes(detectedLang as any) ? detectedLang : 'en') as 'es' | 'en' | 'he';
     const { ref: overviewRef, isVisible: overviewVisible } = useScrollAnimation<HTMLDivElement>({ startVisible: true });
     const { ref: attractionsRef, isVisible: attractionsVisible } = useScrollAnimation<HTMLDivElement>({ startVisible: true });
     const { ref: itineraryRef, isVisible: itineraryVisible } = useScrollAnimation<HTMLDivElement>({ startVisible: true });
@@ -34,12 +36,6 @@ export default function ModuleDetail() {
     useEffect(() => {
         window.scrollTo(0, 0);
     }, [moduleId]);
-
-    // Debug logging
-    console.log('ModuleDetail: loading =', loading);
-    console.log('ModuleDetail: error =', error);
-    console.log('ModuleDetail: modules.length =', modules.length);
-    console.log('ModuleDetail: moduleId =', moduleId);
 
     // Handle loading state
     if (loading) {
@@ -74,18 +70,6 @@ export default function ModuleDetail() {
     }
 
     const module = modules.find((m) => m.id === moduleId);
-
-    console.log('ModuleDetail: Found module?', module ? 'YES' : 'NO');
-    if (module) {
-        console.log('ModuleDetail: Module name:', module.name.es);
-        console.log('ModuleDetail: currentLang =', currentLang);
-        console.log('ModuleDetail: module.description =', module.description);
-        console.log('ModuleDetail: module.description[currentLang] =', module.description[currentLang]);
-        console.log('ModuleDetail: module.mainAttractions.length =', module.mainAttractions.length);
-        console.log('ModuleDetail: module.itinerary =', module.itinerary);
-    } else {
-        console.log('ModuleDetail: Available module IDs:', modules.map(m => m.id));
-    }
 
     if (!module) {
         return <Navigate to="/" replace />;
