@@ -1,3 +1,10 @@
+/* Box Sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
   width: 8px;

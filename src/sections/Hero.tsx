@@ -44,7 +44,6 @@ export default function Hero() {
               }`}
             style={{
               backgroundImage: `url(${image})`,
-              backgroundAttachment: 'fixed',
               backgroundSize: 'cover',
             }}
           />

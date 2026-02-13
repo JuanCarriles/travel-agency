@@ -20,7 +20,7 @@ function App() {
 
   return (
     <Router>
-      <div className="min-h-screen bg-[#F5F3EE]">
+      <div className="min-h-screen bg-[#F5F3EE] overflow-x-hidden">
         <Header />
         <main>
           <Routes>
