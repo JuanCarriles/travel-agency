@@ -21,18 +21,13 @@ export function useModulesData(): UseModulesDataReturn {
         const fetchModules = async () => {
             try {
                 setLoading(true);
-                console.log('useModulesData: Starting fetch...');
                 const response = await fetch('/data/modules.json');
-
-                console.log('useModulesData: Response status:', response.status);
 
                 if (!response.ok) {
                     throw new Error(`Failed to fetch modules: ${response.status} ${response.statusText}`);
                 }
 
                 const data: ModulesData = await response.json();
-
-                console.log('useModulesData: Data received:', data.modules.length, 'modules');
 
                 // Validate that the data has the expected structure
                 if (!data.modules || !Array.isArray(data.modules)) {
@@ -47,7 +42,6 @@ export function useModulesData(): UseModulesDataReturn {
                 setModules([]);
             } finally {
                 setLoading(false);
-                console.log('useModulesData: Loading complete');
             }
         };
 

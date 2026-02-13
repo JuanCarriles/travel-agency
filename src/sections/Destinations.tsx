@@ -8,8 +8,10 @@ export default function Destinations() {
   const { ref, isVisible } = useScrollAnimation<HTMLElement>();
   const { modules } = useModulesData();
 
-  // Get current language, fallback to 'es' if not available
-  const currentLang = (i18n.language as 'es' | 'en' | 'he') || 'es';
+  // Get current language with proper fallback
+  const validLanguages = ['es', 'en', 'he'] as const;
+  const detectedLang = i18n.language?.split('-')[0]; // Handle 'en-US' -> 'en'
+  const currentLang = (validLanguages.includes(detectedLang as any) ? detectedLang : 'en') as 'es' | 'en' | 'he';
 
   return (
     <section
