@@ -1,10 +1,9 @@
 import { useEffect } from 'react';
 import { useParams, Link, Navigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { ArrowLeft, Calendar, Users, MapPin, Download, MessageCircle, Mail } from 'lucide-react';
+import { ArrowLeft, Calendar, Users, MapPin, Download, MessageCircle, Mail, Loader2 } from 'lucide-react';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
-import modulesData from '@/data/modules.json';
-import type { ModulesData } from '@/types/modules';
+import { useModulesData } from '@/hooks/useModulesData';
 import * as LucideIcons from 'lucide-react';
 
 // Icon mapping for dynamic icon loading
@@ -20,24 +19,73 @@ const iconMap: Record<string, any> = {
     Ticket: LucideIcons.Ticket,
 };
 
-const modules = (modulesData as ModulesData).modules;
-
 export default function ModuleDetail() {
     const { moduleId } = useParams<{ moduleId: string }>();
     const { t, i18n } = useTranslation();
+    const { modules, loading, error } = useModulesData();
 
     // Get current language, fallback to 'es' if not available
     const currentLang = (i18n.language as 'es' | 'en' | 'he') || 'es';
-    const { ref: overviewRef, isVisible: overviewVisible } = useScrollAnimation<HTMLDivElement>();
-    const { ref: attractionsRef, isVisible: attractionsVisible } = useScrollAnimation<HTMLDivElement>();
-    const { ref: itineraryRef, isVisible: itineraryVisible } = useScrollAnimation<HTMLDivElement>();
+    const { ref: overviewRef, isVisible: overviewVisible } = useScrollAnimation<HTMLDivElement>({ startVisible: true });
+    const { ref: attractionsRef, isVisible: attractionsVisible } = useScrollAnimation<HTMLDivElement>({ startVisible: true });
+    const { ref: itineraryRef, isVisible: itineraryVisible } = useScrollAnimation<HTMLDivElement>({ startVisible: true });
 
     // Scroll to top when entering the module detail page
     useEffect(() => {
         window.scrollTo(0, 0);
     }, [moduleId]);
 
+    // Debug logging
+    console.log('ModuleDetail: loading =', loading);
+    console.log('ModuleDetail: error =', error);
+    console.log('ModuleDetail: modules.length =', modules.length);
+    console.log('ModuleDetail: moduleId =', moduleId);
+
+    // Handle loading state
+    if (loading) {
+        return (
+            <div className="min-h-screen bg-[#F5F3EE] flex items-center justify-center">
+                <div className="text-center">
+                    <Loader2 className="w-16 h-16 text-[#EFB4A7] animate-spin mx-auto mb-4" />
+                    <p className="text-lg text-[#2D2D2D]">{t('modules.loading') || 'Loading...'}</p>
+                </div>
+            </div>
+        );
+    }
+
+    // Handle error state
+    if (error) {
+        return (
+            <div className="min-h-screen bg-[#F5F3EE] flex items-center justify-center">
+                <div className="text-center max-w-md px-4">
+                    <p className="text-lg text-red-600 mb-4">
+                        {t('modules.errorLoading') || 'Error loading module data.'}
+                    </p>
+                    <Link
+                        to="/"
+                        className="inline-flex items-center gap-2 text-[#EFB4A7] hover:text-[#2D2D2D] transition-colors"
+                    >
+                        <ArrowLeft className="w-4 h-4" />
+                        {t('modules.backToHome') || 'Back to Home'}
+                    </Link>
+                </div>
+            </div>
+        );
+    }
+
     const module = modules.find((m) => m.id === moduleId);
+
+    console.log('ModuleDetail: Found module?', module ? 'YES' : 'NO');
+    if (module) {
+        console.log('ModuleDetail: Module name:', module.name.es);
+        console.log('ModuleDetail: currentLang =', currentLang);
+        console.log('ModuleDetail: module.description =', module.description);
+        console.log('ModuleDetail: module.description[currentLang] =', module.description[currentLang]);
+        console.log('ModuleDetail: module.mainAttractions.length =', module.mainAttractions.length);
+        console.log('ModuleDetail: module.itinerary =', module.itinerary);
+    } else {
+        console.log('ModuleDetail: Available module IDs:', modules.map(m => m.id));
+    }
 
     if (!module) {
         return <Navigate to="/" replace />;

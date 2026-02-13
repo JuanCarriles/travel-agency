@@ -13,13 +13,10 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select';
-import modulesData from '@/data/modules.json';
-import type { ModulesData } from '@/types/modules';
+import { useModulesData } from '@/hooks/useModulesData';
 import i18n from '@/i18n';
 import { smtpexpressClient, SENDER_EMAIL } from '@/lib/smtp';
 import { toast } from 'sonner';
-
-const modules = (modulesData as ModulesData).modules;
 
 const offices = [
   {
@@ -39,6 +36,7 @@ const offices = [
 export default function Contact() {
   const { t } = useTranslation();
   const { ref, isVisible } = useScrollAnimation<HTMLElement>();
+  const { modules } = useModulesData();
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [hasError, setHasError] = useState(false);
