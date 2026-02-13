@@ -80,22 +80,13 @@ export default function Contact() {
           email: SENDER_EMAIL,
         },
         recipients: {
-          email: 'luffyesmejor@gmail.com',
+          email: 'gloria@gatestoargentina.com',
         },
       });
       console.log('SMTP Express response:', result);
 
       setIsSubmitted(true);
-      setTimeout(() => {
-        setIsSubmitted(false);
-        setFormData({
-          name: '',
-          email: '',
-          phone: '',
-          destination: '',
-          message: '',
-        });
-      }, 3000);
+
     } catch (error) {
       console.error('Email send error:', error);
       setHasError(true);
@@ -338,10 +329,10 @@ export default function Contact() {
                   <div>
                     <h4 className="text-white font-semibold mb-1">Email</h4>
                     <a
-                      href="mailto:info@andesjourney.com"
+                      href="mailto:gloria@gatestoargentina.com"
                       className="text-[#EFB4A7] hover:text-white transition-colors duration-300"
                     >
-                      info@andesjourney.com
+                      gloria@gatestoargentina.com
                     </a>
                   </div>
                 </div>

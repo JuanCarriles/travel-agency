@@ -163,11 +163,11 @@ export default function Footer() {
               <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-[#EFB4A7] flex-shrink-0" />
                 <a
-                  href="mailto:info@andesjourney.com"
+                  href="mailto:gloria@gatestoargentina.com"
                   className="text-white/70 hover:text-[#EFB4A7] transition-colors duration-300 text-sm"
                   style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}
                 >
-                  info@andesjourney.com
+                  gloria@gatestoargentina.com
                 </a>
               </li>
 
