@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useParams, Link, Navigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { ArrowLeft, Calendar, Users, MapPin, Download, MessageCircle, Mail, Loader2 } from 'lucide-react';
+import { ArrowLeft, MapPin, Download, MessageCircle, Mail, Loader2 } from 'lucide-react';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import { useModulesData } from '@/hooks/useModulesData';
 import * as LucideIcons from 'lucide-react';

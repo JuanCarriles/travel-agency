@@ -242,6 +242,12 @@
     "testimonial3": "Excellent service in Hebrew, we felt at home in Argentina.",
     "author3": "Levy Family, Beer Sheva"
   },
+  "socialMedia": {
+    "title": "Visit Us on Social Media",
+    "subtitle": "Follow us for more content, photos and updates from our trips",
+    "facebookText": "Follow us on Facebook",
+    "instagramText": "Follow us on Instagram"
+  },
   "contact": {
     "section": "Contact",
     "title": "Start Your Adventure",
