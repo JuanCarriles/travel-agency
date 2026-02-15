@@ -60,13 +60,6 @@ export default function Hero() {
             : 'opacity-0 translate-y-10'
             }`}
         >
-          {/* Badge */}
-          <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 mb-8">
-            <span className="w-2 h-2 bg-[#EFB4A7] rounded-full animate-pulse" />
-            <span className="text-white/90 text-sm font-medium hero-text-shadow">
-              Israel - Argentina             </span>
-          </div>
-
           {/* Main Title */}
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight hero-text-shadow">                  {t('hero.title').split(' ').map((word, index) =>
             index === t('hero.title').split(' ').length - 1 ? (

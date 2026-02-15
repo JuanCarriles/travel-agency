@@ -124,40 +124,16 @@ export default function Footer() {
               {t('footer.contact')}
             </h4>
             <ul className="space-y-4">
+              {/* Argentina */}
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-[#EFB4A7] flex-shrink-0 mt-0.5" />
                 <div className="text-white/70 text-sm" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}>
-                  <p className="font-medium text-white">Israel (HQ)</p>
-                  <p>Tel Aviv, Israel</p>
+                  <p className="font-medium text-white">{t('contact.offices.argentina')}</p>
+                  <p>{t('contact.offices.argentinaLocation')}</p>
+                  <p>{t('contact.offices.argentinaPhone')}</p>
                 </div>
               </li>
-              <li className="flex items-center gap-3">
-                <Phone className="w-5 h-5 text-[#EFB4A7] flex-shrink-0" />
-                <a
-                  href="tel:+0381 3598639"
-                  className="text-white/70 hover:text-[#EFB4A7] transition-colors duration-300 text-sm"
-                  style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}
-                >
-                  +972546787997
-                </a>
-              </li>
-              <li className="flex items-start gap-3">
-                <MapPin className="w-5 h-5 text-[#EFB4A7] flex-shrink-0 mt-0.5" />
-                <div className="text-white/70 text-sm" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}>
-                  <p className="font-medium text-white">Argentina</p>
-                  <p>Tucumán, Argentina</p>
-                </div>
-              </li>
-              <li className="flex items-center gap-3">
-                <Phone className="w-5 h-5 text-[#EFB4A7] flex-shrink-0" />
-                <a
-                  href="tel:+0381 3598639"
-                  className="text-white/70 hover:text-[#EFB4A7] transition-colors duration-300 text-sm"
-                  style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}
-                >
-                  +0381 3598639
-                </a>
-              </li>
+
               <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-[#EFB4A7] flex-shrink-0" />
                 <a
@@ -167,6 +143,15 @@ export default function Footer() {
                 >
                   gloria@gatestoargentina.com
                 </a>
+              </li>
+              {/* Israel */}
+              <li className="flex items-start gap-3">
+                <MapPin className="w-5 h-5 text-[#EFB4A7] flex-shrink-0 mt-0.5" />
+                <div className="text-white/70 text-sm" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}>
+                  <p className="font-medium text-white">{t('contact.offices.israel')}</p>
+                  <p>{t('contact.offices.israelLocation')}</p>
+                  <p>{t('contact.offices.israelPhone')}</p>
+                </div>
               </li>
 
             </ul>

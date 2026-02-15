@@ -5,7 +5,7 @@ import { useScrollAnimation, useCountUp } from '@/hooks/useScrollAnimation';
 const stats = [
   { key: 'years', value: 15, suffix: '+' },
   { key: 'groups', value: 500, suffix: '+' },
-  { key: 'offices', value: 3, suffix: '' },
+  { key: 'offices', value: 2, suffix: '' },
 ];
 
 function StatCounter({

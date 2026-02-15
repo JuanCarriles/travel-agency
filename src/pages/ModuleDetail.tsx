@@ -106,14 +106,6 @@ export default function ModuleDetail() {
 
                     <div className="flex items-center justify-center gap-3 sm:gap-4 md:gap-6 lg:gap-8 flex-wrap px-2">
                         <div className="flex items-center gap-1.5 sm:gap-2 bg-black/20 backdrop-blur-sm px-2 sm:px-3 py-1.5 sm:py-2 rounded-full">
-                            <Calendar className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0" />
-                            <span className="text-sm sm:text-base md:text-lg whitespace-nowrap">{module.numberOfDays} {t('modules.days')}</span>
-                        </div>
-                        <div className="flex items-center gap-1.5 sm:gap-2 bg-black/20 backdrop-blur-sm px-2 sm:px-3 py-1.5 sm:py-2 rounded-full">
-                            <Users className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0" />
-                            <span className="text-sm sm:text-base md:text-lg whitespace-nowrap">{module.numberOfPeople} {t('modules.people')}</span>
-                        </div>
-                        <div className="flex items-center gap-1.5 sm:gap-2 bg-black/20 backdrop-blur-sm px-2 sm:px-3 py-1.5 sm:py-2 rounded-full">
                             <MapPin className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0" />
                             <span className="text-sm sm:text-base md:text-lg line-clamp-1">
                                 {module.locations.map((loc) => loc.name[currentLang]).join(', ')}

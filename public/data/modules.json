@@ -22,8 +22,6 @@
                 "en": "Hello! I'm interested in learning more about the Northwest Argentina Experience module. Could you provide additional details about availability and pricing?",
                 "he": "שלום! אני מעוניין לקבל מידע נוסף על מודול חוויית צפון מערב ארגנטינה. תוכלו לספק פרטים נוספים על זמינות ומחירים?"
             },
-            "numberOfDays": 8,
-            "numberOfPeople": 20,
             "tag": {
                 "es": "Noroeste Argentino",
                 "en": "Northwest Argentina",
@@ -124,7 +122,7 @@
                     "id": "quebradaConchas",
                     "name": {
                         "es": "Quebrada de las Conchas",
-                        "en": "Shell Gorge",
+                        "en": "Shell Quebrada",
                         "he": "ערוץ הקונצ'ס"
                     },
                     "type": "natural",
@@ -154,7 +152,7 @@
                     "id": "humahuaca",
                     "name": {
                         "es": "Quebrada de Humahuaca",
-                        "en": "Humahuaca Gorge",
+                        "en": "Humahuaca Quebrada",
                         "he": "ערוץ הומאוואקה"
                     },
                     "type": "cultural",
@@ -304,12 +302,12 @@
                         "day": 5,
                         "title": {
                             "es": "Quebrada de las Conchas y llegada a Salta",
-                            "en": "Shell Gorge and arrival in Salta",
+                            "en": "Shell Quebrada and arrival in Salta",
                             "he": "ערוץ הקונצ'ס והגעה לסלטה"
                         },
                         "description": {
                             "es": "Recorrido por las formaciones rocosas de la Quebrada de las Conchas y llegada a la ciudad de Salta, conocida como 'La Linda'",
-                            "en": "Tour through the rock formations of the Shell Gorge and arrival in Salta city, known as 'La Linda'",
+                            "en": "Tour through the rock formations of the Shell Quebrada and arrival in Salta city, known as 'La Linda'",
                             "he": "סיור בתצורות הסלע של ערוץ הקונצ'ס והגעה לעיר סלטה, המכונה 'לה לינדה'"
                         }
                     },
@@ -377,8 +375,6 @@
                 "en": "Hello! I'd like to know more about the Buenos Aires Cultural Immersion module. What dates are available and what's included in the package?",
                 "he": "שלום! ארצה לדעת עוד על מודול הטבילה התרבותית בבואנוס איירס. אילו תאריכים זמינים ומה כלול בחבילה?"
             },
-            "numberOfDays": 4,
-            "numberOfPeople": 20,
             "tag": {
                 "es": "Buenos Aires",
                 "en": "Buenos Aires",
@@ -575,8 +571,6 @@
                 "en": "Hello! I'm interested in the Calafate & Ushuaia module. Could you provide more information about this Southern Patagonia trip?",
                 "he": "שלום! אני מעוניין במודול קלפטה ואושואיה. תוכלו לספק מידע נוסף על הטיול הזה לפטגוניה הדרומית?"
             },
-            "numberOfDays": 9,
-            "numberOfPeople": 20,
             "tag": {
                 "es": "Patagonia Austral",
                 "en": "Southern Patagonia",

@@ -13,8 +13,8 @@
     "cta": "Plan Your Trip"
   },
   "modules": {
-    "title": "Our Travel Modules",
-    "subtitle": "Carefully designed experiences for groups of 15-20 travelers",
+    "title": "Our Travel Perls",
+    "subtitle": "Carefully designed experiences for personalized groups.",
     "cta": "View Details",
     "days": "Days",
     "people": "Travelers",
@@ -209,10 +209,11 @@
     "title-section": "Services",
     "title": "Premium Services",
     "subtitle": "Personalized services crafted to match your unique travel style",
+    "concierge-services": "Personal concierge service",
     "transfers": "Transfers",
     "transfersDesc": "To and from the airport at all destinations",
-    "accommodation": "4★ Accommodation",
-    "accommodationDesc": "Carefully selected hotels",
+    "accommodation": "Accommodation",
+    "accommodationDesc": "Carefully selected lodging",
     "guides": "Expert Guides",
     "guidesDesc": "Specialized bilingual local guides",
     "gastronomy": "Gastronomy",
@@ -242,12 +243,13 @@
     "author3": "Levy Family, Beer Sheva"
   },
   "contact": {
+    "section": "Contact",
     "title": "Start Your Adventure",
     "subtitle": "Contact us and let's design your dream trip together",
     "name": "Full name",
     "email": "Email",
     "phone": "Phone (Optional)",
-    "destination": "Module of interest (Optional)",
+    "destination": "Destination of interest (Optional)",
     "message": "Message",
     "send": "Send Inquiry",
     "sending": "Sending...",
@@ -257,8 +259,12 @@
     "noDestination": "No destination selected",
     "offices": {
       "title": "Our contacts",
-      "israel": "Israel (Headquarters)",
-      "argentina": "Argentina"
+      "argentina": "Argentina (Headquarters)",
+      "argentinaLocation": "Tucumán, Argentina",
+      "argentinaPhone": "+54 381 3598639",
+      "israel": "Israel",
+      "israelLocation": "Tel Aviv, Israel",
+      "israelPhone": "+972546787997"
     }
   },
   "footer": {
