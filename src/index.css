@@ -1,3 +1,6 @@
+/* Import elegant cursive fonts from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&family=Great+Vibes&family=Dancing+Script:wght@400;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -30,7 +33,7 @@
     --secondary-foreground: 240 5.9% 10%;
 
     /* --- ACENTOS Y HOVERS (Pink Gates - Rosa más vivo) --- */
-    /* Hex: #EFB4A7 -> HSL: 11 69% 80% */
+    /* Hex: #9FBCD4 -> HSL: 11 69% 80% */
     --accent: 11 69% 80%;
     --accent-foreground: 240 5.9% 10%;
 

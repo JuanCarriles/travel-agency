@@ -10,7 +10,7 @@ export default function SocialMedia() {
         {
             name: 'Facebook',
             icon: Facebook,
-            url: 'https://www.facebook.com/profile.php?id=61571547598806',
+            url: 'https://www.facebook.com/people/Gates-to-Argentina/61588040902492/',
             bgGradient: 'bg-gradient-to-br from-[#1877F2]/90 to-[#0D65D9]/90',
             hoverBg: 'hover:from-[#1877F2] hover:to-[#0D65D9]',
             iconColor: 'text-white',
@@ -19,7 +19,7 @@ export default function SocialMedia() {
         {
             name: 'Instagram',
             icon: Instagram,
-            url: 'https://www.instagram.com/madrichim.arg',
+            url: 'https://www.instagram.com/gatestoargentina',
             bgGradient: 'bg-gradient-to-br from-[#E4405F]/90 via-[#9B4FAD]/90 to-[#405DE6]/90',
             hoverBg: 'hover:from-[#E4405F] hover:via-[#9B4FAD] hover:to-[#405DE6]',
             iconColor: 'text-white',
@@ -61,11 +61,11 @@ export default function SocialMedia() {
                         }`}
                 >
                     <div className="flex items-center justify-center gap-4 mb-4">
-                        <div className="w-12 h-[2px] bg-[#EFB4A7]" />
-                        <span className="text-[#EFB4A7] text-sm font-semibold uppercase tracking-wider">
+                        <div className="w-12 h-[2px] bg-[#9FBCD4]" />
+                        <span className="text-[#9FBCD4] text-sm font-semibold uppercase tracking-wider">
                             {t('nav.contact') || 'Conecta'}
                         </span>
-                        <div className="w-12 h-[2px] bg-[#EFB4A7]" />
+                        <div className="w-12 h-[2px] bg-[#9FBCD4]" />
                     </div>
                     <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 drop-shadow-lg">
                         {t('socialMedia.title') || 'Visítanos en Nuestras Redes Sociales'}
@@ -92,7 +92,7 @@ export default function SocialMedia() {
                             <div className="relative h-full">
                                 {/* Card Background with Gradient */}
                                 <div
-                                    className={`${social.bgGradient} ${social.hoverBg} backdrop-blur-sm border border-white/20 rounded-2xl p-8 md:p-10 h-full shadow-2xl transition-all duration-300 transform hover:scale-105 hover:shadow-[#EFB4A7]/20 group-hover:border-white/40`}
+                                    className={`${social.bgGradient} ${social.hoverBg} backdrop-blur-sm border border-white/20 rounded-2xl p-8 md:p-10 h-full shadow-2xl transition-all duration-300 transform hover:scale-105 hover:shadow-[#9FBCD4]/20 group-hover:border-white/40`}
                                 >
                                     {/* Icon Container */}
                                     <div className="relative mb-6 flex justify-center">

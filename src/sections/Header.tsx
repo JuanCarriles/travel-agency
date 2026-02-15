@@ -59,11 +59,11 @@ export default function Header() {
             />
             {/* Desktop: simplified logo + text */}
             <img
-              src="/images/gates-to-arg-LOGO-SIMPLIFICADO.png"
+              src="/images/GTA-LOGO-AZUL.png"
               alt="Gates to argentina logo"
               className="h-12 w-auto object-contain hidden sm:block"
             />
-            <span className="text-white font-semibold text-xl hidden sm:block" style={{ fontFamily: "'Monotype Corsiva', 'Great Vibes', cursive" }}>
+            <span className="text-white font-semibold text-xl hidden sm:block" style={{ fontFamily: "'Parisienne', 'Great Vibes', 'Dancing Script', cursive" }}>
               Gates To Argentina
             </span>
           </Link>
@@ -74,7 +74,7 @@ export default function Header() {
               <Link
                 key={item.key}
                 to={item.href}
-                className="text-white/90 hover:text-[#EFB4A7] transition-colors duration-300 text-sm font-medium"
+                className="text-white/90 hover:text-[#9FBCD4] transition-colors duration-300 text-sm font-medium"
               >
                 {t(`nav.${item.key}`)}
               </Link>
@@ -87,7 +87,7 @@ export default function Header() {
               <DropdownMenuTrigger asChild>
                 <Button
                   variant="ghost"
-                  className="text-white hover:text-[#EFB4A7] hover:bg-white/10 flex items-center gap-2"
+                  className="text-white hover:text-[#9FBCD4] hover:bg-white/10 flex items-center gap-2"
                 >
                   <Globe className="w-4 h-4" />
                   <span className="hidden sm:inline">{currentLanguage.flag}</span>
@@ -110,7 +110,7 @@ export default function Header() {
 
             <Link
               to="/#contact"
-              className="hidden md:inline-flex bg-[#EFB4A7] hover:bg-[#EFB9B0] text-white px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 hover:shadow-lg hover:shadow-[#EFB4A7]/30 drop-shadow-lg"
+              className="hidden md:inline-flex bg-[#9FBCD4] hover:bg-[#7cb2dd] text-white px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 hover:shadow-lg hover:shadow-[#9FBCD4]/30 drop-shadow-lg"
             >
               {t('hero.cta')}
             </Link>
@@ -138,7 +138,7 @@ export default function Header() {
                   key={item.key}
                   to={item.href}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="text-white/90 hover:text-[#EFB4A7] hover:bg-white/5 transition-all duration-300 py-3 px-4 rounded-lg text-base font-medium"
+                  className="text-white/90 hover:text-[#9FBCD4] hover:bg-white/5 transition-all duration-300 py-3 px-4 rounded-lg text-base font-medium"
                 >
                   {t(`nav.${item.key}`)}
                 </Link>
@@ -146,7 +146,7 @@ export default function Header() {
               <Link
                 to="/#contact"
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="bg-[#EFB4A7] hover:bg-[#EFB9B0] text-white text-center py-3 px-4 rounded-lg text-base font-medium mt-2 transition-all duration-300 drop-shadow-lg"
+                className="bg-[#9FBCD4] hover:bg-[#7cb2dd] text-white text-center py-3 px-4 rounded-lg text-base font-medium mt-2 transition-all duration-300 drop-shadow-lg"
               >
                 {t('hero.cta')}
               </Link>

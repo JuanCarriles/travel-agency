@@ -43,11 +43,11 @@ export default function Footer() {
           <div className="lg:col-span-1">
             <a href="#home" className="flex items-center gap-2 mb-6">
               <img
-                src="/images/gates-to-arg-LOGO-SIMPLIFICADO.png"
+                src="/images/GTA-LOGO-AZUL.png"
                 alt="Gates to argentina logo"
                 className="h-12 w-auto object-contain"
               />
-              <span className="text-white font-semibold text-xl" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}>
+              <span className="text-white font-semibold text-xl hidden sm:block" style={{ fontFamily: "'Monotype Corsiva', 'Great Vibes', cursive" }}>
                 Gates to argentina
               </span>
             </a>
@@ -63,7 +63,7 @@ export default function Footer() {
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-10 h-10 rounded-full bg-white/10 hover:bg-[#EFB4A7] flex items-center justify-center transition-all duration-300 hover:scale-110"
+                    className="w-10 h-10 rounded-full bg-white/10 hover:bg-[#9FBCD4] flex items-center justify-center transition-all duration-300 hover:scale-110"
                     aria-label={social.label}
                   >
                     {social.isGroupMe ? (
@@ -79,7 +79,7 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-lg font-semibold mb-6 text-[#EFB4A7]" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}>
+            <h4 className="text-lg font-semibold mb-6 text-[#9FBCD4]" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}>
               {t('footer.quickLinks')}
             </h4>
             <ul className="space-y-3">
@@ -87,7 +87,7 @@ export default function Footer() {
                 <li key={link.key}>
                   <a
                     href={link.href}
-                    className="text-white/70 hover:text-[#EFB4A7] transition-colors duration-300"
+                    className="text-white/70 hover:text-[#9FBCD4] transition-colors duration-300"
                     style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}
                   >
                     {t(`nav.${link.key}`)}
@@ -99,7 +99,7 @@ export default function Footer() {
 
           {/* Destinations */}
           <div>
-            <h4 className="text-lg font-semibold mb-6 text-[#EFB4A7]" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}>
+            <h4 className="text-lg font-semibold mb-6 text-[#9FBCD4]" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}>
               {t('footer.destinations')}
             </h4>
             <ul className="space-y-3">
@@ -107,7 +107,7 @@ export default function Footer() {
                 <li key={dest.id}>
                   <a
                     href={dest.href}
-                    className="text-white/70 hover:text-[#EFB4A7] transition-colors duration-300"
+                    className="text-white/70 hover:text-[#9FBCD4] transition-colors duration-300"
                     style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}
                   >
                     {dest.name[i18n.language as keyof typeof dest.name] || dest.name.en}
@@ -119,13 +119,13 @@ export default function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h4 className="text-lg font-semibold mb-6 text-[#EFB4A7]" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}>
+            <h4 className="text-lg font-semibold mb-6 text-[#9FBCD4]" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}>
               {t('footer.contact')}
             </h4>
             <ul className="space-y-4">
               {/* Argentina */}
               <li className="flex items-start gap-3">
-                <MapPin className="w-5 h-5 text-[#EFB4A7] flex-shrink-0 mt-0.5" />
+                <MapPin className="w-5 h-5 text-[#9FBCD4] flex-shrink-0 mt-0.5" />
                 <div className="text-white/70 text-sm" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}>
                   <p className="font-medium text-white">{t('contact.offices.argentina')}</p>
                   <p>{t('contact.offices.argentinaLocation')}</p>
@@ -134,10 +134,10 @@ export default function Footer() {
               </li>
 
               <li className="flex items-center gap-3">
-                <Mail className="w-5 h-5 text-[#EFB4A7] flex-shrink-0" />
+                <Mail className="w-5 h-5 text-[#9FBCD4] flex-shrink-0" />
                 <a
                   href="mailto:gloria@gatestoargentina.com"
-                  className="text-white/70 hover:text-[#EFB4A7] transition-colors duration-300 text-sm"
+                  className="text-white/70 hover:text-[#9FBCD4] transition-colors duration-300 text-sm"
                   style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}
                 >
                   gloria@gatestoargentina.com
@@ -145,7 +145,7 @@ export default function Footer() {
               </li>
               {/* Israel */}
               <li className="flex items-start gap-3">
-                <MapPin className="w-5 h-5 text-[#EFB4A7] flex-shrink-0 mt-0.5" />
+                <MapPin className="w-5 h-5 text-[#9FBCD4] flex-shrink-0 mt-0.5" />
                 <div className="text-white/70 text-sm" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}>
                   <p className="font-medium text-white">{t('contact.offices.israel')}</p>
                   <p>{t('contact.offices.israelLocation')}</p>
