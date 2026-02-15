@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Calendar, Users, MapPin, Loader2 } from 'lucide-react';
+import { ArrowRight, MapPin, Loader2 } from 'lucide-react';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import { useModulesData } from '@/hooks/useModulesData';
 

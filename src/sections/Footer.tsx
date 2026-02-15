@@ -4,7 +4,6 @@ import {
   Instagram,
   MessageCircle,
   Mail,
-  Phone,
   MapPin,
 } from 'lucide-react';
 import { useModulesData } from '@/hooks/useModulesData';
