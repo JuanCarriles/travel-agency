@@ -19,18 +19,8 @@ import { smtpexpressClient, SENDER_EMAIL } from '@/lib/smtp';
 import { toast } from 'sonner';
 
 const offices = [
-  {
-    key: 'israel',
-    location: 'Tel Aviv',
-    phone: '+972546787997',
-    email: 'glo.israel@gmail.com',
-  },
-  {
-    key: 'argentina',
-    location: 'Tucumán',
-    phone: '0381 3598639',
-    email: 'gloria.gta.office@gmail.com ',
-  }
+  { key: 'argentina' },
+  { key: 'israel' }
 ];
 
 export default function Contact() {
@@ -123,7 +113,7 @@ export default function Contact() {
           <div className="flex items-center justify-center gap-4 mb-4">
             <div className="w-12 h-[2px] bg-[#EFB4A7]" />
             <span className="text-[#EFB4A7] text-sm font-semibold uppercase tracking-wider">
-              Contacto
+              {t('contact.section')}
             </span>
             <div className="w-12 h-[2px] bg-[#EFB4A7]" />
           </div>
@@ -287,51 +277,71 @@ export default function Contact() {
                 {t('contact.offices.title')}
               </h3>
 
-              {offices.map((office) => (
-                <div
-                  key={office.key}
-                  className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 hover:bg-white/15 transition-colors duration-300"
-                >
-                  <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 bg-[#EFB4A7] rounded-lg flex items-center justify-center flex-shrink-0">
-                      <MapPin className="w-5 h-5 text-white" />
-                    </div>
-                    <div>
-                      <h4 className="text-white font-semibold mb-1">
-                        {t(`contact.offices.${office.key}`)}
-                      </h4>
-                      <p className="text-white/70 text-sm mb-2">
-                        {office.location}
-                      </p>
-                      <div className="flex items-center gap-2 text-white/60 text-sm">
-                        <Phone className="w-4 h-4" />
-                        {office.phone}
-                      </div>
-                      <div className="flex items-center gap-2 text-white/60 text-sm mt-1">
-                        <Mail className="w-4 h-4" />
-                        <a href={`mailto:${office.email}`} className="hover:text-[#EFB4A7] transition-colors duration-300">
-                          {office.email}
-                        </a>
-                      </div>
+              {/* Argentina */}
+              <div
+                key={offices[0].key}
+                className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 hover:bg-white/15 transition-colors duration-300"
+              >
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 bg-[#EFB4A7] rounded-lg flex items-center justify-center flex-shrink-0">
+                    <MapPin className="w-5 h-5 text-white" />
+                  </div>
+                  <div>
+                    <h4 className="text-white font-semibold mb-1">
+                      {t(`contact.offices.${offices[0].key}`)}
+                    </h4>
+                    <p className="text-white/70 text-sm mb-2">
+                      {t('contact.offices.argentinaLocation')}
+                    </p>
+                    <div className="flex items-center gap-2 text-white/60 text-sm">
+                      <Phone className="w-4 h-4" />
+                      {t('contact.offices.argentinaPhone')}
                     </div>
                   </div>
                 </div>
-              ))}
+              </div>
+
 
               {/* Email */}
-              <div className="bg-[#EFB4A7]/20 backdrop-blur-sm border border-[#EFB4A7]/30 rounded-xl p-6">
+              <div className="bg-[#e7a799]/15 backdrop-blur-sm border border-[#EFB4A7]/60 hover:bg-[#EFB4A7]/60 rounded-xl p-6">
                 <div className="flex items-center gap-4">
                   <div className="w-10 h-10 bg-[#EFB4A7] rounded-lg flex items-center justify-center">
                     <Mail className="w-5 h-5 text-white" />
                   </div>
+
                   <div>
                     <h4 className="text-white font-semibold mb-1">Email</h4>
                     <a
                       href="mailto:gloria@gatestoargentina.com"
-                      className="text-[#EFB4A7] hover:text-white transition-colors duration-300"
+                      className="text-white/60 hover:text-white transition-colors duration-300"
                     >
                       gloria@gatestoargentina.com
                     </a>
+
+                  </div>
+                </div>
+              </div>
+
+              {/* Israel */}
+              <div
+                key={offices[1].key}
+                className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 hover:bg-white/15 transition-colors duration-300"
+              >
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 bg-[#EFB4A7] rounded-lg flex items-center justify-center flex-shrink-0">
+                    <MapPin className="w-5 h-5 text-white" />
+                  </div>
+                  <div>
+                    <h4 className="text-white font-semibold mb-1">
+                      {t(`contact.offices.${offices[1].key}`)}
+                    </h4>
+                    <p className="text-white/70 text-sm mb-2">
+                      {t('contact.offices.israelLocation')}
+                    </p>
+                    <div className="flex items-center gap-2 text-white/60 text-sm">
+                      <Phone className="w-4 h-4" />
+                      {t('contact.offices.israelPhone')}
+                    </div>
                   </div>
                 </div>
               </div>

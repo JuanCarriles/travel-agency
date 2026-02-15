@@ -90,16 +90,7 @@ export default function Modules() {
 
                                     {/* Module Details Overlay */}
                                     <div className="absolute bottom-4 left-4 right-4 text-white">
-                                        <div className="flex items-center gap-4 text-sm mb-2">
-                                            <div className="flex items-center gap-1">
-                                                <Calendar className="w-4 h-4" />
-                                                <span>{module.numberOfDays} {t('modules.days')}</span>
-                                            </div>
-                                            <div className="flex items-center gap-1">
-                                                <Users className="w-4 h-4" />
-                                                <span>{module.numberOfPeople} {t('modules.people')}</span>
-                                            </div>
-                                        </div>
+
                                         <div className="flex items-center gap-1 text-sm opacity-90">
                                             <MapPin className="w-4 h-4" />
                                             <span>{module.locations.length} {t('modules.travelLocations')}</span>

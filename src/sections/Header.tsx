@@ -63,7 +63,7 @@ export default function Header() {
               alt="Gates to argentina logo"
               className="h-12 w-auto object-contain hidden sm:block"
             />
-            <span className="text-white font-semibold text-xl hidden sm:block">
+            <span className="text-white font-semibold text-xl hidden sm:block" style={{ fontFamily: "'Monotype Corsiva', 'Great Vibes', cursive" }}>
               Gates To Argentina
             </span>
           </Link>

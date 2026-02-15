@@ -13,8 +13,8 @@
     "cta": "Planificá tu Viaje"
   },
   "modules": {
-    "title": "Nuestros Módulos de Viaje",
-    "subtitle": "Experiencias cuidadosamente diseñadas para grupos de 15-20 viajeros",
+    "title": "Nuestras perlas de Viaje",
+    "subtitle": "Experiencias cuidadosamente diseñadas para grupos personalizados.",
     "cta": "Ver Detalles",
     "days": "Días",
     "people": "Viajeros",
@@ -206,12 +206,13 @@
     }
   },
   "services": {
-    "title": "Servicios Premium",
+    "title-section": "Servicios Premium",
     "subtitle": "Todo incluido para tu tranquilidad",
+    "concierge-services": "Servicio de asistencia personal",
     "transfers": "Traslados",
     "transfersDesc": "Desde y hacia el aeropuerto en todos los destinos",
-    "accommodation": "Hospedaje 4★",
-    "accommodationDesc": "Hoteles cuidadosamente seleccionados",
+    "accommodation": "Alojamiento",
+    "accommodationDesc": "Alojamiento cuidadosamente seleccionado",
     "guides": "Guías Expertos",
     "guidesDesc": "Guías locales bilingües especializados",
     "gastronomy": "Gastronomía",
@@ -241,12 +242,13 @@
     "author3": "Familia Levy, Beer Sheva"
   },
   "contact": {
+    "section": "Contacto",
     "title": "Empezá tu Aventura",
     "subtitle": "Contactanos y diseñamos juntos tu viaje soñado",
     "name": "Nombre completo",
     "email": "Correo electrónico",
     "phone": "Teléfono (Opcional)",
-    "destination": "Módulo de interés (Opcional)",
+    "destination": "Destino de interés (Opcional)",
     "message": "Mensaje",
     "send": "Enviar Consulta",
     "sending": "Enviando...",
@@ -256,8 +258,12 @@
     "noDestination": "Sin destino seleccionado",
     "offices": {
       "title": "Nuestros contactos",
-      "israel": "Israel (Central)",
-      "argentina": "Argentina"
+      "argentina": "Argentina (Central)",
+      "argentinaLocation": "Tucumán, Argentina",
+      "argentinaPhone": "+54 381 3598639",
+      "israel": "Israel",
+      "israelLocation": "Tel Aviv, Israel",
+      "israelPhone": "+972546787997"
     }
   },
   "footer": {

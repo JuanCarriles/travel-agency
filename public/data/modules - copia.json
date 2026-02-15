@@ -124,7 +124,7 @@
                     "id": "quebradaConchas",
                     "name": {
                         "es": "Quebrada de las Conchas",
-                        "en": "Shell Gorge",
+                        "en": "Shell Quebrada",
                         "he": "ערוץ הקונצ'ס"
                     },
                     "type": "natural",
@@ -154,7 +154,7 @@
                     "id": "humahuaca",
                     "name": {
                         "es": "Quebrada de Humahuaca",
-                        "en": "Humahuaca Gorge",
+                        "en": "Humahuaca Quebrada",
                         "he": "ערוץ הומאוואקה"
                     },
                     "type": "cultural",
@@ -208,7 +208,7 @@
                 {
                     "name": {
                         "es": "Alojamiento en hoteles seleccionados",
-                        "en": "Accommodation in selected hotels",
+                        "en": "Accommodation in selected lodging",
                         "he": "לינה במלונות נבחרים"
                     },
                     "icon": "Hotel"
@@ -305,12 +305,12 @@
                         "day": 5,
                         "title": {
                             "es": "Quebrada de las Conchas y llegada a Salta",
-                            "en": "Shell Gorge and arrival in Salta",
+                            "en": "Shell Quebrada and arrival in Salta",
                             "he": "ערוץ הקונצ'ס והגעה לסלטה"
                         },
                         "description": {
                             "es": "Recorrido por las formaciones rocosas de la Quebrada de las Conchas y llegada a la ciudad de Salta, conocida como 'La Linda'",
-                            "en": "Tour through the rock formations of the Shell Gorge and arrival in Salta city, known as 'La Linda'",
+                            "en": "Tour through the rock formations of the Shell Quebrada and arrival in Salta city, known as 'La Linda'",
                             "he": "סיור בתצורות הסלע של ערוץ הקונצ'ס והגעה לעיר סלטה, המכונה 'לה לינדה'"
                         }
                     },
