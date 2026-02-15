@@ -43,13 +43,10 @@ export default function Footer() {
           <div className="lg:col-span-1">
             <a href="#home" className="flex items-center gap-2 mb-6">
               <img
-                src="/images/gates-to-arg-LOGO-SIMPLIFICADO.png"
+                src="/images/gates-to-arg-LOGO-COMPLETO-WHITE.png"
                 alt="Gates to argentina logo"
                 className="h-12 w-auto object-contain"
               />
-              <span className="text-white font-semibold text-xl" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}>
-                Gates to argentina
-              </span>
             </a>
             <p className="text-white/70 leading-relaxed mb-6" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}>
               {t('footer.description')}
