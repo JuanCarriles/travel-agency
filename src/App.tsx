@@ -30,10 +30,10 @@ function App() {
         </main>
         <Footer />
 
-        {/* Floating Social Buttons */}
+        {/* Floating Social Buttons  
         <GroupMeButton
           groupUrl="https://groupme.com/join_group/YOUR_GROUP_ID/YOUR_TOKEN"
-        />
+        />*/}
         <WhatsAppButton
           phoneNumber="543813598639"
           message=""

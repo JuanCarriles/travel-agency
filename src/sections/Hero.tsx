@@ -63,7 +63,7 @@ export default function Hero() {
           {/* Main Title */}
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight hero-text-shadow">                  {t('hero.title').split(' ').map((word, index) =>
             index === t('hero.title').split(' ').length - 1 ? (
-              <span key={index} className="text-[#EFB4A7]">
+              <span key={index} className="text-[#9FBCD4]">
                 {word}
               </span>
             ) : (
@@ -86,14 +86,14 @@ export default function Hero() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
               href="#contact"
-              className="hero-text-shadow group relative bg-[#EFB4A7] hover:bg-[#EFB9B0] text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 hover:shadow-xl hover:shadow-[#EFB4A7]/30 overflow-hidden"
+              className="hero-text-shadow group relative bg-[#9FBCD4] hover:bg-[#7cb2dd] text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 hover:shadow-xl hover:shadow-[#9FBCD4]/30 overflow-hidden"
             >
               <span className="relative z-10">{t('hero.cta')}</span>
               <div className="hero-text-shadow absolute inset-0 bg-white/20 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-500" />
             </a>
             <a
               href="#modules"
-              className="hero-text-shadow text-white border-2 border-white/30 hover:border-[#EFB4A7] hover:text-[#EFB4A7] px-8 py-4 rounded-full text-lg font-medium transition-all duration-300 hero-text-shadow"
+              className="hero-text-shadow text-white border-2 border-white/30 hover:border-[#9FBCD4] hover:text-[#9FBCD4] px-8 py-4 rounded-full text-lg font-medium transition-all duration-300 hero-text-shadow"
             >
               {t('Destinations')}
             </a>
@@ -105,7 +105,7 @@ export default function Hero() {
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
         <a
           href="#modules"
-          className="flex flex-col items-center text-white/60 hover:text-[#EFB4A7] transition-colors duration-300"
+          className="flex flex-col items-center text-white/60 hover:text-[#9FBCD4] transition-colors duration-300"
         >
           <span className="text-sm mb-2 hero-text-shadow">{t('Destinations')}</span>
           <ChevronDown className="w-6 h-6 hero-text-shadow" />
@@ -113,8 +113,8 @@ export default function Hero() {
       </div>
 
       {/* Decorative Elements */}
-      <div className="absolute top-1/4 left-10 w-2 h-2 bg-[#EFB4A7] rounded-full opacity-60" />
-      <div className="absolute top-1/3 right-20 w-3 h-3 bg-[#EFB4A7] rounded-full opacity-40" />
+      <div className="absolute top-1/4 left-10 w-2 h-2 bg-[#9FBCD4] rounded-full opacity-60" />
+      <div className="absolute top-1/3 right-20 w-3 h-3 bg-[#9FBCD4] rounded-full opacity-40" />
       <div className="absolute bottom-1/4 left-1/4 w-2 h-2 bg-white rounded-full opacity-30" />
     </section>
   );

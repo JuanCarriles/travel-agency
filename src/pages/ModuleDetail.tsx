@@ -42,7 +42,7 @@ export default function ModuleDetail() {
         return (
             <div className="min-h-screen bg-[#F5F3EE] flex items-center justify-center">
                 <div className="text-center">
-                    <Loader2 className="w-16 h-16 text-[#EFB4A7] animate-spin mx-auto mb-4" />
+                    <Loader2 className="w-16 h-16 text-[#9FBCD4] animate-spin mx-auto mb-4" />
                     <p className="text-lg text-[#2D2D2D]">{t('modules.loading') || 'Loading...'}</p>
                 </div>
             </div>
@@ -59,7 +59,7 @@ export default function ModuleDetail() {
                     </p>
                     <Link
                         to="/"
-                        className="inline-flex items-center gap-2 text-[#EFB4A7] hover:text-[#2D2D2D] transition-colors"
+                        className="inline-flex items-center gap-2 text-[#9FBCD4] hover:text-[#2D2D2D] transition-colors"
                     >
                         <ArrowLeft className="w-4 h-4" />
                         {t('modules.backToHome') || 'Back to Home'}
@@ -89,7 +89,7 @@ export default function ModuleDetail() {
                 <div className={`absolute top-24 z-10 ${t('nav.home') === 'בית' ? 'right-4 sm:right-6' : 'left-4 sm:left-6'}`}>
                     <Link
                         to="/"
-                        className="inline-flex items-center gap-1.5 sm:gap-2 text-white hover:text-[#EFB4A7] transition-colors duration-300 px-2 py-1"
+                        className="inline-flex items-center gap-1.5 sm:gap-2 text-white hover:text-[#9FBCD4] transition-colors duration-300 px-2 py-1"
                     >
                         <ArrowLeft className="w-4 h-4 sm:w-5 sm:h-5" />
                         <span className="text-xs sm:text-sm font-medium">{t('modules.backToHome') || 'Home'}</span>
@@ -157,7 +157,7 @@ export default function ModuleDetail() {
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
 
                                     <div className="absolute bottom-3 sm:bottom-4 left-3 sm:left-4 right-3 sm:right-4 text-white">
-                                        <div className="inline-block bg-[#EFB4A7]/90 text-xs font-semibold px-2 py-1 rounded mb-2 uppercase text-white" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}>
+                                        <div className="inline-block bg-[#9FBCD4]/90 text-xs font-semibold px-2 py-1 rounded mb-2 uppercase text-white" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}>
                                             {t(`attractionTypes.${attraction.type}`)}
                                         </div>
                                         <h3 className="text-base sm:text-lg md:text-xl font-bold text-white mb-1 sm:mb-2" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.8)' }}>
@@ -199,7 +199,7 @@ export default function ModuleDetail() {
                                 >
                                     <div className="flex gap-3 sm:gap-4 md:gap-6">
                                         <div className="flex-shrink-0">
-                                            <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-full bg-[#EFB4A7] flex items-center justify-center">
+                                            <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-full bg-[#9FBCD4] flex items-center justify-center">
                                                 <span className="text-white font-bold text-sm sm:text-base md:text-lg">D{day.day}</span>
                                             </div>
                                         </div>
@@ -221,7 +221,7 @@ export default function ModuleDetail() {
                                 <a
                                     href={module.itinerary.pdfUrl}
                                     download
-                                    className="flex items-center justify-center gap-2 w-full bg-[#EFB4A7] hover:bg-[#EFB9B0] text-white py-3 px-6 rounded-full font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-[#EFB4A7]/30 min-h-[44px]"
+                                    className="flex items-center justify-center gap-2 w-full bg-[#9FBCD4] hover:bg-[#7cb2dd] text-white py-3 px-6 rounded-full font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-[#9FBCD4]/30 min-h-[44px]"
                                 >
                                     <Download className="w-5 h-5" />
                                     {t('modules.downloadItinerary')}
@@ -235,7 +235,7 @@ export default function ModuleDetail() {
                         : 'opacity-0 translate-y-10'
                         }`}>
                         <div className="flex flex-col items-center gap-4">
-                            <MessageCircle className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 text-[#EFB4A7]" />
+                            <MessageCircle className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 text-[#9FBCD4]" />
                             <p className="text-base sm:text-lg md:text-xl text-[#2D2D2D] max-w-2xl">
                                 {t('modules.noItineraryMessage')}
                             </p>
@@ -260,11 +260,11 @@ export default function ModuleDetail() {
                     {/* Section Header */}
                     <div className="text-center mb-16">
                         <div className="flex items-center justify-center gap-4 mb-4">
-                            <div className="w-12 h-[2px] bg-[#EFB4A7]" />
-                            <span className="text-[#EFB4A7] text-sm font-semibold uppercase tracking-wider services-text-shadow">
+                            <div className="w-12 h-[2px] bg-[#9FBCD4]" />
+                            <span className="text-[#9FBCD4] text-sm font-semibold uppercase tracking-wider services-text-shadow">
                                 {t('modules.whatsIncluded') || "What's Included"}
                             </span>
-                            <div className="w-12 h-[2px] bg-[#EFB4A7]" />
+                            <div className="w-12 h-[2px] bg-[#9FBCD4]" />
                         </div>
                     </div>
 
@@ -275,29 +275,29 @@ export default function ModuleDetail() {
                             return (
                                 <div
                                     key={item.name[currentLang]}
-                                    className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-[#EFB4A7]/50 transition-all duration-500"
+                                    className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-[#9FBCD4]/50 transition-all duration-500"
                                     style={{
                                         transitionDelay: `${index * 100}ms`,
                                     }}
                                 >
                                     {/* Icon */}
                                     <div className="relative mb-4">
-                                        <div className="w-14 h-14 rounded-full bg-[#EFB4A7]/20 flex items-center justify-center group-hover:bg-[#EFB4A7]/30 transition-colors duration-300">
-                                            <Icon className="w-7 h-7 text-[#EFB4A7]" />
+                                        <div className="w-14 h-14 rounded-full bg-[#9FBCD4]/20 flex items-center justify-center group-hover:bg-[#9FBCD4]/30 transition-colors duration-300">
+                                            <Icon className="w-7 h-7 text-[#9FBCD4]" />
                                         </div>
                                         {/* Glow Effect */}
-                                        <div className="absolute inset-0 w-14 h-14 rounded-full bg-[#EFB4A7]/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                                        <div className="absolute inset-0 w-14 h-14 rounded-full bg-[#9FBCD4]/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                                     </div>
 
                                     {/* Content */}
-                                    <h3 className="text-lg font-bold text-white mb-2 group-hover:text-[#EFB4A7] transition-colors duration-300 services-text-shadow">
+                                    <h3 className="text-lg font-bold text-white mb-2 group-hover:text-[#9FBCD4] transition-colors duration-300 services-text-shadow">
                                         {item.name[currentLang]}
                                     </h3>
 
                                     {/* Decorative Corner */}
                                     <div className="absolute top-0 right-0 w-20 h-20 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                                        <div className="absolute top-4 right-4 w-8 h-[2px] bg-[#EFB4A7]" />
-                                        <div className="absolute top-4 right-4 w-[2px] h-8 bg-[#EFB4A7]" />
+                                        <div className="absolute top-4 right-4 w-8 h-[2px] bg-[#9FBCD4]" />
+                                        <div className="absolute top-4 right-4 w-[2px] h-8 bg-[#9FBCD4]" />
                                     </div>
                                 </div>
                             );
@@ -307,12 +307,12 @@ export default function ModuleDetail() {
             </section>
 
             {/* Customization Notice */}
-            <div className="bg-gradient-to-r from-[#EFB4A7]/10 to-[#EFB4A7]/5 py-12 md:py-16">
+            <div className="bg-gradient-to-r from-[#9FBCD4]/10 to-[#9FBCD4]/5 py-12 md:py-16">
                 <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="bg-white rounded-2xl shadow-lg p-6 sm:p-8 md:p-10 border-l-4 border-[#EFB4A7]">
+                    <div className="bg-white rounded-2xl shadow-lg p-6 sm:p-8 md:p-10 border-l-4 border-[#9FBCD4]">
                         <div className="flex items-start gap-4">
                             <div className="flex-shrink-0">
-                                <div className="w-12 h-12 bg-[#EFB4A7] rounded-full flex items-center justify-center">
+                                <div className="w-12 h-12 bg-[#9FBCD4] rounded-full flex items-center justify-center">
                                     <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
                                     </svg>
@@ -364,7 +364,7 @@ export default function ModuleDetail() {
                         <span>{t('modules.contactViaWhatsApp')}</span>
                     </a>
 
-                    {/* GroupMe Button */}
+                    {/* GroupMe Button  
                     <a
                         href={`https://groupme.com/contact/101879750/UfDn3LFL`}
                         target="_blank"
@@ -373,7 +373,7 @@ export default function ModuleDetail() {
                     >
                         <img src="/images/groupme-icon.png" alt="GroupMe" className="w-6 h-6" />
                         <span>{t('modules.contactViaGroupMe')}</span>
-                    </a>
+                    </a>*/}
                 </div>
             </div>
         </div>

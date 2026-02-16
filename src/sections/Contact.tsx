@@ -111,11 +111,11 @@ export default function Contact() {
             }`}
         >
           <div className="flex items-center justify-center gap-4 mb-4">
-            <div className="w-12 h-[2px] bg-[#EFB4A7]" />
-            <span className="text-[#EFB4A7] text-sm font-semibold uppercase tracking-wider">
+            <div className="w-12 h-[2px] bg-[#9FBCD4]" />
+            <span className="text-[#9FBCD4] text-sm font-semibold uppercase tracking-wider">
               {t('contact.section')}
             </span>
-            <div className="w-12 h-[2px] bg-[#EFB4A7]" />
+            <div className="w-12 h-[2px] bg-[#9FBCD4]" />
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
             {t('contact.title')}
@@ -153,7 +153,7 @@ export default function Contact() {
                   </h3>
                   <Button
                     onClick={() => setHasError(false)}
-                    className="mt-4 bg-[#EFB4A7] hover:bg-[#EFB9B0] text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300"
+                    className="mt-4 bg-[#9FBCD4] hover:bg-[#7cb2dd] text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300"
                   >
                     {t('contact.retry')}
                   </Button>
@@ -171,7 +171,7 @@ export default function Contact() {
                         value={formData.name}
                         onChange={handleChange}
                         required
-                        className="border-[#2D2D2D]/20 focus:border-[#EFB4A7] focus:ring-[#EFB4A7]"
+                        className="border-[#2D2D2D]/20 focus:border-[#9FBCD4] focus:ring-[#9FBCD4]"
                         placeholder="John Doe"
                       />
                     </div>
@@ -186,7 +186,7 @@ export default function Contact() {
                         value={formData.email}
                         onChange={handleChange}
                         required
-                        className="border-[#2D2D2D]/20 focus:border-[#EFB4A7] focus:ring-[#EFB4A7]"
+                        className="border-[#2D2D2D]/20 focus:border-[#9FBCD4] focus:ring-[#9FBCD4]"
                         placeholder="john@example.com"
                       />
                     </div>
@@ -203,7 +203,7 @@ export default function Contact() {
                         type="tel"
                         value={formData.phone}
                         onChange={handleChange}
-                        className="border-[#2D2D2D]/20 focus:border-[#EFB4A7] focus:ring-[#EFB4A7]"
+                        className="border-[#2D2D2D]/20 focus:border-[#9FBCD4] focus:ring-[#9FBCD4]"
                         placeholder="+1 234 567 890"
                       />
                     </div>
@@ -217,7 +217,7 @@ export default function Contact() {
                           setFormData({ ...formData, destination: value })
                         }
                       >
-                        <SelectTrigger className="border-[#2D2D2D]/20 focus:border-[#EFB4A7] focus:ring-[#EFB4A7]">
+                        <SelectTrigger className="border-[#2D2D2D]/20 focus:border-[#9FBCD4] focus:ring-[#9FBCD4]">
                           <SelectValue placeholder={t('contact.destination')} />
                         </SelectTrigger>
                         <SelectContent>
@@ -243,7 +243,7 @@ export default function Contact() {
                       onChange={handleChange}
                       required
                       rows={4}
-                      className="border-[#2D2D2D]/20 focus:border-[#EFB4A7] focus:ring-[#EFB4A7] resize-none"
+                      className="border-[#2D2D2D]/20 focus:border-[#9FBCD4] focus:ring-[#9FBCD4] resize-none"
                       placeholder="Tell us about your dream trip..."
                     />
                   </div>
@@ -251,7 +251,7 @@ export default function Contact() {
                   <Button
                     type="submit"
                     disabled={isLoading}
-                    className="w-full bg-[#EFB4A7] hover:bg-[#EFB9B0] text-white py-6 rounded-xl text-lg font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-[#EFB4A7]/30 disabled:opacity-60"
+                    className="w-full bg-[#9FBCD4] hover:bg-[#7cb2dd] text-white py-6 rounded-xl text-lg font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-[#9FBCD4]/30 disabled:opacity-60"
                   >
                     {isLoading ? (
                       <Loader2 className="w-5 h-5 mr-2 animate-spin" />
@@ -283,7 +283,7 @@ export default function Contact() {
                 className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 hover:bg-white/15 transition-colors duration-300"
               >
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 bg-[#EFB4A7] rounded-lg flex items-center justify-center flex-shrink-0">
+                  <div className="w-10 h-10 bg-[#9FBCD4] rounded-lg flex items-center justify-center flex-shrink-0">
                     <MapPin className="w-5 h-5 text-white" />
                   </div>
                   <div>
@@ -303,9 +303,9 @@ export default function Contact() {
 
 
               {/* Email */}
-              <div className="bg-[#e7a799]/15 backdrop-blur-sm border border-[#EFB4A7]/60 hover:bg-[#EFB4A7]/60 rounded-xl p-6">
+              <div className="bg-[#7cb2dd]/15 backdrop-blur-sm border border-[#9FBCD4]/60 hover:bg-[#9FBCD4]/60 rounded-xl p-6">
                 <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 bg-[#EFB4A7] rounded-lg flex items-center justify-center">
+                  <div className="w-10 h-10 bg-[#9FBCD4] rounded-lg flex items-center justify-center">
                     <Mail className="w-5 h-5 text-white" />
                   </div>
 
@@ -328,7 +328,7 @@ export default function Contact() {
                 className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 hover:bg-white/15 transition-colors duration-300"
               >
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 bg-[#EFB4A7] rounded-lg flex items-center justify-center flex-shrink-0">
+                  <div className="w-10 h-10 bg-[#9FBCD4] rounded-lg flex items-center justify-center flex-shrink-0">
                     <MapPin className="w-5 h-5 text-white" />
                   </div>
                   <div>
