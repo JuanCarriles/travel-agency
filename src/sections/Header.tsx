@@ -53,13 +53,17 @@ export default function Header() {
           <Link to="/#home" className="flex items-center gap-3">
             {/* Mobile: full logo */}
             <img
+
               src="/images/LOGO-DEFINITIVO.png"
+
               alt="Gates to argentina logo"
               className="h-12 w-auto object-contain sm:hidden"
             />
             {/* Desktop: simplified logo + text */}
             <img
+
               src="/images/LOGO-DEFINITIVO.png"
+
               alt="Gates to argentina logo"
               className="h-12 w-auto object-contain hidden sm:block"
             />

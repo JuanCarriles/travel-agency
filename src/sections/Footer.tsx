@@ -43,6 +43,7 @@ export default function Footer() {
           <div className="lg:col-span-1">
             <a href="/#home" className="flex items-center gap-2 mb-6">
               <img
+
                 src="/images/LOGO-DEFINITIVO.png"
                 alt="Gates to argentina logo"
                 className="h-12 w-auto object-contain"
