@@ -53,19 +53,16 @@ export default function Header() {
           <Link to="/#home" className="flex items-center gap-3">
             {/* Mobile: full logo */}
             <img
-              src="/images/gates-to-arg-LOGO-COMPLETO.png"
+              src="/images/LOGO-DEFINITIVO.png"
               alt="Gates to argentina logo"
               className="h-12 w-auto object-contain sm:hidden"
             />
             {/* Desktop: simplified logo + text */}
             <img
-              src="/images/GTA-LOGO-AZUL.png"
+              src="/images/LOGO-DEFINITIVO.png"
               alt="Gates to argentina logo"
               className="h-12 w-auto object-contain hidden sm:block"
             />
-            <span className="text-white font-semibold text-xl hidden sm:block" style={{ fontFamily: "'Parisienne', 'Great Vibes', 'Dancing Script', cursive" }}>
-              Gates To Argentina
-            </span>
           </Link>
 
           {/* Desktop Navigation */}

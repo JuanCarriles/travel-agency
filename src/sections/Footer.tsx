@@ -31,9 +31,9 @@ export default function Footer() {
     { icon: Instagram, href: 'https://www.instagram.com/gatestoargentina/', label: 'Instagram' },
     { icon: Facebook, href: 'https://www.facebook.com/people/Gates-to-Argentina/61588040902492/', label: 'Facebook' },
     { icon: MessageCircle, href: 'https://wa.me/543813598639', label: 'WhatsApp' },
-    { icon: null, href: 'https://groupme.com/contact/101879750/UfDn3LFL', label: 'GroupMe', isGroupMe: true },
   ];
-
+  /*  { icon: null, href: 'https://groupme.com/contact/101879750/UfDn3LFL', label: 'GroupMe', isGroupMe: true },
+  */
   return (
     <footer className="bg-[#858585ea] text-white">
       {/* Main Footer */}
@@ -41,15 +41,13 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <a href="#home" className="flex items-center gap-2 mb-6">
+            <a href="/#home" className="flex items-center gap-2 mb-6">
               <img
-                src="/images/GTA-LOGO-AZUL.png"
+                src="/images/LOGO-DEFINITIVO.png"
                 alt="Gates to argentina logo"
                 className="h-12 w-auto object-contain"
               />
-              <span className="text-white font-semibold text-xl hidden sm:block" style={{ fontFamily: "'Monotype Corsiva', 'Great Vibes', cursive" }}>
-                Gates to argentina
-              </span>
+
             </a>
             <p className="text-white/70 leading-relaxed mb-6" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}>
               {t('footer.description')}
@@ -66,11 +64,14 @@ export default function Footer() {
                     className="w-10 h-10 rounded-full bg-white/10 hover:bg-[#9FBCD4] flex items-center justify-center transition-all duration-300 hover:scale-110"
                     aria-label={social.label}
                   >
+                    {social.icon && <social.icon className="w-5 h-5" />}
+                    {/* GROUP ME  
+
                     {social.isGroupMe ? (
                       <img src="/images/groupme-icon.png" alt="GroupMe" className="w-5 h-5" />
                     ) : (
                       social.icon && <social.icon className="w-5 h-5" />
-                    )}
+                    )}*/}
                   </a>
                 );
               })}

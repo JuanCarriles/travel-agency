@@ -364,7 +364,7 @@ export default function ModuleDetail() {
                         <span>{t('modules.contactViaWhatsApp')}</span>
                     </a>
 
-                    {/* GroupMe Button */}
+                    {/* GroupMe Button  
                     <a
                         href={`https://groupme.com/contact/101879750/UfDn3LFL`}
                         target="_blank"
@@ -373,7 +373,7 @@ export default function ModuleDetail() {
                     >
                         <img src="/images/groupme-icon.png" alt="GroupMe" className="w-6 h-6" />
                         <span>{t('modules.contactViaGroupMe')}</span>
-                    </a>
+                    </a>*/}
                 </div>
             </div>
         </div>
