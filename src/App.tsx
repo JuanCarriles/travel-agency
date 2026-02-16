@@ -7,7 +7,6 @@ import Home from './pages/Home';
 import ModuleDetail from './pages/ModuleDetail';
 import Footer from './sections/Footer';
 import WhatsAppButton from './components/WhatsAppButton';
-import GroupMeButton from './components/GroupMeButton';
 import './App.css';
 
 function App() {
