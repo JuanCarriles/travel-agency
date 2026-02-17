@@ -27,11 +27,11 @@ export default function Modules() {
                         }`}
                 >
                     <div className="flex items-center justify-center gap-4 mb-4">
-                        <div className="w-12 h-[2px] bg-[#9FBCD4]" />
-                        <span className="text-[#9FBCD4] text-sm font-semibold uppercase tracking-wider">
+                        <div className="w-12 h-[2px] bg-[#7cb2dd]" />
+                        <span className="text-[#7cb2dd] text-sm font-semibold uppercase tracking-wider">
                             {t('nav.destinations')}
                         </span>
-                        <div className="w-12 h-[2px] bg-[#9FBCD4]" />
+                        <div className="w-12 h-[2px] bg-[#7cb2dd]" />
                     </div>
                     <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#2D2D2D] mb-4">
                         "{t('modules.title')}"
@@ -44,7 +44,7 @@ export default function Modules() {
                 {/* Loading State */}
                 {loading && (
                     <div className="flex justify-center items-center py-20">
-                        <Loader2 className="w-12 h-12 text-[#9FBCD4] animate-spin" />
+                        <Loader2 className="w-12 h-12 text-[#7cb2dd] animate-spin" />
                     </div>
                 )}
 
@@ -83,7 +83,7 @@ export default function Modules() {
 
                                     {/* Tag Badge - Dynamic */}
                                     {module.tag && (
-                                        <div className="absolute top-4 left-4 bg-[#9FBCD4] text-white text-xs font-semibold px-3 py-1.5 rounded-full">
+                                        <div className="absolute top-4 left-4 bg-[#7cb2dd] text-white text-xs font-semibold px-3 py-1.5 rounded-full">
                                             {module.tag[currentLang]}
                                         </div>
                                     )}
@@ -100,20 +100,20 @@ export default function Modules() {
 
                                 {/* Content */}
                                 <div className="p-6">
-                                    <h3 className="text-xl font-bold text-[#2D2D2D] mb-2 group-hover:text-[#9FBCD4] transition-colors duration-300">
+                                    <h3 className="text-xl font-bold text-[#2D2D2D] mb-2 group-hover:text-[#7cb2dd] transition-colors duration-300">
                                         {module.name[currentLang]}
                                     </h3>
                                     <p className="text-[#2D2D2D]/70 mb-4 line-clamp-2">
                                         {module.summary[currentLang]}
                                     </p>
-                                    <span className="inline-flex items-center gap-2 text-[#9FBCD4] font-semibold group-hover:gap-3 transition-all duration-300">
+                                    <span className="inline-flex items-center gap-2 text-[#7cb2dd] font-semibold group-hover:gap-3 transition-all duration-300">
                                         {t('modules.cta')}
                                         <ArrowRight className="w-4 h-4" />
                                     </span>
                                 </div>
 
                                 {/* Hover Border Effect */}
-                                <div className="absolute inset-0 border-2 border-[#9FBCD4] rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+                                <div className="absolute inset-0 border-2 border-[#7cb2dd] rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
                             </Link>
                         ))}
                     </div>

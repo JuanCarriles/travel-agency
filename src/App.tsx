@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import './i18n';
 import Header from './sections/Header';
@@ -7,6 +7,8 @@ import Home from './pages/Home';
 import ModuleDetail from './pages/ModuleDetail';
 import Footer from './sections/Footer';
 import WhatsAppButton from './components/WhatsAppButton';
+import InstagramButton from './components/InstagramButton';
+import FacebookButton from './components/FacebookButton';
 import './App.css';
 
 function App() {
@@ -25,14 +27,17 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/modules/:moduleId" element={<ModuleDetail />} />
+            <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </main>
         <Footer />
 
-        {/* Floating Social Buttons  
-        <GroupMeButton
-          groupUrl="https://groupme.com/join_group/YOUR_GROUP_ID/YOUR_TOKEN"
-        />*/}
+        {/* Floating Social Buttons */}
+        <FacebookButton
+          pageUrl="https://www.facebook.com/people/Gates-to-Argentina/61588040902492/"
+        />
+        <InstagramButton
+        />
         <WhatsAppButton
           phoneNumber="543813598639"
           message=""

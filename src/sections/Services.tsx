@@ -63,11 +63,11 @@ export default function Services() {
             }`}
         >
           <div className="flex items-center justify-center gap-4 mb-4">
-            <div className="w-12 h-[2px] bg-[#9FBCD4]" />
-            <span className="text-[#9FBCD4] text-sm font-semibold uppercase tracking-wider services-text-shadow">
+            <div className="w-12 h-[2px] bg-[#7cb2dd]" />
+            <span className="text-[#7cb2dd] text-sm font-semibold uppercase tracking-wider services-text-shadow">
               {t('services.title-section')}
             </span>
-            <div className="w-12 h-[2px] bg-[#9FBCD4]" />
+            <div className="w-12 h-[2px] bg-[#7cb2dd]" />
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 services-text-shadow">
             {t('services.title')}
@@ -86,7 +86,7 @@ export default function Services() {
             return (
               <div
                 key={service.key}
-                className={`group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 hover:border-[#9FBCD4]/50 transition-all duration-500 ${isVisible
+                className={`group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 hover:border-[#7cb2dd]/50 transition-all duration-500 ${isVisible
                   ? 'opacity-100 translate-y-0'
                   : 'opacity-0 translate-y-10'
                   }`}
@@ -96,11 +96,11 @@ export default function Services() {
               >
                 {/* Icon */}
                 <div className="relative mb-6">
-                  <div className="w-16 h-16 rounded-full bg-[#9FBCD4]/20 flex items-center justify-center group-hover:bg-[#9FBCD4]/30 transition-colors duration-300">
-                    <Icon className="w-8 h-8 text-[#9FBCD4]" />
+                  <div className="w-16 h-16 rounded-full bg-[#7cb2dd]/20 flex items-center justify-center group-hover:bg-[#7cb2dd]/30 transition-colors duration-300">
+                    <Icon className="w-8 h-8 text-[#7cb2dd]" />
                   </div>
                   {/* Glow Effect */}
-                  <div className="absolute inset-0 w-16 h-16 rounded-full bg-[#9FBCD4]/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <div className="absolute inset-0 w-16 h-16 rounded-full bg-[#7cb2dd]/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 </div>
 
                 {/* Content */}
@@ -113,8 +113,8 @@ export default function Services() {
 
                 {/* Decorative Corner */}
                 <div className="absolute top-0 right-0 w-20 h-20 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                  <div className="absolute top-4 right-4 w-8 h-[2px] bg-[#9FBCD4]" />
-                  <div className="absolute top-4 right-4 w-[2px] h-8 bg-[#9FBCD4]" />
+                  <div className="absolute top-4 right-4 w-8 h-[2px] bg-[#7cb2dd]" />
+                  <div className="absolute top-4 right-4 w-[2px] h-8 bg-[#7cb2dd]" />
                 </div>
               </div>
             );
