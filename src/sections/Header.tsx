@@ -71,7 +71,7 @@ export default function Header() {
               <Link
                 key={item.key}
                 to={item.href}
-                className="text-white/90 hover:text-[#9FBCD4] transition-colors duration-300 text-sm font-medium"
+                className="text-white/90 hover:text-[#7cb2dd] transition-colors duration-300 text-sm font-medium"
               >
                 {t(`nav.${item.key}`)}
               </Link>
@@ -84,7 +84,7 @@ export default function Header() {
               <DropdownMenuTrigger asChild>
                 <Button
                   variant="ghost"
-                  className="text-white hover:text-[#9FBCD4] hover:bg-white/10 flex items-center gap-2"
+                  className="text-white hover:text-[#7cb2dd] hover:bg-white/10 flex items-center gap-2"
                 >
                   <Globe className="w-4 h-4" />
                   <span className="hidden sm:inline">{currentLanguage.flag}</span>
@@ -107,7 +107,7 @@ export default function Header() {
 
             <Link
               to="/#contact"
-              className="hidden md:inline-flex bg-[#9FBCD4] hover:bg-[#7cb2dd] text-white px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 hover:shadow-lg hover:shadow-[#9FBCD4]/30 drop-shadow-lg"
+              className="hidden md:inline-flex bg-[#7cb2dd] hover:bg-[#66a0d0] text-white px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 hover:shadow-lg hover:shadow-[#7cb2dd]/30 drop-shadow-lg"
             >
               {t('hero.cta')}
             </Link>
@@ -135,7 +135,7 @@ export default function Header() {
                   key={item.key}
                   to={item.href}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="text-white/90 hover:text-[#9FBCD4] hover:bg-white/5 transition-all duration-300 py-3 px-4 rounded-lg text-base font-medium"
+                  className="text-white/90 hover:text-[#7cb2dd] hover:bg-white/5 transition-all duration-300 py-3 px-4 rounded-lg text-base font-medium"
                 >
                   {t(`nav.${item.key}`)}
                 </Link>
@@ -143,7 +143,7 @@ export default function Header() {
               <Link
                 to="/#contact"
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="bg-[#9FBCD4] hover:bg-[#7cb2dd] text-white text-center py-3 px-4 rounded-lg text-base font-medium mt-2 transition-all duration-300 drop-shadow-lg"
+                className="bg-[#7cb2dd] hover:bg-[#66a0d0] text-white text-center py-3 px-4 rounded-lg text-base font-medium mt-2 transition-all duration-300 drop-shadow-lg"
               >
                 {t('hero.cta')}
               </Link>

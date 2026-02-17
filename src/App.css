@@ -11,11 +11,12 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #9FBCD4;
+  background: #7cb2dd;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #7cb2dd;
+  background: #66a0d0;
+  background: #66a0d0;
   border-radius: 4px;
 }
 
@@ -97,14 +98,14 @@ html {
     text-shadow:
       0 2px 4px rgba(0, 0, 0, 0.3),
       0 1px 2px rgba(0, 0, 0, 0.2),
-      0 0 20px rgba(239, 180, 167, 0.8),
-      0 0 30px rgba(239, 180, 167, 0.6),
-      0 0 40px rgba(239, 180, 167, 0.4);
+      0 0 20px rgba(92, 182, 255, 0.8),
+      0 0 30px rgba(92, 182, 255, 0.6),
+      0 0 40px rgba(92, 182, 255, 0.4);
   }
 }
 
 .animate-shimmer {
-  animation: shimmer 3s ease-in-out infinite;
+  animation: shimmer 2s ease-in-out infinite;
 }
 
 .animate-fade-in-up {
@@ -113,7 +114,7 @@ html {
 
 /* Focus Styles */
 *:focus-visible {
-  outline: 2px solid #9FBCD4;
+  outline: 2px solid #7cb2dd;
   outline-offset: 2px;
 }
 
@@ -168,7 +169,7 @@ img[loading] {
 
 /* Gradient Text */
 .gradient-text {
-  background: linear-gradient(135deg, #9FBCD4 0%, #daa093 100%);
+  background: linear-gradient(135deg, #7cb2dd 0%, #daa093 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

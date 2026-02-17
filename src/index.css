@@ -22,7 +22,7 @@
     --popover-foreground: 240 10% 3.9%;
 
     /* --- COLOR PRINCIPAL (La Argentinidad - Azul) --- */
-    /* Hex: #9FBCD4 -> HSL: 207 41% 73% */
+    /* Hex: #7cb2dd -> HSL: 207 41% 73% */
     --primary: 207 41% 73%;
     /* IMPORTANTE: Como el azul es claro, el texto sobre él debe ser oscuro */
     --primary-foreground: 240 5.9% 10%;
@@ -33,7 +33,7 @@
     --secondary-foreground: 240 5.9% 10%;
 
     /* --- ACENTOS Y HOVERS (Pink Gates - Rosa más vivo) --- */
-    /* Hex: #9FBCD4 -> HSL: 11 69% 80% */
+    /* Hex: #7cb2dd -> HSL: 11 69% 80% */
     --accent: 11 69% 80%;
     --accent-foreground: 240 5.9% 10%;
 
