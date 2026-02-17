@@ -15,7 +15,7 @@ export default defineConfig({
   server: {
     allowedHosts: [
       '195.35.40.60', // Example: '192.168.1.101'
-      'srv457427.hstgr.cloud',
+      'gatestoargentina.com',
       //     '.example.com', // Allows example.com and all subdomains (e.g., foo.example.com)
     ]
   }
