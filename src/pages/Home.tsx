@@ -4,7 +4,7 @@ import Hero from '../sections/Hero';
 import Modules from '../sections/Modules';
 import Services from '../sections/Services';
 import About from '../sections/About';
-import Testimonials from '../sections/Testimonials';
+// import Testimonials from '../sections/Testimonials';
 import SocialMedia from '../sections/SocialMedia';
 import Contact from '../sections/Contact';
 
@@ -27,10 +27,10 @@ export default function Home() {
         <>
             <Hero />
             <Modules />
+            <SocialMedia />
             <Services />
             <About />
-            <SocialMedia />
-            <Testimonials />
+            {/*   <Testimonials /> */}
             <Contact />
         </>
     );
