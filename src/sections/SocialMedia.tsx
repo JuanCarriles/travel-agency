@@ -30,53 +30,39 @@ export default function SocialMedia() {
     return (
         <section
             ref={ref}
-            className="py-20 md:py-32 bg-[#232121fa] relative overflow-hidden"
+            className="py-16 md:py-24 relative overflow-hidden"
         >
             {/* Background Image with Overlay */}
             <div className="absolute inset-0">
                 <div
                     className="absolute inset-0 bg-cover bg-center"
                     style={{
-                        backgroundImage: 'url("https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=2874")',
-                        opacity: 0.15
+                        backgroundImage: 'url("/images/PORTADA FACEBOOK GATES TO ARGENTINA.jpg")',
+                        opacity: 1
                     }}
                 />
-                <div className="absolute inset-0 bg-gradient-to-b from-[#232121fa] via-[#232121dd] to-[#232121fa]" />
-            </div>
-
-            {/* Decorative Pattern Overlay */}
-            <div className="absolute inset-0 opacity-5">
-                <div
-                    className="absolute inset-0"
-                    style={{
-                        backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-                    }}
-                />
+                {/* Subtle overlay to enhance text readability */}
+                <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/20 to-black/30" />
+                {/* Vignette effect */}
+                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_0%,rgba(0,0,0,0.4)_100%)]" />
             </div>
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                {/* Section Header */}
+                {/* Section Title - positioned at the top */}
                 <div
                     className={`text-center mb-12 md:mb-16 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
                         }`}
                 >
-                    <div className="flex items-center justify-center gap-4 mb-4">
-                        <div className="w-12 h-[2px] bg-[#9FBCD4]" />
-                        <span className="text-[#9FBCD4] text-sm font-semibold uppercase tracking-wider">
-                            {t('nav.contact') || 'Conecta'}
-                        </span>
-                        <div className="w-12 h-[2px] bg-[#9FBCD4]" />
-                    </div>
-                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 drop-shadow-lg">
-                        {t('socialMedia.title') || 'Visítanos en Nuestras Redes Sociales'}
+                    <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-3 drop-shadow-2xl tracking-tight">
+                        {t('socialMedia.title') || '¡Síguenos en Redes Sociales!'}
                     </h2>
-                    <p className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto drop-shadow-md">
-                        {t('socialMedia.subtitle') || 'Síguenos para más contenido, fotos y actualizaciones de nuestros viajes'}
+                    <p className="text-lg md:text-xl text-white drop-shadow-xl font-medium">
+                        {t('socialMedia.subtitle') || 'Para tours exclusivos y destinos inolvidables'}
                     </p>
                 </div>
 
                 {/* Social Media Cards */}
-                <div className="flex flex-col sm:flex-row gap-8 justify-center items-stretch max-w-4xl mx-auto">
+                <div className="flex flex-col sm:flex-row gap-6 md:gap-8 justify-center items-stretch max-w-3xl mx-auto">
                     {socialLinks.map((social, index) => (
                         <a
                             key={social.name}
@@ -86,29 +72,29 @@ export default function SocialMedia() {
                             className={`group flex-1 transition-all duration-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
                                 }`}
                             style={{
-                                transitionDelay: `${index * 150}ms`,
+                                transitionDelay: `${(index + 1) * 150}ms`,
                             }}
                         >
                             <div className="relative h-full">
-                                {/* Card Background with Gradient */}
+                                {/* Card Background with Glassmorphism */}
                                 <div
-                                    className={`${social.bgGradient} ${social.hoverBg} backdrop-blur-sm border border-white/20 rounded-2xl p-8 md:p-10 h-full shadow-2xl transition-all duration-300 transform hover:scale-105 hover:shadow-[#9FBCD4]/20 group-hover:border-white/40`}
+                                    className={`${social.bgGradient} ${social.hoverBg} backdrop-blur-md border-2 border-white/30 rounded-3xl p-8 md:p-10 h-full shadow-[0_8px_32px_0_rgba(0,0,0,0.4)] transition-all duration-300 transform hover:scale-105 hover:shadow-[0_8px_48px_0_rgba(0,0,0,0.6)] group-hover:border-white/50`}
                                 >
                                     {/* Icon Container */}
                                     <div className="relative mb-6 flex justify-center">
-                                        <div className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center group-hover:bg-white/20 transition-all duration-300 border-2 border-white/30">
-                                            <social.icon className={`w-10 h-10 md:w-12 md:h-12 ${social.iconColor} drop-shadow-lg`} />
+                                        <div className="w-24 h-24 md:w-28 md:h-28 rounded-full bg-white/20 backdrop-blur-lg flex items-center justify-center group-hover:bg-white/30 transition-all duration-300 border-3 border-white/50 shadow-2xl group-hover:shadow-[0_0_40px_rgba(255,255,255,0.5)]">
+                                            <social.icon className={`w-12 h-12 md:w-14 md:h-14 ${social.iconColor} drop-shadow-2xl`} />
                                         </div>
                                         {/* Glow Effect */}
-                                        <div className={`absolute inset-0 w-20 h-20 md:w-24 md:h-24 rounded-full ${social.glowColor} blur-xl opacity-0 group-hover:opacity-40 transition-opacity duration-500`} />
+                                        <div className={`absolute inset-0 w-24 h-24 md:w-28 md:h-28 rounded-full ${social.glowColor} blur-2xl opacity-0 group-hover:opacity-50 transition-opacity duration-500`} />
                                     </div>
 
                                     {/* Content */}
                                     <div className="text-center">
-                                        <h3 className="text-2xl md:text-3xl font-bold text-white mb-3 drop-shadow-lg">
+                                        <h3 className="text-3xl md:text-4xl font-bold text-white mb-3 drop-shadow-2xl tracking-tight">
                                             {social.name}
                                         </h3>
-                                        <p className="text-base md:text-lg text-white/90 leading-relaxed drop-shadow-md">
+                                        <p className="text-base md:text-lg text-white/95 leading-relaxed drop-shadow-xl font-medium">
                                             {t(`socialMedia.${social.name.toLowerCase()}Text`) || `Síguenos en ${social.name}`}
                                         </p>
                                     </div>
