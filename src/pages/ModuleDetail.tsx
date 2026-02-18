@@ -1,9 +1,10 @@
 import { useEffect } from 'react';
 import { useParams, Link, Navigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { ArrowLeft, MapPin, Download, MessageCircle, Mail, Loader2 } from 'lucide-react';
+import { ArrowLeft, MapPin, Download, MessageCircle, Mail } from 'lucide-react';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import { useModulesData } from '@/hooks/useModulesData';
+import LoadingScreen from '@/components/ui/LoadingScreen';
 import * as LucideIcons from 'lucide-react';
 
 // Icon mapping for dynamic icon loading
@@ -39,14 +40,7 @@ export default function ModuleDetail() {
 
     // Handle loading state
     if (loading) {
-        return (
-            <div className="min-h-screen bg-[#F5F3EE] flex items-center justify-center">
-                <div className="text-center">
-                    <Loader2 className="w-16 h-16 text-[#7cb2dd] animate-spin mx-auto mb-4" />
-                    <p className="text-lg text-[#2D2D2D]">{t('modules.loading') || 'Loading...'}</p>
-                </div>
-            </div>
-        );
+        return <LoadingScreen fullScreen />;
     }
 
     // Handle error state
