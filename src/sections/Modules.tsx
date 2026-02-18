@@ -1,8 +1,9 @@
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
-import { ArrowRight, MapPin, Loader2 } from 'lucide-react';
+import { ArrowRight, MapPin } from 'lucide-react';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import { useModulesData } from '@/hooks/useModulesData';
+import LoadingScreen from '@/components/ui/LoadingScreen';
 
 export default function Modules() {
     const { t, i18n } = useTranslation();
@@ -42,11 +43,7 @@ export default function Modules() {
                 </div>
 
                 {/* Loading State */}
-                {loading && (
-                    <div className="flex justify-center items-center py-20">
-                        <Loader2 className="w-12 h-12 text-[#7cb2dd] animate-spin" />
-                    </div>
-                )}
+                {loading && <LoadingScreen />}
 
                 {/* Error State */}
                 {error && (

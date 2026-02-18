@@ -34,6 +34,7 @@ export function useModulesData(): UseModulesDataReturn {
                     throw new Error('Invalid modules data structure');
                 }
 
+
                 setModules(data.modules);
                 setError(null);
             } catch (err) {
